@@ -4,109 +4,116 @@
 Клонировать репозиторий, изучить архитектуру и развернуть модуль парсера.
 Нужно поднять всю логику exchange (биржевые провайдеры) и первый уровень анализа данных.
 
-## Architecture (Final)
+## Final Architecture
 
-### Layer 1: Market Data (Exchange Providers)
-| Provider | Status | Instruments |
-|----------|--------|-------------|
-| Binance | ❌ 451 geo-blocked | - |
-| Bybit | ❌ 403 geo-blocked | - |
-| Coinbase | ✅ Working | 378 spot |
-| Hyperliquid | ✅ Working | 229 perp |
-
-### Layer 2: Intel (Crypto Intelligence)
-| Source | Role | Status |
-|--------|------|--------|
-| CoinGecko | **Primary** - Full market (~15k), categories, trending | ✅ |
-| Dropstab | SSR top100 only (most pages 404 from server) | ⚠️ |
-| CryptoRank | VC data, funding (manual ingest or browser discovery) | Ready |
-
-## Data Source Strategy
+### Data Sources Roles
 ```
-PRICES (realtime)
-├ Coinbase ✅ (378 spot pairs)
-└ Hyperliquid ✅ (229 perp contracts)
+MARKET DATA (prices, mcap, volume)
+├ CoinGecko → PRIMARY (15k coins, categories, trending)
+└ Exchanges → realtime prices (Coinbase, Hyperliquid)
 
-FULL MARKET (15k+ coins)
-└ CoinGecko /coins/markets ✅
+ANALYTICS DATA (redundancy from BOTH sources)
+├ CryptoRank → fundraising, investors, unlocks, ICO/IDO
+└ Dropstab  → fundraising, investors, unlocks, ICO/IDO
 
-INTEL DATA
-├ CoinGecko categories/trending ✅
-├ Dropstab coins top100 ✅ (SSR only)
-└ CryptoRank (browser crawler required)
+Note: CryptoRank + Dropstab collect SAME data types for redundancy
 ```
+
+### Source Priority Table
+| Data Type | Primary | Fallback |
+|-----------|---------|----------|
+| price | Exchange providers | CoinGecko |
+| marketcap | CoinGecko | - |
+| categories | CoinGecko | - |
+| trending | CoinGecko | - |
+| fundraising | CryptoRank + Dropstab | both |
+| investors | CryptoRank + Dropstab | both |
+| unlocks | CryptoRank + Dropstab | both |
+| ICO/IDO/IEO | CryptoRank + Dropstab | both |
+
+### Provider Status
+| Provider | Status | Data |
+|----------|--------|------|
+| Coinbase | ✅ | 378 spot |
+| Hyperliquid | ✅ | 229 perp |
+| Binance | ❌ 451 | geo-blocked |
+| Bybit | ❌ 403 | geo-blocked |
 
 ## Implemented (2026-03-05)
 
 ### Exchange API ✅
-- `/api/exchange/providers` - 4 providers
+- `/api/exchange/providers` - provider list
 - `/api/exchange/instruments` - 607 instruments
 - `/api/exchange/ticker`, `/orderbook`, `/candles`, `/funding`, `/open-interest`
 
 ### Intel API ✅
-| Endpoint | Status |
-|----------|--------|
-| POST /api/intel/sync/coingecko/markets_full | ✅ ~15k coins |
-| POST /api/intel/sync/coingecko/categories | ✅ 675 categories |
-| POST /api/intel/sync/coingecko/trending | ✅ 15 coins |
-| POST /api/intel/sync/dropstab/v2 | ⚠️ Limited (SSR only) |
-| GET /api/intel/projects | ✅ |
+| Endpoint | Function |
+|----------|----------|
+| POST /api/intel/sync/coingecko/markets_full | ~15k coins (1.2s throttle) |
+| POST /api/intel/sync/coingecko/top_coins | Top 100 |
+| POST /api/intel/sync/coingecko/categories | 675 categories |
+| POST /api/intel/sync/coingecko/trending | 15 trending |
+| POST /api/intel/sync/dropstab/v2 | Production scraper |
+| GET /api/intel/admin/health | System health |
 
-### Dropstab Scraper v2 (Production)
-- Dynamic dataset finder
-- Retry with exponential backoff
-- Snapshot debugging
-- **Limitation**: Dropstab returns 404 for most pages from server IP
-  - Working: `/investors` (2 items), homepage
-  - Blocked: `/vesting`, `/funding-rounds`, etc.
+### Scheduler ✅
+| Endpoint | Function |
+|----------|----------|
+| GET /api/intel/scheduler/status | Job status |
+| POST /api/intel/scheduler/start | Start scheduler |
+| POST /api/intel/scheduler/stop | Stop scheduler |
+| POST /api/intel/scheduler/run/{job} | Run job now |
 
-### CryptoRank Discovery System
-- Browser-based endpoint discovery (requires Playwright)
-- Sync from discovered endpoints
-- Manual JSON ingest for funding/investors/unlocks
+### Scheduled Jobs
+| Job | Interval | Status |
+|-----|----------|--------|
+| coingecko_markets_full | daily | enabled |
+| coingecko_top_coins | 10 min | enabled |
+| coingecko_trending | 30 min | enabled |
+| coingecko_categories | daily | enabled |
+| dropstab_markets | 10 min | enabled |
+| dropstab_unlocks | 1h | disabled (browser) |
+| dropstab_funding | 2h | disabled (browser) |
+
+### Health Monitor
+- Source availability tracking
+- Last sync times with age
+- Database stats
+- Error history (24h)
 
 ## Database Stats
-- CoinGecko projects: 350+
-- Dropstab projects: 100
-- Categories: 675
-- Total: 450+
+```
+intel_projects: 350+
+intel_categories: 675
+intel_funding: 0 (pending CryptoRank/Dropstab browser scrape)
+intel_unlocks: 0 (pending)
+intel_investors: 0 (pending)
+```
 
 ## Known Limitations
 
 ### Dropstab
-- **SSR blocked** for most pages (404 from server)
-- **Solution**: Playwright browser crawler or manual data ingest
-
-### Exchange Providers
-- Binance/Bybit geo-blocked (451/403)
-- **Solution**: VPN/proxy or use Coinbase+Hyperliquid
+- SSR pages blocked (404) from server IP
+- **Solution**: Playwright browser crawler or manual ingest
 
 ### CoinGecko
-- Rate limit: 30 req/min free tier
-- Full sync takes ~25 min (60 pages × 250 coins)
+- Rate limit: ~50 req/min with 1.2s throttle
+- Full sync: ~72 seconds (60 pages)
 
 ## Backlog
 
 ### P0 (Done)
-- [x] Exchange providers (Coinbase, Hyperliquid)
+- [x] Exchange providers
 - [x] CoinGecko full market sync
-- [x] Dropstab v2 scraper (structure-agnostic)
+- [x] Scheduler with jobs
+- [x] Health monitor
 
 ### P1 (Next)
-- [ ] Playwright browser crawler for Dropstab
-- [ ] CryptoRank discovery run
-- [ ] Scheduled syncs (cron)
+- [ ] Playwright browser crawler for Dropstab/CryptoRank
+- [ ] Data deduplication (merge CryptoRank + Dropstab events)
+- [ ] Source provenance tracking
 
 ### P2 (Future)
 - [ ] Redis realtime pipeline
 - [ ] ClickHouse historical storage
-- [ ] Frontend dashboard
-
-## Sync Schedule (Recommended)
-```
-CoinGecko markets_full  → daily (15k coins)
-CoinGecko top_coins     → every 10 min
-CoinGecko categories    → daily
-CoinGecko trending      → every 5 min
-Dropstab markets v1     → every 10 min (top 100)
-```
+- [ ] Source failover (CryptoCompare)

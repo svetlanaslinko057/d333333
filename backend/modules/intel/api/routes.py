@@ -1169,38 +1169,45 @@ async def calculate_fmi_single(
 
 
 # ═══════════════════════════════════════════════════════════════
-# SCHEDULER
+# SCHEDULER & HEALTH
 # ═══════════════════════════════════════════════════════════════
 
 def get_scheduler():
     """Get scheduler instance"""
     from server import db
-    from ..engine.intel_scheduler import get_intel_scheduler
-    return get_intel_scheduler(db)
+    from ..scheduler import init_scheduler, intel_scheduler
+    if intel_scheduler is None:
+        init_scheduler(db)
+    from ..scheduler import intel_scheduler
+    return intel_scheduler
+
+
+def get_health_monitor():
+    """Get health monitor instance"""
+    from server import db
+    from ..scheduler import init_scheduler, intel_health
+    if intel_health is None:
+        init_scheduler(db)
+    from ..scheduler import intel_health
+    return intel_health
 
 
 @router.get("/scheduler/status")
 async def scheduler_status():
     """Get scheduler status"""
     scheduler = get_scheduler()
-    return {
-        'ts': int(datetime.now(timezone.utc).timestamp() * 1000),
-        **scheduler.status()
-    }
+    return scheduler.get_status()
 
 
 @router.post("/scheduler/start")
-async def start_scheduler(
-    enable_dropstab: bool = Query(True),
-    enable_cryptorank: bool = Query(True)
-):
+async def start_scheduler():
     """Start the Intel sync scheduler"""
     scheduler = get_scheduler()
-    await scheduler.start(enable_dropstab, enable_cryptorank)
+    result = await scheduler.start()
     return {
         'ts': int(datetime.now(timezone.utc).timestamp() * 1000),
-        'ok': True,
-        **scheduler.status()
+        **result,
+        **scheduler.get_status()
     }
 
 
@@ -1208,9 +1215,51 @@ async def start_scheduler(
 async def stop_scheduler():
     """Stop the Intel sync scheduler"""
     scheduler = get_scheduler()
-    await scheduler.stop()
+    result = await scheduler.stop()
     return {
         'ts': int(datetime.now(timezone.utc).timestamp() * 1000),
-        'ok': True,
-        **scheduler.status()
+        **result
     }
+
+
+@router.post("/scheduler/run/{job_name}")
+async def run_scheduler_job(job_name: str):
+    """Run specific job immediately"""
+    scheduler = get_scheduler()
+    result = await scheduler.run_now(job_name)
+    return {
+        'ts': int(datetime.now(timezone.utc).timestamp() * 1000),
+        'job': job_name,
+        **result
+    }
+
+
+@router.post("/scheduler/job/{job_name}/enable")
+async def enable_scheduler_job(job_name: str):
+    """Enable a scheduler job"""
+    scheduler = get_scheduler()
+    return scheduler.enable_job(job_name)
+
+
+@router.post("/scheduler/job/{job_name}/disable")
+async def disable_scheduler_job(job_name: str):
+    """Disable a scheduler job"""
+    scheduler = get_scheduler()
+    return scheduler.disable_job(job_name)
+
+
+@router.get("/admin/health")
+async def get_intel_health():
+    """
+    Get comprehensive intel system health.
+    
+    Shows:
+    - Scheduler status
+    - Source availability
+    - Last sync times
+    - Database stats
+    - Recent errors
+    """
+    health = get_health_monitor()
+    return await health.get_health()
+

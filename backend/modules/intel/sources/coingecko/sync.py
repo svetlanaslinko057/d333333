@@ -145,15 +145,18 @@ class CoinGeckoSync:
         CoinGecko /coins/markets allows 250 coins per page.
         60 pages = ~15000 coins (full market coverage)
         
-        Rate limiting: ~30 req/min for free tier, use pool rotation
+        Throttling: 1.2 sec delay = ~50 req/min (safe for free tier)
+        Total time: ~72 seconds for full sync
         """
         import asyncio
         
         logger.info(f"[CoinGecko] Starting FULL market sync (up to {max_pages} pages, ~{max_pages * 250} coins)...")
+        start_time = asyncio.get_event_loop().time()
         
         total = 0
         changed = 0
         empty_pages = 0
+        errors = 0
         
         for page in range(1, max_pages + 1):
             try:
@@ -177,12 +180,14 @@ class CoinGeckoSync:
                 
                 # Log progress every 10 pages
                 if page % 10 == 0:
-                    logger.info(f"[CoinGecko] Progress: page {page}, {total} coins synced, {changed} changed")
+                    elapsed = asyncio.get_event_loop().time() - start_time
+                    logger.info(f"[CoinGecko] Progress: page {page}/{max_pages}, {total} coins, {elapsed:.1f}s elapsed")
                 
-                # Rate limit: wait between pages (CoinGecko free tier ~30 req/min)
-                await asyncio.sleep(2.5)
+                # Throttling: 1.2 sec between requests (safe rate limit)
+                await asyncio.sleep(1.2)
                 
             except Exception as e:
+                errors += 1
                 logger.error(f"[CoinGecko] Page {page} error: {e}")
                 # On rate limit, wait longer
                 if '429' in str(e):
@@ -190,13 +195,16 @@ class CoinGeckoSync:
                     await asyncio.sleep(60)
                 continue
         
-        logger.info(f"[CoinGecko] Full market sync complete: {total} total, {changed} changed")
+        elapsed = asyncio.get_event_loop().time() - start_time
+        logger.info(f"[CoinGecko] Full market sync complete: {total} coins, {changed} changed, {elapsed:.1f}s")
         return {
             'source': 'coingecko',
             'entity': 'markets_full',
             'total': total,
             'changed': changed,
-            'pages': page
+            'pages': page,
+            'errors': errors,
+            'elapsed_sec': round(elapsed, 1)
         }
     
     async def sync_coin(self, coin_id: str) -> Dict[str, Any]:
