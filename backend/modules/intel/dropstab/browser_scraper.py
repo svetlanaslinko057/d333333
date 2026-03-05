@@ -1,22 +1,21 @@
 """
-Dropstab Browser Scraper
-Uses Playwright for real browser automation to bypass bot detection.
+Dropstab Browser Scraper (Stealth Edition)
+- Real browser automation with stealth patches
+- Human behaviour simulation
+- Multi-layer extraction (API → Browser → DOM)
+- Automatic endpoint discovery
 
-Why browser is needed:
-- Dropstab uses bot detection + SSR filtering + cloud firewall
-- Regular HTTP requests get fake 404
-- Real browser passes all checks
-
-Targets:
-- /token-unlock - vesting/unlock schedule
-- /funding-rounds - latest fundraising
-- /investors - VC/fund list
-- /ico, /ieo, /ido - token sales
+Stealth Features:
+- navigator.webdriver = undefined
+- chrome.runtime mock
+- Human-like mouse/scroll behaviour
+- Realistic viewport/user-agent
 """
 
 import asyncio
 import json
 import time
+import random
 import logging
 from typing import Dict, Any, List, Optional
 from datetime import datetime, timezone
@@ -26,6 +25,7 @@ logger = logging.getLogger(__name__)
 
 # Output directory for captured data
 OUTPUT_DIR = Path("/app/backend/modules/intel/dropstab/browser_output")
+SNAPSHOTS_DIR = OUTPUT_DIR / "snapshots"
 
 # Target pages to scrape
 TARGETS = [
@@ -39,23 +39,91 @@ TARGETS = [
     {"label": "coins", "url": "https://dropstab.com/coins"},
 ]
 
+# Stealth JavaScript patches
+STEALTH_SCRIPTS = """
+// Remove webdriver flag
+Object.defineProperty(navigator, 'webdriver', {
+    get: () => undefined
+});
+
+// Mock chrome.runtime
+window.chrome = {
+    runtime: {}
+};
+
+// Mock permissions API
+const originalQuery = window.navigator.permissions.query;
+window.navigator.permissions.query = (parameters) => (
+    parameters.name === 'notifications' ?
+        Promise.resolve({ state: Notification.permission }) :
+        originalQuery(parameters)
+);
+
+// Mock plugins
+Object.defineProperty(navigator, 'plugins', {
+    get: () => [1, 2, 3, 4, 5]
+});
+
+// Mock languages
+Object.defineProperty(navigator, 'languages', {
+    get: () => ['en-US', 'en']
+});
+"""
+
 
 class DropstabBrowserScraper:
     """
-    Browser-based scraper for Dropstab using Playwright.
+    Stealth browser scraper for Dropstab.
     
-    Captures XHR/fetch JSON responses while navigating pages.
-    Looks like real user to bypass bot detection.
+    Features:
+    - Anti-detection stealth patches
+    - Human behaviour simulation
+    - XHR/fetch JSON capture
+    - Automatic endpoint discovery
+    - Snapshot system for debugging
     """
     
     def __init__(self):
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
         self.captured: List[Dict] = []
         self._proxy = None
     
     def set_proxy(self, proxy_config: Optional[Dict] = None):
         """Set proxy for browser"""
         self._proxy = proxy_config
+    
+    async def _human_behavior(self, page):
+        """
+        Simulate human behaviour to avoid bot detection.
+        - Random mouse movements
+        - Natural scroll patterns
+        - Human-like delays
+        """
+        # Initial pause (humans don't act instantly)
+        await asyncio.sleep(random.uniform(1.2, 2.5))
+        
+        # Random mouse movement
+        await page.mouse.move(
+            random.randint(100, 600),
+            random.randint(100, 400)
+        )
+        
+        await asyncio.sleep(random.uniform(0.3, 0.8))
+        
+        # Scroll down naturally
+        for _ in range(random.randint(2, 4)):
+            scroll_amount = random.randint(300, 800)
+            await page.mouse.wheel(0, scroll_amount)
+            await asyncio.sleep(random.uniform(0.8, 1.5))
+        
+        # Another mouse movement
+        await page.mouse.move(
+            random.randint(200, 800),
+            random.randint(200, 600)
+        )
+        
+        await asyncio.sleep(random.uniform(0.5, 1.2))
     
     def _capture_response(self, label: str):
         """Create response capture handler"""
@@ -72,35 +140,33 @@ class DropstabBrowserScraper:
                 if "json" not in content_type.lower():
                     return
                 
-                # Skip small responses (likely errors)
                 if response.status != 200:
                     return
                 
-                # Parse JSON
                 try:
                     data = await response.json()
                 except:
                     return
                 
-                # Skip empty responses
                 if not data:
                     return
                 
-                # Classify the data
                 data_type = self._classify_data(data, response.url)
                 
                 self.captured.append({
                     "label": label,
                     "url": response.url,
                     "type": data_type,
+                    "method": request.method,
+                    "headers": dict(request.headers),
                     "timestamp": datetime.now(timezone.utc).isoformat(),
                     "data": data
                 })
                 
-                logger.info(f"[Dropstab Browser] Captured: {data_type} from {response.url[:80]}")
+                logger.info(f"[Dropstab] Captured: {data_type} from {response.url[:80]}")
                 
             except Exception as e:
-                logger.debug(f"[Dropstab Browser] Capture error: {e}")
+                logger.debug(f"[Dropstab] Capture error: {e}")
         
         return handler
     
@@ -111,21 +177,20 @@ class DropstabBrowserScraper:
                 return "list_data"
             return "unknown"
         
-        # Check for common patterns
-        if "coins" in data or "coinsBody" in data:
-            return "coins"
-        if "unlock" in str(data.keys()).lower() or "vesting" in str(data.keys()).lower():
-            return "unlocks"
-        if "funding" in str(data.keys()).lower() or "round" in str(data.keys()).lower():
-            return "funding"
-        if "investor" in str(data.keys()).lower() or "fund" in str(data.keys()).lower():
-            return "investors"
-        if "ico" in url or "ieo" in url or "ido" in url:
-            return "sales"
-        if "category" in str(data.keys()).lower():
-            return "categories"
+        keys_str = str(data.keys()).lower()
         
-        # Check for list wrapper
+        if "coins" in data or "coinsbody" in data:
+            return "coins"
+        if "unlock" in keys_str or "vesting" in keys_str:
+            return "unlocks"
+        if "funding" in keys_str or "round" in keys_str:
+            return "funding"
+        if "investor" in keys_str or "fund" in keys_str:
+            return "investors"
+        if any(x in url.lower() for x in ["ico", "ieo", "ido"]):
+            return "sales"
+        if "category" in keys_str:
+            return "categories"
         if "data" in data and isinstance(data["data"], list):
             return "list_wrapper"
         if "total" in data:
@@ -133,48 +198,60 @@ class DropstabBrowserScraper:
         
         return "unknown"
     
+    async def _save_snapshot(self, page, label: str):
+        """Save page snapshot for debugging"""
+        try:
+            timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+            
+            # Save HTML
+            html = await page.content()
+            html_path = SNAPSHOTS_DIR / f"{label}_{timestamp}.html"
+            with open(html_path, "w", encoding="utf-8") as f:
+                f.write(html)
+            
+            # Save screenshot
+            screenshot_path = SNAPSHOTS_DIR / f"{label}_{timestamp}.png"
+            await page.screenshot(path=str(screenshot_path), full_page=False)
+            
+            logger.debug(f"[Dropstab] Snapshot saved: {label}_{timestamp}")
+            
+        except Exception as e:
+            logger.warning(f"[Dropstab] Snapshot failed: {e}")
+    
     async def scrape_all(self, headless: bool = True) -> Dict[str, Any]:
         """
-        Scrape all target pages using browser.
-        
-        Args:
-            headless: Run browser in headless mode (True for server, False for debug)
-        
-        Returns:
-            Summary with captured data
+        Scrape all target pages using stealth browser.
         """
         try:
             from playwright.async_api import async_playwright
         except ImportError:
-            logger.error("[Dropstab Browser] Playwright not installed!")
-            return {
-                "error": "Playwright not installed. Run: pip install playwright && playwright install chromium"
-            }
+            logger.error("[Dropstab] Playwright not installed!")
+            return {"error": "Playwright not installed"}
         
         self.captured = []
         start_time = time.time()
         
-        logger.info(f"[Dropstab Browser] Starting scrape ({len(TARGETS)} pages)...")
+        logger.info(f"[Dropstab] Starting stealth scrape ({len(TARGETS)} pages)...")
         
         async with async_playwright() as p:
-            # Launch browser with anti-detection
+            # Launch with anti-detection args
             launch_args = {
                 "headless": headless,
                 "args": [
                     "--disable-blink-features=AutomationControlled",
                     "--disable-features=IsolateOrigins,site-per-process",
+                    "--disable-dev-shm-usage",
                     "--no-sandbox"
                 ]
             }
             
-            # Add proxy if configured
             if self._proxy:
                 launch_args["proxy"] = self._proxy
-                logger.info(f"[Dropstab Browser] Using proxy: {self._proxy.get('server')}")
+                logger.info(f"[Dropstab] Using proxy: {self._proxy.get('server')}")
             
             browser = await p.chromium.launch(**launch_args)
             
-            # Create context with realistic settings
+            # Context with realistic settings
             context = await browser.new_context(
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
                 viewport={"width": 1920, "height": 1080},
@@ -182,55 +259,56 @@ class DropstabBrowserScraper:
                 timezone_id="America/New_York"
             )
             
+            # Apply stealth scripts
+            await context.add_init_script(STEALTH_SCRIPTS)
+            
             page = await context.new_page()
             
-            # Scrape each target
             for target in TARGETS:
                 label = target["label"]
                 url = target["url"]
                 
-                logger.info(f"[Dropstab Browser] Opening: {url}")
+                logger.info(f"[Dropstab] Opening: {url}")
                 
-                # Set up response capture
                 page.on("response", self._capture_response(label))
                 
                 try:
-                    # Navigate with longer timeout
-                    await page.goto(url, wait_until="networkidle", timeout=60000)
+                    await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+                    
+                    # Human behaviour simulation
+                    await self._human_behavior(page)
                     
                     # Wait for dynamic content
-                    await asyncio.sleep(4)
+                    await asyncio.sleep(random.uniform(2, 4))
                     
-                    # Scroll to trigger lazy loading
-                    await page.mouse.wheel(0, 2000)
-                    await asyncio.sleep(2)
-                    await page.mouse.wheel(0, 2000)
-                    await asyncio.sleep(2)
-                    
-                    # Try clicking common pagination/load more buttons
+                    # Try clicking load more buttons
                     for selector in ["text=Load more", "text=Show more", "button:has-text('Next')"]:
                         try:
                             btn = page.locator(selector).first
-                            if await btn.is_visible():
+                            if await btn.is_visible(timeout=1000):
                                 await btn.click()
-                                await asyncio.sleep(2)
+                                await asyncio.sleep(random.uniform(1.5, 2.5))
                         except:
                             pass
                     
+                    # Save snapshot on first page
+                    if target == TARGETS[0]:
+                        await self._save_snapshot(page, label)
+                    
                 except Exception as e:
-                    logger.warning(f"[Dropstab Browser] Failed to load {url}: {e}")
+                    logger.warning(f"[Dropstab] Failed to load {url}: {e}")
+                    await self._save_snapshot(page, f"{label}_error")
                 
-                # Delay between pages
-                await asyncio.sleep(3)
+                # Human-like delay between pages
+                await asyncio.sleep(random.uniform(2, 4))
             
             await browser.close()
         
         elapsed = time.time() - start_time
         
-        # Save captured data
         self._save_output()
+        self._save_endpoints()
         
-        # Group by type
         by_type = {}
         for item in self.captured:
             t = item["type"]
@@ -246,18 +324,16 @@ class DropstabBrowserScraper:
             "output_dir": str(OUTPUT_DIR)
         }
         
-        logger.info(f"[Dropstab Browser] Complete: {len(self.captured)} items in {elapsed:.1f}s")
+        logger.info(f"[Dropstab] Complete: {len(self.captured)} items in {elapsed:.1f}s")
         
         return result
     
     def _save_output(self):
         """Save captured data to files"""
-        # Save all data
         all_path = OUTPUT_DIR / "dropstab_all.json"
         with open(all_path, "w", encoding="utf-8") as f:
             json.dump(self.captured, f, indent=2, ensure_ascii=False)
         
-        # Save by type
         by_type = {}
         for item in self.captured:
             t = item["type"]
@@ -269,8 +345,36 @@ class DropstabBrowserScraper:
             path = OUTPUT_DIR / f"dropstab_{data_type}.json"
             with open(path, "w", encoding="utf-8") as f:
                 json.dump(items, f, indent=2, ensure_ascii=False)
+    
+    def _save_endpoints(self):
+        """Save discovered endpoints to registry"""
+        endpoints = []
+        seen = set()
         
-        logger.info(f"[Dropstab Browser] Saved to {OUTPUT_DIR}")
+        for item in self.captured:
+            url = item["url"]
+            if url in seen:
+                continue
+            seen.add(url)
+            
+            # Skip tracking/analytics
+            if any(x in url for x in ["yandex", "google", "analytics", "pixel"]):
+                continue
+            
+            endpoints.append({
+                "url": url,
+                "method": item.get("method", "GET"),
+                "headers": {k: v for k, v in item.get("headers", {}).items() 
+                          if k.lower() in ["accept", "content-type", "origin", "referer"]},
+                "type": item["type"],
+                "discovered": datetime.now(timezone.utc).isoformat()
+            })
+        
+        path = OUTPUT_DIR / "dropstab_endpoints.json"
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(endpoints, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"[Dropstab] Saved {len(endpoints)} endpoints to registry")
     
     async def scrape_single(self, target_label: str, headless: bool = True) -> Dict[str, Any]:
         """Scrape single target page"""
@@ -278,8 +382,8 @@ class DropstabBrowserScraper:
         if not target:
             return {"error": f"Unknown target: {target_label}"}
         
-        # Temporarily replace TARGETS
-        original_targets = TARGETS.copy()
+        # Temporarily modify targets
+        original = list(TARGETS)
         TARGETS.clear()
         TARGETS.append(target)
         
@@ -287,7 +391,7 @@ class DropstabBrowserScraper:
             result = await self.scrape_all(headless=headless)
         finally:
             TARGETS.clear()
-            TARGETS.extend(original_targets)
+            TARGETS.extend(original)
         
         return result
     
@@ -296,28 +400,14 @@ class DropstabBrowserScraper:
         if data_type:
             return [item for item in self.captured if item["type"] == data_type]
         return self.captured
+    
+    def get_discovered_endpoints(self) -> List[Dict]:
+        """Get list of discovered endpoints"""
+        path = OUTPUT_DIR / "dropstab_endpoints.json"
+        if path.exists():
+            return json.load(open(path, "r", encoding="utf-8"))
+        return []
 
 
 # Singleton instance
 dropstab_browser = DropstabBrowserScraper()
-
-
-# Standalone script runner
-if __name__ == "__main__":
-    import sys
-    
-    async def main():
-        print("Starting Dropstab browser scraper...")
-        
-        # Load proxy from env
-        from proxy_manager import proxy_manager
-        if proxy_manager.is_configured:
-            dropstab_browser.set_proxy(proxy_manager.get_playwright_proxy())
-        
-        # Run headless=False for debugging
-        headless = "--headless" in sys.argv
-        result = await dropstab_browser.scrape_all(headless=headless)
-        
-        print(json.dumps(result, indent=2))
-    
-    asyncio.run(main())

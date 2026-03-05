@@ -6,87 +6,86 @@
 
 ## Final Architecture
 
-### Data Sources Roles
+### Multi-Layer Scraper Engine
+```
+Layer 1: Direct API (fastest, may break)
+Layer 2: Browser Network Discovery (stealth)
+Layer 3: DOM Extraction (slowest, most stable)
+
+If Layer 1 fails → fallback to Layer 2
+If Layer 2 fails → fallback to Layer 3
+```
+
+### Data Sources
 ```
 MARKET DATA - CoinGecko ONLY
-├ CoinGecko → 15k coins, categories, trending, prices
-└ Exchanges → realtime prices (Coinbase, Hyperliquid)
+├ 15k coins
+├ 675 categories
+└ trending
 
 ANALYTICS - CryptoRank + Dropstab (redundancy)
-├ CryptoRank → fundraising, investors, unlocks
-└ Dropstab  → fundraising, investors, unlocks
+├ fundraising
+├ investors
+└ unlocks
 ```
 
-### Scheduler Jobs (Final)
+### Stealth Browser Features
 ```
-MARKET (enabled, auto-running):
-├ coingecko_top_coins    → 10 min
-├ coingecko_trending     → 30 min  
-├ coingecko_categories   → daily
-└ coingecko_markets_full → daily
-
-ANALYTICS (disabled, require browser):
-├ cryptorank_fundraising → 1h
-├ cryptorank_unlocks     → 1h
-├ cryptorank_investors   → 6h
-├ dropstab_fundraising   → 1h
-├ dropstab_unlocks       → 1h
-└ dropstab_investors     → 6h
+✅ navigator.webdriver = undefined
+✅ chrome.runtime mock  
+✅ Human behaviour simulation (mouse, scroll, delays)
+✅ Realistic viewport 1920x1080
+✅ Proper user-agent
+✅ Snapshot system for debugging
+✅ Endpoint registry auto-discovery
 ```
 
-### Provider Status
-| Provider | Status | Data |
-|----------|--------|------|
-| Coinbase | ✅ | 378 spot |
-| Hyperliquid | ✅ | 229 perp |
-| Binance | ❌ 451 | geo-blocked |
-| Bybit | ❌ 403 | geo-blocked |
+### Proxy Failover System
+```
+Proxy #1 (primary)
+    ↓ if fails
+Proxy #2 (backup)
+    ↓ if fails
+Proxy #3 (backup)
 
-## Current System Status
-
-### Health Monitor Output
-```json
-{
-  "scheduler_running": true,
-  "jobs_total": 10,
-  "jobs_enabled": 4,
-  "errors_24h": [],
-  "database_stats": {
-    "intel_projects": 350,
-    "intel_categories": 675
-  }
-}
+NOT rotation - just failover
 ```
 
-## Implemented (2026-03-05)
+## API Endpoints
 
-### Exchange API ✅
-- `/api/exchange/providers`, `/instruments`, `/ticker`
-- `/orderbook`, `/candles`, `/funding`, `/open-interest`
+### Exchange
+- `/api/exchange/providers` - 4 providers
+- `/api/exchange/instruments` - 607 instruments
+- `/api/exchange/ticker`, `/orderbook`, `/candles`
 
-### Intel API ✅
-| Endpoint | Function |
-|----------|----------|
-| POST /api/intel/sync/coingecko/markets_full | ~15k coins |
-| POST /api/intel/sync/dropstab/browser | Playwright scraper |
-| GET /api/intel/admin/health | System health |
-| POST /api/intel/scheduler/start | Start scheduler |
+### Intel Sync
+- `POST /api/intel/sync/coingecko/markets_full` - 15k coins
+- `POST /api/intel/sync/dropstab/browser` - stealth scraper
+- `GET /api/intel/admin/health` - system health
 
-### Browser Scraper ✅
-- Playwright for bot detection bypass
-- Discovered Dropstab internal APIs
-- Proxy support
+### Scheduler
+- `POST /api/intel/scheduler/start`
+- `POST /api/intel/scheduler/run/{job}`
+- `GET /api/intel/scheduler/status`
 
-### Scheduler ✅
-- Auto-running CoinGecko jobs
-- Browser jobs ready (disabled by default)
+### Proxy Admin
+- `GET /api/intel/admin/proxy/status`
+- `POST /api/intel/admin/proxy/add`
+- `POST /api/intel/admin/proxy/remove`
 
 ## Database Stats
 ```
 intel_projects:   350
 intel_categories: 675
-intel_funding:    0 (pending)
+intel_funding:    0 (pending browser scrape)
 intel_unlocks:    0 (pending)
+```
+
+## Discovered Direct APIs
+```
+✅ api2.dropstab.com/portfolio/api/marketTotal/last - works!
+⚠️ api2.dropstab.com/portfolio/api/markets - needs cookies
+⚠️ api2.dropstab.com/portfolio/api/exchange - needs cookies
 ```
 
 ## Backlog
@@ -95,15 +94,16 @@ intel_unlocks:    0 (pending)
 - [x] Exchange providers (Coinbase, Hyperliquid)
 - [x] CoinGecko full market sync
 - [x] Scheduler with correct jobs
-- [x] Health monitor
-- [x] Browser scraper
+- [x] Stealth browser scraper
+- [x] Proxy failover system
+- [x] Human behaviour simulation
+- [x] Endpoint auto-discovery
 
 ### P1 (Next)
-- [ ] Enable browser jobs for analytics
+- [ ] Full browser scrape for analytics
 - [ ] CryptoRank browser discovery
-- [ ] Full analytics data collection
+- [ ] Direct API cookie replay
 
 ### P2 (Future)
 - [ ] Data deduplication
 - [ ] Redis realtime pipeline
-- [ ] Frontend dashboard
