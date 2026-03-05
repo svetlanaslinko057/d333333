@@ -149,12 +149,27 @@ class HyperliquidAdapter(MarketDataProvider):
         
         ctx = asset_ctxs[asset_idx]
         
+        # Получаем bid/ask из orderbook (первые уровни)
+        bid = None
+        ask = None
+        try:
+            ob_data = await self._post_info("l2Book", coin=coin)
+            levels = ob_data.get("levels", [[], []])
+            bids = levels[0] if len(levels) > 0 else []
+            asks = levels[1] if len(levels) > 1 else []
+            if bids:
+                bid = float(bids[0]["px"])
+            if asks:
+                ask = float(asks[0]["px"])
+        except:
+            pass
+        
         return Ticker(
             ts=self._now_ms(),
             instrument_id=self._make_instrument_id(coin),
             last=float(ctx["markPx"]),
-            bid=None,  # Нужен orderbook
-            ask=None,
+            bid=bid,
+            ask=ask,
             change_24h=float(ctx.get("dayNtlVlm", 0)) / 100 if ctx.get("dayNtlVlm") else None,
             high_24h=None,
             low_24h=None,
