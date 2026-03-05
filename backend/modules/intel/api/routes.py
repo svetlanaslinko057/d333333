@@ -1354,3 +1354,237 @@ async def clear_proxy():
     }
 
 
+# ═══════════════════════════════════════════════════════════════
+# SCRAPER ENGINE
+# ═══════════════════════════════════════════════════════════════
+
+@router.get("/scraper/status")
+async def scraper_status():
+    """Get scraper engine status"""
+    from ..scraper_engine import scraper_runner
+    return scraper_runner.get_status()
+
+
+@router.post("/scraper/discover/{source}")
+async def scraper_discover(
+    source: str,
+    targets: str = Query(None, description="Comma-separated targets (e.g. unlocks,funding)"),
+    headless: bool = Query(True)
+):
+    """
+    Run endpoint discovery for source.
+    
+    Sources: dropstab, cryptorank
+    
+    This opens pages in browser, captures XHR/fetch JSON,
+    saves full request blueprints to registry.
+    """
+    from ..scraper_engine import scraper_runner
+    
+    target_list = targets.split(",") if targets else None
+    
+    if source == "dropstab":
+        result = await scraper_runner.discover_dropstab(targets=target_list, headless=headless)
+    elif source == "cryptorank":
+        result = await scraper_runner.discover_cryptorank(targets=target_list, headless=headless)
+    else:
+        raise HTTPException(status_code=400, detail=f"Unknown source: {source}")
+    
+    return result
+
+
+@router.post("/scraper/sync/{source}/{target}")
+async def scraper_sync(source: str, target: str):
+    """
+    Sync specific target from source.
+    
+    Uses endpoints from registry (discovered via /scraper/discover).
+    Saves raw data to /data/raw/{source}/{target}/
+    """
+    from ..scraper_engine import scraper_runner
+    return await scraper_runner.sync(source, target)
+
+
+@router.post("/scraper/sync/{source}")
+async def scraper_sync_all(source: str):
+    """Sync all targets for source"""
+    from ..scraper_engine import scraper_runner
+    return await scraper_runner.sync_all(source)
+
+
+@router.get("/scraper/registry")
+async def scraper_registry(source: str = None, target: str = None):
+    """Get endpoint registry contents"""
+    from ..scraper_engine import endpoint_registry
+    
+    endpoints = endpoint_registry.get_all(source, target)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "count": len(endpoints),
+        "endpoints": [
+            {
+                "key": e.key,
+                "url": e.url[:100],
+                "method": e.method,
+                "source": e.source,
+                "target": e.target,
+                "response_type": e.response_type,
+                "success_count": e.success_count,
+                "fail_count": e.fail_count,
+                "last_success": e.last_success,
+                "last_error": e.last_error
+            }
+            for e in endpoints
+        ]
+    }
+
+
+@router.get("/scraper/raw")
+async def scraper_raw_list(source: str = None, target: str = None, limit: int = 20):
+    """List raw data files"""
+    from ..scraper_engine import raw_store
+    
+    files = raw_store.list_files(source, target, limit=limit)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "count": len(files),
+        "files": files
+    }
+
+
+@router.get("/scraper/raw/stats")
+async def scraper_raw_stats():
+    """Get raw storage statistics"""
+    from ..scraper_engine import raw_store
+    return raw_store.get_stats()
+
+
+
+# ═══════════════════════════════════════════════════════════════
+# WORKER & QUEUE MANAGEMENT
+# ═══════════════════════════════════════════════════════════════
+
+@router.get("/worker/status")
+async def worker_status():
+    """Get worker status"""
+    from ..scraper_engine import get_worker_status
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        **get_worker_status()
+    }
+
+
+@router.post("/worker/start")
+async def start_worker_endpoint(worker_id: str = Query("worker-1")):
+    """Start the scraper worker"""
+    from ..scraper_engine import start_worker
+    result = await start_worker(worker_id)
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        **result
+    }
+
+
+@router.post("/worker/stop")
+async def stop_worker_endpoint():
+    """Stop the scraper worker"""
+    from ..scraper_engine import stop_worker
+    result = await stop_worker()
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        **result
+    }
+
+
+@router.get("/queue/status")
+async def queue_status():
+    """Get job queue status"""
+    from ..scraper_engine import job_queue
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        **job_queue.get_stats()
+    }
+
+
+@router.get("/queue/jobs")
+async def queue_jobs(status: str = Query("pending", description="pending, processing, completed, failed")):
+    """Get jobs by status"""
+    from ..scraper_engine import job_queue
+    
+    if status == "pending":
+        jobs = job_queue.get_pending_jobs()
+    elif status == "processing":
+        jobs = job_queue.get_processing_jobs()
+    elif status == "completed":
+        jobs = job_queue.get_recent_completed()
+    elif status == "failed":
+        jobs = job_queue.get_recent_failed()
+    else:
+        raise HTTPException(status_code=400, detail="Invalid status")
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "status": status,
+        "count": len(jobs),
+        "jobs": jobs
+    }
+
+
+@router.post("/queue/push/discover")
+async def queue_push_discover(
+    source: str = Query(..., description="dropstab or cryptorank"),
+    targets: str = Query(None, description="Comma-separated targets"),
+    priority: int = Query(5, ge=1, le=10)
+):
+    """Push discovery jobs to queue"""
+    from ..scraper_engine import job_queue
+    
+    target_list = targets.split(",") if targets else None
+    job_ids = job_queue.push_discover(source, target_list, priority)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "ok": True,
+        "source": source,
+        "jobs_pushed": len(job_ids),
+        "job_ids": job_ids
+    }
+
+
+@router.post("/queue/push/sync")
+async def queue_push_sync(
+    source: str = Query(..., description="dropstab or cryptorank"),
+    targets: str = Query(None, description="Comma-separated targets"),
+    priority: int = Query(5, ge=1, le=10)
+):
+    """Push sync jobs to queue"""
+    from ..scraper_engine import job_queue
+    
+    target_list = targets.split(",") if targets else None
+    job_ids = job_queue.push_sync(source, target_list, priority)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "ok": True,
+        "source": source,
+        "jobs_pushed": len(job_ids),
+        "job_ids": job_ids
+    }
+
+
+@router.delete("/queue/clear")
+async def queue_clear(confirm: bool = Query(False)):
+    """Clear pending jobs from queue"""
+    if not confirm:
+        raise HTTPException(status_code=400, detail="Set confirm=true to clear queue")
+    
+    from ..scraper_engine import job_queue
+    job_queue.clear_queue()
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "ok": True,
+        "message": "Queue cleared"
+    }
