@@ -109,6 +109,85 @@ async def sync_dropstab_entity(
     }
 
 
+# ═══════════════════════════════════════════════════════════════
+# COINGECKO SYNC ENDPOINTS
+# ═══════════════════════════════════════════════════════════════
+
+def get_coingecko_sync():
+    """Dependency to get CoinGecko sync service"""
+    from server import db
+    from ..sources.coingecko.sync import CoinGeckoSync
+    return CoinGeckoSync(db)
+
+
+@router.post("/sync/coingecko")
+async def sync_coingecko_all(sync = Depends(get_coingecko_sync)):
+    """
+    Run full CoinGecko sync (global, categories, trending, top coins)
+    """
+    result = await sync.sync_all()
+    return result
+
+
+@router.post("/sync/coingecko/{entity}")
+async def sync_coingecko_entity(
+    entity: str,
+    limit: int = Query(100, ge=1, le=250),
+    page: int = Query(1, ge=1),
+    max_pages: int = Query(10, ge=1, le=100),
+    sync = Depends(get_coingecko_sync)
+):
+    """
+    Sync specific entity from CoinGecko
+    
+    Entities:
+    - global: Global market data (BTC dominance, total mcap)
+    - categories: All categories with market data
+    - trending: Trending coins
+    - top_coins: Top coins by market cap (single page)
+    - markets: Markets with pagination (limit per page)
+    - markets_full: FULL market sync (~15000 coins, slow!)
+    """
+    if entity == 'global':
+        result = await sync.sync_global_market()
+    elif entity == 'categories':
+        result = await sync.sync_categories()
+    elif entity == 'trending':
+        result = await sync.sync_trending()
+    elif entity == 'top_coins':
+        result = await sync.sync_top_coins(limit=limit)
+    elif entity == 'markets':
+        result = await sync.sync_top_coins(limit=limit)
+    elif entity == 'markets_full':
+        # Full market sync - all coins (~15000)
+        result = await sync.sync_markets_full(max_pages=max_pages)
+    else:
+        raise HTTPException(
+            status_code=400, 
+            detail=f"Unknown entity: {entity}. Available: global, categories, trending, top_coins, markets, markets_full"
+        )
+    
+    return {
+        'ts': int(datetime.now(timezone.utc).timestamp() * 1000),
+        'source': 'coingecko',
+        'entity': entity,
+        **result
+    }
+
+
+@router.get("/sync/coingecko/status")
+async def coingecko_status(sync = Depends(get_coingecko_sync)):
+    """Check CoinGecko API pool status"""
+    pool_status = sync.get_pool_status()
+    return {
+        'ts': int(datetime.now(timezone.utc).timestamp() * 1000),
+        'source': 'coingecko',
+        'type': 'api',
+        'ready': True,
+        'pool': pool_status
+    }
+
+
 
 # ═══════════════════════════════════════════════════════════════
 # CRYPTORANK STATUS

@@ -139,6 +139,66 @@ class CoinGeckoSync:
         logger.info(f"[CoinGecko] Top coins: {len(data)} total, {saved} changed")
         return {'total': len(data), 'changed': saved}
     
+    async def sync_markets_full(self, max_pages: int = 60) -> Dict[str, Any]:
+        """
+        Full market sync with pagination.
+        CoinGecko /coins/markets allows 250 coins per page.
+        60 pages = ~15000 coins (full market coverage)
+        
+        Rate limiting: ~30 req/min for free tier, use pool rotation
+        """
+        import asyncio
+        
+        logger.info(f"[CoinGecko] Starting FULL market sync (up to {max_pages} pages, ~{max_pages * 250} coins)...")
+        
+        total = 0
+        changed = 0
+        empty_pages = 0
+        
+        for page in range(1, max_pages + 1):
+            try:
+                data = await self.client.get_markets(per_page=250, page=page)
+                
+                if not data or len(data) == 0:
+                    empty_pages += 1
+                    if empty_pages >= 3:
+                        logger.info(f"[CoinGecko] No more data at page {page}, stopping")
+                        break
+                    continue
+                
+                empty_pages = 0  # Reset counter on success
+                
+                for coin in data:
+                    doc = self._parse_coin_market(coin)
+                    result = await upsert_with_diff(self.db.intel_projects, doc)
+                    total += 1
+                    if result['changed']:
+                        changed += 1
+                
+                # Log progress every 10 pages
+                if page % 10 == 0:
+                    logger.info(f"[CoinGecko] Progress: page {page}, {total} coins synced, {changed} changed")
+                
+                # Rate limit: wait between pages (CoinGecko free tier ~30 req/min)
+                await asyncio.sleep(2.5)
+                
+            except Exception as e:
+                logger.error(f"[CoinGecko] Page {page} error: {e}")
+                # On rate limit, wait longer
+                if '429' in str(e):
+                    logger.warning("[CoinGecko] Rate limited, waiting 60s...")
+                    await asyncio.sleep(60)
+                continue
+        
+        logger.info(f"[CoinGecko] Full market sync complete: {total} total, {changed} changed")
+        return {
+            'source': 'coingecko',
+            'entity': 'markets_full',
+            'total': total,
+            'changed': changed,
+            'pages': page
+        }
+    
     async def sync_coin(self, coin_id: str) -> Dict[str, Any]:
         """Sync single coin with full details"""
         logger.info(f"[CoinGecko] Syncing coin: {coin_id}")

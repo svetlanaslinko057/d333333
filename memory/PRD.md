@@ -13,73 +13,81 @@
 - **Hyperliquid** - Perp DEX ✅
 
 ### Layer 2: Intel (Crypto Intelligence)
-- **Dropstab SSR Scraper** - coins, unlocks, categories, investors
-- **CoinGecko API** - markets, categories, trending
-- **CryptoRank Ingest** - VC data, funding rounds
+| Source | Role | Status |
+|--------|------|--------|
+| Dropstab | top100 coins, unlock, funding metadata | ⚠️ SSR limited |
+| CoinGecko | **Full market (~15k coins)**, categories | ✅ Working |
+| CryptoRank | VC data, funding rounds | Ready (ingest) |
 
-## Core Requirements
+## Data Source Roles (Final Architecture)
+```
+MARKET DATA (prices)
+├ Binance (geo-blocked)
+├ Bybit (geo-blocked)
+├ Coinbase ✅
+└ Hyperliquid ✅
 
-### Exchange API Endpoints
-| Endpoint | Status |
-|----------|--------|
-| /api/exchange/providers | ✅ |
-| /api/exchange/instruments | ✅ |
-| /api/exchange/ticker | ✅ |
-| /api/exchange/orderbook | ✅ |
-| /api/exchange/candles | ✅ |
-| /api/exchange/funding | ✅ |
-| /api/exchange/open-interest | ✅ |
-
-### Intel API Endpoints
-| Endpoint | Status |
-|----------|--------|
-| /api/intel/health | ✅ |
-| /api/intel/sync/dropstab | ✅ |
-| /api/intel/projects | ✅ |
+INTEL DATA
+├ CoinGecko → FULL MARKET + categories
+├ Dropstab → top100 + unlock/vesting (SSR limited)
+└ CryptoRank → VC funding (manual ingest)
+```
 
 ## What's Been Implemented (2026-03-05)
 
-### Market Data Module
-- 4 exchange providers registered
-- Provider registry with capabilities
-- Instrument registry (607 instruments, 484 assets)
-- Ticker, orderbook, candles, funding, OI endpoints
-- Provider health checks
+### Exchange API ✅
+- 4 providers: Binance, Bybit, Coinbase, Hyperliquid
+- Endpoints: providers, instruments, ticker, orderbook, candles, funding, OI
+- Working: Coinbase (378 spot), Hyperliquid (229 perp)
 
-### Intel Module
-- Dropstab SSR scraper (100 coins per sync)
-- CoinGecko client with load balancing pool
-- MongoDB integration for intel data storage
+### Intel API ✅
+- **CoinGecko sync with full pagination** - NEW
+- Dropstab SSR scraper (100 coins)
+- MongoDB storage for intel data
+
+### New CoinGecko Endpoints
+| Endpoint | Function |
+|----------|----------|
+| POST /api/intel/sync/coingecko | Full sync (all entities) |
+| POST /api/intel/sync/coingecko/global | Global market data |
+| POST /api/intel/sync/coingecko/categories | 675 categories |
+| POST /api/intel/sync/coingecko/trending | Trending coins |
+| POST /api/intel/sync/coingecko/top_coins?limit=100 | Top 100 |
+| POST /api/intel/sync/coingecko/markets_full?max_pages=60 | ~15k coins |
+| GET /api/intel/sync/coingecko/status | Pool status |
+
+## Database Stats
+- CoinGecko projects: 350+ (after 2-page test)
+- Dropstab projects: 100
+- Categories: 675
+- Total intel_projects: 450+
 
 ## Known Limitations
-
-### Dropstab Pagination
-- **SSR pagination NOT working** - same data on page 1,2,3
-- Client-side JavaScript pagination used
-- Solution: browser crawler OR CoinGecko for full market
-
-### Geo Restrictions
-- Binance: 451 error (geo-blocked)
-- Bybit: 403 error (geo-blocked)
-- Working providers: Coinbase, Hyperliquid
+- Dropstab SSR returns same data on all pages (client-side pagination)
+- Binance/Bybit 403/451 (geo-restrictions)
+- CoinGecko rate limit: 30 req/min free tier
 
 ## Backlog
 
-### P0 (Critical)
-- [ ] Add CoinGecko /coins/markets sync endpoint
-- [ ] Fix Dropstab full market scraping
+### P0 (Done)
+- [x] Exchange providers (Coinbase, Hyperliquid working)
+- [x] CoinGecko markets_full sync with pagination
 
-### P1 (High)
+### P1 (Next)
+- [ ] Full market sync cron (daily ~15k coins)
 - [ ] Redis realtime pipeline
 - [ ] ClickHouse historical storage
-- [ ] WebSocket streaming
 
-### P2 (Medium)
-- [ ] Browser crawler for Dropstab
+### P2 (Future)
 - [ ] VPN/proxy for Binance/Bybit
+- [ ] Playwright crawler for Dropstab unlocks
 - [ ] Frontend dashboard
 
-## Next Tasks
-1. Implement CoinGecko markets pagination sync
-2. Test full market coverage (~15k coins)
-3. Schedule periodic syncs (cron)
+## Sync Schedule (Recommended)
+```
+CoinGecko markets_full  → daily (15k coins)
+CoinGecko top_coins     → every 10 min (top 100)
+CoinGecko categories    → daily
+CoinGecko trending      → every 5 min
+Dropstab markets        → every 10 min (top 100)
+```
