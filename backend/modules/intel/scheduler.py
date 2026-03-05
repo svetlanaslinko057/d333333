@@ -71,7 +71,9 @@ class IntelScheduler:
         
         # Job definitions
         self.jobs: Dict[str, SyncJob] = {
-            # CoinGecko - Market data (PRIMARY)
+            # ═══════════════════════════════════════════════════════════════
+            # MARKET DATA - CoinGecko ONLY (primary source for prices/mcap)
+            # ═══════════════════════════════════════════════════════════════
             "coingecko_markets_full": SyncJob(
                 name="CoinGecko Full Market",
                 source="coingecko",
@@ -101,37 +103,60 @@ class IntelScheduler:
                 priority=3
             ),
             
-            # Dropstab - Analytics (REDUNDANCY SOURCE 1)
-            "dropstab_markets": SyncJob(
-                name="Dropstab Markets",
-                source="dropstab",
-                entity="markets",
-                interval_minutes=10,
-                priority=1
+            # ═══════════════════════════════════════════════════════════════
+            # ANALYTICS - CryptoRank (source 1 for redundancy)
+            # ═══════════════════════════════════════════════════════════════
+            "cryptorank_fundraising": SyncJob(
+                name="CryptoRank Fundraising",
+                source="cryptorank_browser",
+                entity="fundraising",
+                interval_minutes=60,  # 1h
+                priority=4,
+                enabled=False  # Requires browser
+            ),
+            "cryptorank_unlocks": SyncJob(
+                name="CryptoRank Unlocks",
+                source="cryptorank_browser",
+                entity="unlocks",
+                interval_minutes=60,  # 1h
+                priority=5,
+                enabled=False  # Requires browser
+            ),
+            "cryptorank_investors": SyncJob(
+                name="CryptoRank Investors",
+                source="cryptorank_browser",
+                entity="investors",
+                interval_minutes=360,  # 6h
+                priority=6,
+                enabled=False  # Requires browser
+            ),
+            
+            # ═══════════════════════════════════════════════════════════════
+            # ANALYTICS - Dropstab (source 2 for redundancy)
+            # ═══════════════════════════════════════════════════════════════
+            "dropstab_fundraising": SyncJob(
+                name="Dropstab Fundraising",
+                source="dropstab_browser",
+                entity="funding",
+                interval_minutes=60,  # 1h
+                priority=4,
+                enabled=False  # Requires browser
             ),
             "dropstab_unlocks": SyncJob(
                 name="Dropstab Unlocks",
-                source="dropstab_v2",
+                source="dropstab_browser",
                 entity="unlocks",
-                interval_minutes=60,
-                priority=2,
-                enabled=False  # Requires browser (disabled by default)
-            ),
-            "dropstab_funding": SyncJob(
-                name="Dropstab Funding",
-                source="dropstab_v2",
-                entity="funding",
-                interval_minutes=120,
-                priority=3,
-                enabled=False  # Requires browser (disabled by default)
+                interval_minutes=60,  # 1h
+                priority=5,
+                enabled=False  # Requires browser  
             ),
             "dropstab_investors": SyncJob(
                 name="Dropstab Investors",
-                source="dropstab_v2",
+                source="dropstab_browser",
                 entity="investors",
-                interval_minutes=1440,
-                priority=4,
-                enabled=False  # Requires browser (disabled by default)
+                interval_minutes=360,  # 6h
+                priority=6,
+                enabled=False  # Requires browser
             ),
         }
     
@@ -140,12 +165,12 @@ class IntelScheduler:
         if source == "coingecko":
             from modules.intel.sources.coingecko.sync import CoinGeckoSync
             return CoinGeckoSync(self.db)
-        elif source == "dropstab":
-            from modules.intel.dropstab.sync import DropstabSync
-            return DropstabSync(self.db)
-        elif source == "dropstab_v2":
-            from modules.intel.dropstab.scraper_v2 import dropstab_scraper_v2
-            return dropstab_scraper_v2
+        elif source == "dropstab_browser":
+            from modules.intel.dropstab.browser_scraper import dropstab_browser
+            return dropstab_browser
+        elif source == "cryptorank_browser":
+            from modules.intel.sources.cryptorank.discovery import cryptorank_sync
+            return cryptorank_sync
         else:
             raise ValueError(f"Unknown source: {source}")
     
@@ -169,25 +194,15 @@ class IntelScheduler:
                     result = await service.sync_categories()
                 else:
                     result = {"error": f"Unknown entity: {job.entity}"}
-                    
-            elif job.source == "dropstab":
-                if job.entity == "markets":
-                    result = await service.sync_markets(limit=100, max_pages=1)
-                else:
-                    result = {"error": f"Unknown entity: {job.entity}"}
-                    
-            elif job.source == "dropstab_v2":
-                if job.entity == "unlocks":
-                    data = await service.scrape_unlocks()
-                    result = {"count": len(data), "data": data}
-                elif job.entity == "funding":
-                    data = await service.scrape_funding()
-                    result = {"count": len(data), "data": data}
-                elif job.entity == "investors":
-                    data = await service.scrape_investors()
-                    result = {"count": len(data), "data": data}
-                else:
-                    result = {"error": f"Unknown entity: {job.entity}"}
+            
+            elif job.source == "dropstab_browser":
+                # Browser scraper for analytics
+                result = await service.scrape_single(job.entity, headless=True)
+                
+            elif job.source == "cryptorank_browser":
+                # Browser sync for analytics
+                result = await service.sync_by_kind(job.entity)
+                
             else:
                 result = {"error": f"Unknown source: {job.source}"}
             
