@@ -46,6 +46,58 @@ async def sync_dropstab_all(sync = Depends(get_dropstab_sync)):
     return result
 
 
+@router.post("/sync/dropstab/v2")
+async def sync_dropstab_v2():
+    """
+    Run production Dropstab scraper v2.
+    Dynamic dataset finder - resilient to structure changes.
+    
+    Returns: coins, unlocks, funding, investors
+    """
+    from ..dropstab.scraper_v2 import dropstab_scraper_v2
+    result = await dropstab_scraper_v2.scrape_all()
+    # Remove raw data from response to keep it small
+    summary = {
+        "ts": result["ts"],
+        "source": result["source"],
+        "elapsed_sec": result["elapsed_sec"],
+        "summary": result["summary"]
+    }
+    return summary
+
+
+@router.post("/sync/dropstab/v2/{entity}")
+async def sync_dropstab_v2_entity(entity: str):
+    """
+    Scrape specific entity using v2 scraper.
+    
+    Entities: coins, unlocks, funding, investors
+    """
+    from ..dropstab.scraper_v2 import dropstab_scraper_v2
+    
+    if entity == "coins":
+        data = await dropstab_scraper_v2.scrape_coins()
+    elif entity == "unlocks":
+        data = await dropstab_scraper_v2.scrape_unlocks()
+    elif entity == "funding":
+        data = await dropstab_scraper_v2.scrape_funding()
+    elif entity == "investors":
+        data = await dropstab_scraper_v2.scrape_investors()
+    else:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown entity: {entity}. Available: coins, unlocks, funding, investors"
+        )
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "source": "dropstab_v2",
+        "entity": entity,
+        "count": len(data),
+        "data": data[:10] if data else []  # Sample only
+    }
+
+
 @router.post("/sync/dropstab/{entity}")
 async def sync_dropstab_entity(
     entity: str,

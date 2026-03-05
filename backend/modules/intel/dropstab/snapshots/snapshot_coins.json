@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Pi Network",
+    "slug": "pi-network",
+    "symbol": "PI",
+    "rank": null,
+    "change": null,
+    "marketCap": null,
+    "image": "https://static.images.dropstab.com/images/pi-network.jpg"
+  },
+  {
+    "name": "Sky",
+    "slug": "sky-money",
+    "symbol": "SKY",
+    "rank": null,
+    "change": null,
+    "marketCap": null,
+    "image": "https://static.images.dropstab.com/images/sky-money.jpg"
+  }
+]
