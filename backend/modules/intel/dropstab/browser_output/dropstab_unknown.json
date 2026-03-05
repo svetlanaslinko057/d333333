@@ -1,0 +1,2089 @@
+[
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/markets",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:08.907792+00:00",
+    "data": {
+      "btcPriceUsd": "71975.77",
+      "btcChange24h": "3.7122719708148955",
+      "ethPriceUsd": "2101.6",
+      "ethChange24h": "4.34603143027652",
+      "btcDominance": "58.730602",
+      "globalInitialType": "USD",
+      "marketTotal": {
+        "marketCap": {
+          "USD": 2447376756703.0,
+          "BTC": 34002786.72535215,
+          "ETH": 1164530242.055101,
+          "BNB": 3757045112.4529867,
+          "SOL": 2447376756703.0
+        },
+        "volume24h": {
+          "USD": 275157282024.0,
+          "BTC": 3822915.4342357153,
+          "ETH": 130927522.85116103,
+          "BNB": 422402606.69010305,
+          "SOL": 275157282024.0
+        },
+        "marketCapChange24h": {
+          "USD": 2.7517282819291777,
+          "BTC": 2.853879919652221,
+          "ETH": 2.871319257937628,
+          "BNB": 2.7908998318119207,
+          "SOL": 2.7517282819291777
+        },
+        "volumeChange24h": {
+          "USD": 58.816413614538554,
+          "BTC": 60.999838851389626,
+          "ETH": 61.37259343638784,
+          "BNB": 59.65368017714069,
+          "SOL": 58.816413614538554
+        },
+        "btcDominance": 58.730602
+      },
+      "markets": {
+        "content": [
+          {
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "image": "https://static.images.dropstab.com/images/bitcoin.svg",
+            "price": {
+              "USD": "71975.77",
+              "BTC": "1.0",
+              "ETH": "34.28054258",
+              "BNB": "110.57756419",
+              "SOL": "799.73077778",
+              "EUR": "62011.40532409",
+              "GBP": "53951.22487147",
+              "CAD": "98215.27604884",
+              "RUB": "5605186.37072824"
+            },
+            "currencyId": 1
+          },
+          {
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "image": "https://static.images.dropstab.com/images/ethereum.svg",
+            "price": {
+              "USD": "2101.6",
+              "BTC": "0.0292368",
+              "ETH": "1.0",
+              "BNB": "3.22872279",
+              "SOL": "23.35111111",
+              "EUR": "1810.653355",
+              "GBP": "1575.30644257",
+              "CAD": "2867.75986063",
+              "RUB": "163664.2397396"
+            },
+            "currencyId": 2
+          },
+          {
+            "name": "BNB",
+            "symbol": "BNB",
+            "image": "https://static.images.dropstab.com/images/binancecoin.png",
+            "price": {
+              "USD": "651.41",
+              "BTC": "0.00906221",
+              "ETH": "0.31025286",
+              "BNB": "1.0",
+              "SOL": "7.23788889",
+              "EUR": "561.22844594",
+              "GBP": "488.28053376",
+              "CAD": "888.88820461",
+              "RUB": "50729.21698172"
+            },
+            "currencyId": 36
+          },
+          {
+            "name": "Dogecoin",
+            "symbol": "DOGE",
+            "image": "https://static.images.dropstab.com/images/dogecoin.png",
+            "price": {
+              "USD": "0.09576",
+              "BTC": "1.33E-6",
+              "ETH": "4.561E-5",
+              "BNB": "1.4712E-4",
+              "SOL": "0.001064",
+              "EUR": "0.08250293",
+              "GBP": "0.07177928",
+              "CAD": "0.13067029",
+              "RUB": "7.4574075"
+            },
+            "currencyId": 34
+          },
+          {
+            "name": "Cardano",
+            "symbol": "ADA",
+            "image": "https://static.images.dropstab.com/images/cardano.svg",
+            "price": {
+              "USD": "0.2719",
+              "BTC": "3.78E-6",
+              "ETH": "1.295E-4",
+              "BNB": "4.1772E-4",
+              "SOL": "0.00302111",
+              "EUR": "0.23425802",
+              "GBP": "0.20380939",
+              "CAD": "0.37102394",
+              "RUB": "21.17448933"
+            },
+            "currencyId": 7
+          }
+        ],
+        "pageable": {
+          "pageNumber": 0,
+          "pageSize": 100000,
+          "offset": 0,
+          "paged": true,
+          "unpaged": false,
+          "sort": {
+            "sorted": false,
+            "unsorted": true
+          }
+        },
+        "totalElements": 5,
+        "totalPages": 1,
+        "size": 100000,
+        "number": 0,
+        "numberOfElements": 5,
+        "first": true,
+        "last": true,
+        "empty": false,
+        "hasContent": true,
+        "hasNext": false,
+        "hasPrevious": false
+      }
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://mc.yandex.com/watch/95700251/1?wmode=7&page-url=https%3A%2F%2Fdropstab.com%2Fcoins&charset=utf-8&uah=chu%0A%22Not%3AA-Brand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22145%22%2C%22Chromium%22%3Bv%3D%22145%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A145.0.7632.0%0Achl%0A%22Not%3AA-Brand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22145.0.7632.0%22%2C%22Chromium%22%3Bv%3D%22145.0.7632.0%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0&browser-info=pv%3A1%3Avf%3A6g20vg83qczf8he8e6rm6azi046aj%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%3Av%3A2400%3Acn%3A1%3Adp%3A0%3Als%3A79578221292%3Ahid%3A396294763%3Az%3A-300%3Ai%3A20260305031909%3Aet%3A1772698750%3Ac%3A1%3Arn%3A777203627%3Arqn%3A1%3Au%3A1772698750790569427%3Aw%3A1920x1080%3As%3A1920x1080x24%3Ask%3A1%3Afp%3A684%3Awv%3A2%3Ads%3A20%2C69%2C350%2C68%2C0%2C0%2C%2C70%2C0%2C1180%2C1180%2C0%2C579%3Aco%3A0%3Antf%3A1%3Ans%3A1772698747450%3Agi%3AR0ExLjEuMTcxMjk0NzY4NS4xNzcyNjk4NzQ4%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1772698750%3At%3A&t=gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2883952132%29ti%281%29&redirnss=1",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:10.757147+00:00",
+    "data": {
+      "settings": {
+        "auto_goals": 1,
+        "button_goals": 0,
+        "c_recp": "1.00000",
+        "form_goals": 1,
+        "pcs": "1",
+        "webvisor": {
+          "arch_type": "none",
+          "date": "2026-03-04 23:24:40",
+          "forms": 1,
+          "recp": "0.70870"
+        },
+        "sbp": {
+          "a": "25h36OXT+9ndgvIEhadRRh6y1A3wlsPS4aZsXYR4wy5P//qxETCpHuJ/9ChDBuET",
+          "b": "GHH6PXzPHBXkAXfQzaMp6uwYBuXb3hGwmpo42S7wzMw/jmEi2Tw+DcnZWdSh6iHe"
+        },
+        "eu": 2,
+        "nss": 1,
+        "hittoken": "1772698750_fa051e3e06b3fde1a6091a5d9e4ac279fca4b75778841a2df2fc81bdeee910d1",
+        "wstoken": "10961.5wY3Og3qEWWORAr4B9PaemCDI89PvvFBHSDF0OpoCwdALkEFCdUuPqWQ3lal6gAu-ZpAObI-sTFKSvpswAoZ9m-sPP70hZPjPlddjXGHl38,.j2TqeCxeSWkLIfcINOeSFeQGYmg,",
+        "hidv2": "1004418021517951229",
+        "ymclid": "1004418021517951229"
+      },
+      "userData": {}
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/exchange",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:10.792170+00:00",
+    "data": {
+      "content": [
+        {
+          "id": 2292,
+          "slug": "binance-futures",
+          "name": "Binance Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance_futures.svg",
+          "rankReported": 1,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2295,
+          "slug": "okex-swap",
+          "name": "OKX Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/okex_swap.svg",
+          "rankReported": 3,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2319,
+          "slug": "poloniex-futures",
+          "name": "Poloniex Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/poloniex_futures.png",
+          "rankReported": 4,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2304,
+          "slug": "gate-futures",
+          "name": "Gate.io Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/gate_futures.svg",
+          "rankReported": 5,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2296,
+          "slug": "bybit",
+          "name": "Bybit (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bybit.svg",
+          "rankReported": 6,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2,
+          "slug": "binance",
+          "name": "Binance",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance.svg",
+          "rankReported": 8,
+          "type": "SPOT"
+        },
+        {
+          "id": 2299,
+          "slug": "mxc-futures",
+          "name": "MEXC Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/mxc_futures.svg",
+          "rankReported": 9,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2877,
+          "slug": "hyperliquid",
+          "name": "Hyperliquid (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/hyperliquid.png",
+          "rankReported": 10,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2574,
+          "slug": "bingx-futures",
+          "name": "BingX (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bingx_futures.png",
+          "rankReported": 12,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 1994,
+          "slug": "mxc",
+          "name": "MEXC",
+          "image": "https://static.images.dropstab.com/images/exchanges/mxc.svg",
+          "rankReported": 16,
+          "type": "SPOT"
+        },
+        {
+          "id": 5,
+          "slug": "lbank",
+          "name": "LBank",
+          "image": "https://static.images.dropstab.com/images/exchanges/lbank.png",
+          "rankReported": 17,
+          "type": "SPOT"
+        },
+        {
+          "id": 30,
+          "slug": "bitmart",
+          "name": "BitMart",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmart.png",
+          "rankReported": 18,
+          "type": "SPOT"
+        },
+        {
+          "id": 2293,
+          "slug": "huobi-dm",
+          "name": "HTX Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi_dm.png",
+          "rankReported": 19,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 14,
+          "slug": "gate",
+          "name": "Gate",
+          "image": "https://static.images.dropstab.com/images/exchanges/gate.svg",
+          "rankReported": 21,
+          "type": "SPOT"
+        },
+        {
+          "id": 10,
+          "slug": "gdax",
+          "name": "Coinbase",
+          "image": "https://static.images.dropstab.com/images/exchanges/gdax.svg",
+          "rankReported": 22,
+          "type": "SPOT"
+        },
+        {
+          "id": 18,
+          "slug": "kucoin",
+          "name": "KuCoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/kucoin.svg",
+          "rankReported": 23,
+          "type": "SPOT"
+        },
+        {
+          "id": 2358,
+          "slug": "bybit-spot",
+          "name": "Bybit",
+          "image": "https://static.images.dropstab.com/images/exchanges/bybit_spot.svg",
+          "rankReported": 24,
+          "type": "SPOT"
+        },
+        {
+          "id": 1,
+          "slug": "okex",
+          "name": "OKX",
+          "image": "https://static.images.dropstab.com/images/exchanges/okex.svg",
+          "rankReported": 25,
+          "type": "SPOT"
+        },
+        {
+          "id": 2216,
+          "slug": "crypto-com",
+          "name": "Crypto.com Exchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/crypto_com.png",
+          "rankReported": 27,
+          "type": "SPOT"
+        },
+        {
+          "id": 7,
+          "slug": "upbit",
+          "name": "Upbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/upbit.png",
+          "rankReported": 28,
+          "type": "SPOT"
+        },
+        {
+          "id": 13,
+          "slug": "kraken",
+          "name": "Kraken",
+          "image": "https://static.images.dropstab.com/images/exchanges/kraken.png",
+          "rankReported": 29,
+          "type": "SPOT"
+        },
+        {
+          "id": 1988,
+          "slug": "whitebit",
+          "name": "WhiteBIT",
+          "image": "https://static.images.dropstab.com/images/exchanges/whitebit.png",
+          "rankReported": 30,
+          "type": "SPOT"
+        },
+        {
+          "id": 3216,
+          "slug": "bitunix-futures",
+          "name": "Bitunix Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitunix_futures.png",
+          "rankReported": 31,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2309,
+          "slug": "kraken-futures",
+          "name": "Kraken Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/kraken_futures.png",
+          "rankReported": 32,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2478,
+          "slug": "bingx",
+          "name": "BingX",
+          "image": "https://static.images.dropstab.com/images/exchanges/bingx.png",
+          "rankReported": 34,
+          "type": "SPOT"
+        },
+        {
+          "id": 2181,
+          "slug": "bitget",
+          "name": "Bitget",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitget.svg",
+          "rankReported": 35,
+          "type": "SPOT"
+        },
+        {
+          "id": 16,
+          "slug": "poloniex",
+          "name": "Poloniex",
+          "image": "https://static.images.dropstab.com/images/exchanges/poloniex.png",
+          "rankReported": 36,
+          "type": "SPOT"
+        },
+        {
+          "id": 3,
+          "slug": "huobi",
+          "name": "HTX",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi.png",
+          "rankReported": 38,
+          "type": "SPOT"
+        },
+        {
+          "id": 234,
+          "slug": "bitmax",
+          "name": "AscendEX (BitMax)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmax.png",
+          "rankReported": 39,
+          "type": "SPOT"
+        },
+        {
+          "id": 2111,
+          "slug": "uniswap",
+          "name": "Uniswap (v3)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap.png",
+          "rankReported": 43,
+          "type": "DEX"
+        },
+        {
+          "id": 159,
+          "slug": "bitmex",
+          "name": "BitMEX (Derivative)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmex.png",
+          "rankReported": 44,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 4,
+          "slug": "bitfinex",
+          "name": "Bitfinex",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitfinex.png",
+          "rankReported": 46,
+          "type": "SPOT"
+        },
+        {
+          "id": 2851,
+          "slug": "bitunix",
+          "name": "Bitunix",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitunix.png",
+          "rankReported": 47,
+          "type": "SPOT"
+        },
+        {
+          "id": 6,
+          "slug": "bithumb",
+          "name": "Bithumb",
+          "image": "https://static.images.dropstab.com/images/exchanges/bithumb.png",
+          "rankReported": 48,
+          "type": "SPOT"
+        },
+        {
+          "id": 31,
+          "slug": "bitstamp",
+          "name": "Bitstamp by Robinhood",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitstamp.png",
+          "rankReported": 51,
+          "type": "SPOT"
+        },
+        {
+          "id": 2477,
+          "slug": "jupiter",
+          "name": "Jupiter",
+          "image": "https://static.images.dropstab.com/images/exchanges/jupiter.svg",
+          "rankReported": 54,
+          "type": "SPOT"
+        },
+        {
+          "id": 2579,
+          "slug": "uniswap-v3-arbitrum",
+          "name": "Uniswap V3 (Arbitrum One)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v3_arbitrum.png",
+          "rankReported": 58,
+          "type": "DEX"
+        },
+        {
+          "id": 2354,
+          "slug": "orca",
+          "name": "Orca",
+          "image": "https://static.images.dropstab.com/images/exchanges/orca.png",
+          "rankReported": 59,
+          "type": "DEX"
+        },
+        {
+          "id": 2850,
+          "slug": "bydfi",
+          "name": "BYDFi",
+          "image": "https://static.images.dropstab.com/images/exchanges/bydfi.png",
+          "rankReported": 60,
+          "type": "SPOT"
+        },
+        {
+          "id": 115,
+          "slug": "btc-alpha",
+          "name": "ALP.COM",
+          "image": "https://static.images.dropstab.com/images/exchanges/btc_alpha.jpg",
+          "rankReported": 64,
+          "type": "SPOT"
+        },
+        {
+          "id": 2192,
+          "slug": "one-inch",
+          "name": "1inch",
+          "image": "https://static.images.dropstab.com/images/exchanges/one_inch.png",
+          "rankReported": 68,
+          "type": "SPOT"
+        },
+        {
+          "id": 4407,
+          "slug": "meteora",
+          "name": "Meteora",
+          "image": "https://static.images.dropstab.com/images/exchanges/meteora.jpeg",
+          "rankReported": 70,
+          "type": "DEX"
+        },
+        {
+          "id": 4480,
+          "slug": "hyperliquid-spot",
+          "name": "Hyperliquid",
+          "image": "https://static.images.dropstab.com/images/exchanges/hyperliquid-spot.png",
+          "rankReported": 71,
+          "type": "SPOT"
+        },
+        {
+          "id": 2871,
+          "slug": "uniswap-v3-base",
+          "name": "Uniswap V3 (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap-v3-base.png",
+          "rankReported": 72,
+          "type": "DEX"
+        },
+        {
+          "id": 17,
+          "slug": "coinone",
+          "name": "Coinone",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinone.png",
+          "rankReported": 73,
+          "type": "SPOT"
+        },
+        {
+          "id": 2082,
+          "slug": "kumex",
+          "name": "KuCoin Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/kumex.svg",
+          "rankReported": 78,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2298,
+          "slug": "bitfinex-futures",
+          "name": "Bitfinex Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitfinex_futures.png",
+          "rankReported": 79,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 11,
+          "slug": "hitbtc",
+          "name": "HitBTC",
+          "image": "https://static.images.dropstab.com/images/exchanges/hitbtc.png",
+          "rankReported": 81,
+          "type": "SPOT"
+        },
+        {
+          "id": 2084,
+          "slug": "bitcoin-com",
+          "name": "FMFW.io",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitcoin_com.png",
+          "rankReported": 82,
+          "type": "SPOT"
+        },
+        {
+          "id": 2210,
+          "slug": "changelly",
+          "name": "Changelly PRO",
+          "image": "https://static.images.dropstab.com/images/exchanges/changelly.png",
+          "rankReported": 83,
+          "type": "SPOT"
+        },
+        {
+          "id": 3323,
+          "slug": "raydium-clmm",
+          "name": "Raydium (CLMM)",
+          "image": "https://static.images.dropstab.com/images/exchanges/raydium-clmm.png",
+          "rankReported": 85,
+          "type": "DEX"
+        },
+        {
+          "id": 9,
+          "slug": "bit-z",
+          "name": "BitZ",
+          "image": "https://static.images.dropstab.com/images/exchanges/bit_z.png",
+          "rankReported": 89,
+          "type": "SPOT"
+        },
+        {
+          "id": 186,
+          "slug": "exmo",
+          "name": "EXMO",
+          "image": "https://static.images.dropstab.com/images/exchanges/exmo.png",
+          "rankReported": 92,
+          "type": "SPOT"
+        },
+        {
+          "id": 19,
+          "slug": "gemini",
+          "name": "Gemini",
+          "image": "https://static.images.dropstab.com/images/exchanges/gemini.png",
+          "rankReported": 93,
+          "type": "SPOT"
+        },
+        {
+          "id": 4509,
+          "slug": "traderjoe-v2-2-avalanche",
+          "name": "LFJ V2.2 (Avalanche)",
+          "image": "https://static.images.dropstab.com/images/exchanges/traderjoe-v2-2-avalanche.png",
+          "rankReported": 95,
+          "type": "DEX"
+        },
+        {
+          "id": 195,
+          "slug": "cex",
+          "name": "CEX.IO",
+          "image": "https://static.images.dropstab.com/images/exchanges/cex.svg",
+          "rankReported": 96,
+          "type": "SPOT"
+        },
+        {
+          "id": 2329,
+          "slug": "delta-futures",
+          "name": "Delta Exchange Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/delta_futures.png",
+          "rankReported": 97,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2799,
+          "slug": "cetus",
+          "name": "Cetus",
+          "image": "https://static.images.dropstab.com/images/exchanges/cetus.png",
+          "rankReported": 98,
+          "type": "DEX"
+        },
+        {
+          "id": 2410,
+          "slug": "raydium2",
+          "name": "Raydium",
+          "image": "https://static.images.dropstab.com/images/exchanges/raydium2.png",
+          "rankReported": 99,
+          "type": "DEX"
+        },
+        {
+          "id": 2311,
+          "slug": "perpetual-protocol",
+          "name": "Perpetual Protocol",
+          "image": "https://static.images.dropstab.com/images/exchanges/perpetual_protocol.png",
+          "rankReported": 102,
+          "type": "DEX"
+        },
+        {
+          "id": 2246,
+          "slug": "quickswap",
+          "name": "Quickswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/quickswap.png",
+          "rankReported": 103,
+          "type": "DEX"
+        },
+        {
+          "id": 4781,
+          "slug": "pumpswap",
+          "name": "PumpSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/pumpswap.jpg",
+          "rankReported": 104,
+          "type": "SPOT"
+        },
+        {
+          "id": 2215,
+          "slug": "dodo",
+          "name": "DODO (Ethereum)",
+          "image": "https://static.images.dropstab.com/images/exchanges/dodo.png",
+          "rankReported": 105,
+          "type": "SPOT"
+        },
+        {
+          "id": 2350,
+          "slug": "pancakeswap-new",
+          "name": "PancakeSwap (v2)",
+          "image": "https://static.images.dropstab.com/images/exchanges/pancakeswap_new.png",
+          "rankReported": 106,
+          "type": "DEX"
+        },
+        {
+          "id": 2171,
+          "slug": "hoo",
+          "name": "Hoo.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/hoo.png",
+          "rankReported": 107,
+          "type": "SPOT"
+        },
+        {
+          "id": 2010,
+          "slug": "binance-us",
+          "name": "Binance US",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance_us.png",
+          "rankReported": 111,
+          "type": "SPOT"
+        },
+        {
+          "id": 165,
+          "slug": "bitso",
+          "name": "Bitso",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitso.png",
+          "rankReported": 112,
+          "type": "SPOT"
+        },
+        {
+          "id": 2643,
+          "slug": "uniswap-v3-polygon-pos",
+          "name": "Uniswap V3 (Polygon)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v3_polygon_pos.png",
+          "rankReported": 113,
+          "type": "DEX"
+        },
+        {
+          "id": 2166,
+          "slug": "tokenlon",
+          "name": "Tokenlon",
+          "image": "https://static.images.dropstab.com/images/exchanges/tokenlon.png",
+          "rankReported": 114,
+          "type": "DEX"
+        },
+        {
+          "id": 2278,
+          "slug": "uniswap-v2",
+          "name": "Uniswap V2 (Ethereum)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v2.png",
+          "rankReported": 115,
+          "type": "DEX"
+        },
+        {
+          "id": 116,
+          "slug": "luno",
+          "name": "Luno",
+          "image": "https://static.images.dropstab.com/images/exchanges/luno.png",
+          "rankReported": 116,
+          "type": "SPOT"
+        },
+        {
+          "id": 2271,
+          "slug": "pancakeswap-v1",
+          "name": "PancakeSwap (v1)",
+          "image": "https://static.images.dropstab.com/images/exchanges/pancakeswap_v1.png",
+          "rankReported": 118,
+          "type": "DEX"
+        },
+        {
+          "id": 3178,
+          "slug": "aerodrome-base",
+          "name": "Aerodrome (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/aerodrome-base.jpeg",
+          "rankReported": 120,
+          "type": "DEX"
+        },
+        {
+          "id": 2836,
+          "slug": "camelot-v3",
+          "name": "Camelot V3",
+          "image": "https://static.images.dropstab.com/images/exchanges/camelot-v3.jpg",
+          "rankReported": 122,
+          "type": "DEX"
+        },
+        {
+          "id": 2176,
+          "slug": "ftx-us",
+          "name": "FTX.US",
+          "image": "https://static.images.dropstab.com/images/exchanges/ftx_us.png",
+          "rankReported": 123,
+          "type": "SPOT"
+        },
+        {
+          "id": 3235,
+          "slug": "turbos-finance",
+          "name": "Turbos Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/turbos-finance.png",
+          "rankReported": 125,
+          "type": "DEX"
+        },
+        {
+          "id": 2644,
+          "slug": "uniswap-v3-optimism",
+          "name": "Uniswap V3 (Optimism)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v3_optimism.png",
+          "rankReported": 126,
+          "type": "SPOT"
+        },
+        {
+          "id": 2347,
+          "slug": "osmosis",
+          "name": "Osmosis",
+          "image": "https://static.images.dropstab.com/images/exchanges/osmosis.svg",
+          "rankReported": 127,
+          "type": "SPOT"
+        },
+        {
+          "id": 2179,
+          "slug": "curve",
+          "name": "Curve Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/curve.png",
+          "rankReported": 128,
+          "type": "SPOT"
+        },
+        {
+          "id": 184,
+          "slug": "bitbay",
+          "name": "zondacrypto",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitbay.png",
+          "rankReported": 131,
+          "type": "SPOT"
+        },
+        {
+          "id": 2116,
+          "slug": "dydx",
+          "name": "dYdX",
+          "image": "https://static.images.dropstab.com/images/exchanges/dydx.png",
+          "rankReported": 133,
+          "type": "DEX"
+        },
+        {
+          "id": 2792,
+          "slug": "traderjoe-v2-1-avalanche",
+          "name": "LFJ V2.1 (Avalanche)",
+          "image": "https://static.images.dropstab.com/images/exchanges/traderjoe-v2-1-avalanche.png",
+          "rankReported": 134,
+          "type": "DEX"
+        },
+        {
+          "id": 4522,
+          "slug": "sunswap-v2",
+          "name": "SunSwap V2",
+          "image": "https://static.images.dropstab.com/images/exchanges/sunswap-v2.png",
+          "rankReported": 136,
+          "type": "DEX"
+        },
+        {
+          "id": 2178,
+          "slug": "balancer",
+          "name": "Balancer V2",
+          "image": "https://static.images.dropstab.com/images/exchanges/balancer.png",
+          "rankReported": 138,
+          "type": "SPOT"
+        },
+        {
+          "id": 2260,
+          "slug": "dodo-bsc",
+          "name": "DODO (BSC)",
+          "image": "https://static.images.dropstab.com/images/exchanges/dodo_bsc.png",
+          "rankReported": 139,
+          "type": "DEX"
+        },
+        {
+          "id": 1983,
+          "slug": "bithumb-global",
+          "name": "BitGlobal",
+          "image": "https://static.images.dropstab.com/images/exchanges/bithumb_global.png",
+          "rankReported": 142,
+          "type": "SPOT"
+        },
+        {
+          "id": 2177,
+          "slug": "uniswap-v1",
+          "name": "Uniswap (v1)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v1.png",
+          "rankReported": 143,
+          "type": "DEX"
+        },
+        {
+          "id": 2779,
+          "slug": "syncswap",
+          "name": "SyncSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/syncswap.jpg",
+          "rankReported": 144,
+          "type": "DEX"
+        },
+        {
+          "id": 2865,
+          "slug": "sushiswap-v3-base",
+          "name": "SushiSwap V3 (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/sushiswap-v3-base.png",
+          "rankReported": 145,
+          "type": "DEX"
+        },
+        {
+          "id": 2207,
+          "slug": "sushiswap",
+          "name": "Sushiswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/sushiswap.png",
+          "rankReported": 146,
+          "type": "DEX"
+        },
+        {
+          "id": 179,
+          "slug": "kyber-network",
+          "name": "Kyber Network",
+          "image": "https://static.images.dropstab.com/images/exchanges/kyber_network.png",
+          "rankReported": 147,
+          "type": "SPOT"
+        },
+        {
+          "id": 2844,
+          "slug": "velodrome-finance-v2",
+          "name": "Velodrome Finance V2 (Optimism)",
+          "image": "https://static.images.dropstab.com/images/exchanges/velodrome-finance-v2.png",
+          "rankReported": 148,
+          "type": "SPOT"
+        },
+        {
+          "id": 2355,
+          "slug": "traderjoe",
+          "name": "LFJ",
+          "image": "https://static.images.dropstab.com/images/exchanges/traderjoe.jpg",
+          "rankReported": 149,
+          "type": "DEX"
+        },
+        {
+          "id": 1893,
+          "slug": "huobi-korea",
+          "name": "Huobi Korea",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi_korea.png",
+          "rankReported": 151,
+          "type": "SPOT"
+        },
+        {
+          "id": 2884,
+          "slug": "ston-fi",
+          "name": "STON.fi",
+          "image": "https://static.images.dropstab.com/images/exchanges/stonfi.png",
+          "rankReported": 152,
+          "type": "DEX"
+        },
+        {
+          "id": 2187,
+          "slug": "nice-hash",
+          "name": "NiceHash",
+          "image": "https://static.images.dropstab.com/images/exchanges/nice_hash.png",
+          "rankReported": 153,
+          "type": "SPOT"
+        },
+        {
+          "id": 133,
+          "slug": "wazirx",
+          "name": "WazirX",
+          "image": "https://static.images.dropstab.com/images/exchanges/wazirx.png",
+          "rankReported": 154,
+          "type": "SPOT"
+        },
+        {
+          "id": 2895,
+          "slug": "dedust",
+          "name": "DeDust",
+          "image": "https://static.images.dropstab.com/images/exchanges/dedust.png",
+          "rankReported": 155,
+          "type": "DEX"
+        },
+        {
+          "id": 172,
+          "slug": "bancor",
+          "name": "Bancor (V2)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bancor.png",
+          "rankReported": 156,
+          "type": "SPOT"
+        },
+        {
+          "id": 2208,
+          "slug": "serum-dex",
+          "name": "Serum DEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/serum_dex.png",
+          "rankReported": 157,
+          "type": "DEX"
+        },
+        {
+          "id": 2313,
+          "slug": "dydx-perpetual",
+          "name": "dYdX Perpetual (Ethereum)",
+          "image": "https://static.images.dropstab.com/images/exchanges/dydx_perpetual.png",
+          "rankReported": 158,
+          "type": "DEX"
+        },
+        {
+          "id": 2193,
+          "slug": "zero-ex",
+          "name": "Matcha",
+          "image": "https://static.images.dropstab.com/images/exchanges/zero_ex.png",
+          "rankReported": 159,
+          "type": "DEX"
+        },
+        {
+          "id": 2226,
+          "slug": "serumswap",
+          "name": "SerumSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/serumswap.png",
+          "rankReported": 162,
+          "type": "DEX"
+        },
+        {
+          "id": 3358,
+          "slug": "thruster-v3",
+          "name": "Thruster V3",
+          "image": "https://static.images.dropstab.com/images/exchanges/thruster-v3.jpeg",
+          "rankReported": 163,
+          "type": "DEX"
+        },
+        {
+          "id": 2856,
+          "slug": "pancakeswap-v3-zksync",
+          "name": "PancakeSwap V3 (zkSync)",
+          "image": "https://static.images.dropstab.com/images/exchanges/pancakeswap-v3-zksync.jpeg",
+          "rankReported": 165,
+          "type": "DEX"
+        },
+        {
+          "id": 2676,
+          "slug": "camelot",
+          "name": "Camelot",
+          "image": "https://static.images.dropstab.com/images/exchanges/camelot.png",
+          "rankReported": 167,
+          "type": "DEX"
+        },
+        {
+          "id": 2835,
+          "slug": "ramses-v2",
+          "name": "Ramses V2",
+          "image": "https://static.images.dropstab.com/images/exchanges/ramses-v2.jpeg",
+          "rankReported": 168,
+          "type": "DEX"
+        },
+        {
+          "id": 2277,
+          "slug": "wault-swap",
+          "name": "WaultSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/wault_swap.png",
+          "rankReported": 169,
+          "type": "DEX"
+        },
+        {
+          "id": 2213,
+          "slug": "anyswap",
+          "name": "Anyswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/anyswap.png",
+          "rankReported": 170,
+          "type": "SPOT"
+        },
+        {
+          "id": 4397,
+          "slug": "cellana-finance",
+          "name": "Cellana Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/cellana-finance.png",
+          "rankReported": 171,
+          "type": "DEX"
+        },
+        {
+          "id": 2785,
+          "slug": "thala",
+          "name": "ThalaSwap V1",
+          "image": "https://static.images.dropstab.com/images/exchanges/thala.jpeg",
+          "rankReported": 172,
+          "type": "DEX"
+        },
+        {
+          "id": 2009,
+          "slug": "okex-korea",
+          "name": "OKEx Korea",
+          "image": "https://static.images.dropstab.com/images/exchanges/okex_korea.png",
+          "rankReported": 173,
+          "type": "SPOT"
+        },
+        {
+          "id": 2164,
+          "slug": "huobi-id",
+          "name": "Huobi Indonesia",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi_id.png",
+          "rankReported": 175,
+          "type": "SPOT"
+        },
+        {
+          "id": 2596,
+          "slug": "velodrome",
+          "name": "Velodrome Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/velodrome.png",
+          "rankReported": 176,
+          "type": "SPOT"
+        },
+        {
+          "id": 2333,
+          "slug": "bakkt",
+          "name": "Bakkt",
+          "image": "https://static.images.dropstab.com/images/exchanges/bakkt.png",
+          "rankReported": 178,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 190,
+          "slug": "hotbit",
+          "name": "Hotbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/hotbit.png",
+          "rankReported": 181,
+          "type": "SPOT"
+        },
+        {
+          "id": 2223,
+          "slug": "honeyswap",
+          "name": "Honeyswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/honeyswap.png",
+          "rankReported": 182,
+          "type": "DEX"
+        },
+        {
+          "id": 21,
+          "slug": "idex",
+          "name": "Idex",
+          "image": "https://static.images.dropstab.com/images/exchanges/idex.png",
+          "rankReported": 183,
+          "type": "SPOT"
+        },
+        {
+          "id": 238,
+          "slug": "okcoin",
+          "name": "Okcoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/okcoin.png",
+          "rankReported": 184,
+          "type": "SPOT"
+        },
+        {
+          "id": 26,
+          "slug": "coinbene",
+          "name": "CoinBene",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinbene.png",
+          "rankReported": 185,
+          "type": "SPOT"
+        },
+        {
+          "id": 2725,
+          "slug": "liquidswap",
+          "name": "Liquidswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/liquidswap.png",
+          "rankReported": 186,
+          "type": "DEX"
+        },
+        {
+          "id": 2276,
+          "slug": "spookyswap",
+          "name": "SpookySwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/spookyswap.png",
+          "rankReported": 187,
+          "type": "DEX"
+        },
+        {
+          "id": 2100,
+          "slug": "newdex",
+          "name": "Newdex",
+          "image": "https://static.images.dropstab.com/images/exchanges/newdex.png",
+          "rankReported": 189,
+          "type": "DEX"
+        },
+        {
+          "id": 2283,
+          "slug": "spiritswap",
+          "name": "SpiritSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/spiritswap.png",
+          "rankReported": 190,
+          "type": "DEX"
+        },
+        {
+          "id": 3331,
+          "slug": "fluxbeam",
+          "name": "FluxBeam",
+          "image": "https://static.images.dropstab.com/images/exchanges/fluxbeam.png",
+          "rankReported": 192,
+          "type": "DEX"
+        },
+        {
+          "id": 4449,
+          "slug": "liquidswap-v0-5",
+          "name": "LiquidSwap V0.5",
+          "image": "https://static.images.dropstab.com/images/exchanges/liquidswap-v0-5.png",
+          "rankReported": 193,
+          "type": "DEX"
+        },
+        {
+          "id": 2234,
+          "slug": "blockchain-com",
+          "name": "Blockchain.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/blockchain_com.png",
+          "rankReported": 196,
+          "type": "SPOT"
+        },
+        {
+          "id": 4552,
+          "slug": "uniswap-v3-zora",
+          "name": "Uniswap V3 (Zora)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap-v3-zora.jpg",
+          "rankReported": 197,
+          "type": "DEX"
+        },
+        {
+          "id": 2126,
+          "slug": "nash",
+          "name": "Nash",
+          "image": "https://static.images.dropstab.com/images/exchanges/nash.png",
+          "rankReported": 200,
+          "type": "SPOT"
+        },
+        {
+          "id": 1891,
+          "slug": "trx-market",
+          "name": "PoloniDEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/trx_market.png",
+          "rankReported": 201,
+          "type": "DEX"
+        },
+        {
+          "id": 20,
+          "slug": "quoine",
+          "name": "Liquid",
+          "image": "https://static.images.dropstab.com/images/exchanges/quoine.png",
+          "rankReported": 202,
+          "type": "SPOT"
+        },
+        {
+          "id": 15,
+          "slug": "bittrex",
+          "name": "Bittrex Global",
+          "image": "https://static.images.dropstab.com/images/exchanges/bittrex.png",
+          "rankReported": 204,
+          "type": "SPOT"
+        },
+        {
+          "id": 1999,
+          "slug": "bitholic",
+          "name": "Bithumb Singapore",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitholic.png",
+          "rankReported": 207,
+          "type": "SPOT"
+        },
+        {
+          "id": 2152,
+          "slug": "etorox",
+          "name": "eToro",
+          "image": "https://static.images.dropstab.com/images/exchanges/etorox.png",
+          "rankReported": 208,
+          "type": "SPOT"
+        },
+        {
+          "id": 1979,
+          "slug": "binance-dex",
+          "name": "Binance DEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance_dex.png",
+          "rankReported": 210,
+          "type": "DEX"
+        },
+        {
+          "id": 2866,
+          "slug": "rocketswap-base",
+          "name": "Rocketswap (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/rocketswap-base.png",
+          "rankReported": 212,
+          "type": "DEX"
+        },
+        {
+          "id": 2867,
+          "slug": "cbswap-base",
+          "name": "CBSwap (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/cbswap-base.jpg",
+          "rankReported": 213,
+          "type": "DEX"
+        },
+        {
+          "id": 2307,
+          "slug": "bitz-futures",
+          "name": "BitZ Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitz_futures.png",
+          "rankReported": 216,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2450,
+          "slug": "azbit",
+          "name": "Azbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/azbit.png",
+          "rankReported": 14,
+          "type": "SPOT"
+        },
+        {
+          "id": 270,
+          "slug": "coineal",
+          "name": "Coineal",
+          "image": "https://static.images.dropstab.com/images/exchanges/coineal.png",
+          "rankReported": 101,
+          "type": "SPOT"
+        },
+        {
+          "id": 2300,
+          "slug": "hopex",
+          "name": "Hopex",
+          "image": "https://static.images.dropstab.com/images/exchanges/hopex.png",
+          "rankReported": 214,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2301,
+          "slug": "btse-futures",
+          "name": "BTSE (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/btse_futures.png",
+          "rankReported": 11,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 111,
+          "slug": "bitrue",
+          "name": "Bitrue",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitrue.jpeg",
+          "rankReported": 49,
+          "type": "SPOT"
+        },
+        {
+          "id": 1901,
+          "slug": "bhex",
+          "name": "HBTC",
+          "image": "https://static.images.dropstab.com/images/exchanges/bhex.png",
+          "rankReported": 50,
+          "type": "SPOT"
+        },
+        {
+          "id": 191,
+          "slug": "yobit",
+          "name": "YoBit",
+          "image": "https://static.images.dropstab.com/images/exchanges/yobit.png",
+          "rankReported": 74,
+          "type": "SPOT"
+        },
+        {
+          "id": 51,
+          "slug": "btcturk",
+          "name": "BtcTurk | Kripto",
+          "image": "https://static.images.dropstab.com/images/exchanges/btcturk.png",
+          "rankReported": 87,
+          "type": "SPOT"
+        },
+        {
+          "id": 3151,
+          "slug": "bibox-futures",
+          "name": "Bibox (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bibox_futures.png",
+          "rankReported": 129,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2631,
+          "slug": "bitlo",
+          "name": "Bitlo",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitlo.png",
+          "rankReported": 137,
+          "type": "SPOT"
+        },
+        {
+          "id": 3031,
+          "slug": "balancer-v1",
+          "name": "Balancer V1",
+          "image": "https://static.images.dropstab.com/images/exchanges/balancer_v1.png",
+          "rankReported": 161,
+          "type": "SPOT"
+        },
+        {
+          "id": 212,
+          "slug": "bigone",
+          "name": "BigONE",
+          "image": "https://static.images.dropstab.com/images/exchanges/bigone.svg",
+          "rankReported": 45,
+          "type": "SPOT"
+        },
+        {
+          "id": 112,
+          "slug": "livecoin",
+          "name": "Livecoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/livecoin.png",
+          "rankReported": 62,
+          "type": "SPOT"
+        },
+        {
+          "id": 42,
+          "slug": "cointiger",
+          "name": "CoinTiger",
+          "image": "https://static.images.dropstab.com/images/exchanges/cointiger.png",
+          "rankReported": 65,
+          "type": "SPOT"
+        },
+        {
+          "id": 72,
+          "slug": "crex24",
+          "name": "CREX24",
+          "image": "https://static.images.dropstab.com/images/exchanges/crex24.png",
+          "rankReported": 67,
+          "type": "SPOT"
+        },
+        {
+          "id": 2162,
+          "slug": "currency",
+          "name": "Currency.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/currency.png",
+          "rankReported": 69,
+          "type": "SPOT"
+        },
+        {
+          "id": 2042,
+          "slug": "btse",
+          "name": "BTSE",
+          "image": "https://static.images.dropstab.com/images/exchanges/btse.png",
+          "rankReported": 77,
+          "type": "SPOT"
+        },
+        {
+          "id": 102,
+          "slug": "fcoin",
+          "name": "FCoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/fcoin.png",
+          "rankReported": 80,
+          "type": "SPOT"
+        },
+        {
+          "id": 3332,
+          "slug": "backpack-exchange",
+          "name": "Backpack Exchange ",
+          "image": "https://static.images.dropstab.com/images/exchanges/backpack_exchange.png",
+          "rankReported": 100,
+          "type": "SPOT"
+        },
+        {
+          "id": 52,
+          "slug": "indodax",
+          "name": "Indodax",
+          "image": "https://static.images.dropstab.com/images/exchanges/indodax.jpg",
+          "rankReported": 117,
+          "type": "SPOT"
+        },
+        {
+          "id": 12,
+          "slug": "bcex",
+          "name": "BCEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/bcex.png",
+          "rankReported": 135,
+          "type": "SPOT"
+        },
+        {
+          "id": 202,
+          "slug": "coin-egg",
+          "name": "CoinEgg",
+          "image": "https://static.images.dropstab.com/images/exchanges/coin_egg.png",
+          "rankReported": 166,
+          "type": "SPOT"
+        },
+        {
+          "id": 142,
+          "slug": "coinfalcon",
+          "name": "Coinfalcon",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinfalcon.png",
+          "rankReported": 188,
+          "type": "SPOT"
+        },
+        {
+          "id": 232,
+          "slug": "tokok",
+          "name": "TOKOK",
+          "image": "https://static.images.dropstab.com/images/exchanges/tokok.png",
+          "rankReported": 198,
+          "type": "SPOT"
+        },
+        {
+          "id": 3223,
+          "slug": "bitdelta",
+          "name": "BitDelta",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitdelta.png",
+          "rankReported": 40,
+          "type": "SPOT"
+        },
+        {
+          "id": 3253,
+          "slug": "bitcastle",
+          "name": "bitcastle",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitcastle.png",
+          "rankReported": 42,
+          "type": "SPOT"
+        },
+        {
+          "id": 2803,
+          "slug": "bit2me",
+          "name": "Bit2Me",
+          "image": "https://static.images.dropstab.com/images/exchanges/bit2me.png",
+          "rankReported": 53,
+          "type": "SPOT"
+        },
+        {
+          "id": 2023,
+          "slug": "bitci",
+          "name": "SAFEbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitci.png",
+          "rankReported": 84,
+          "type": "SPOT"
+        },
+        {
+          "id": 33,
+          "slug": "bitbank",
+          "name": "Bitbank",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitbank.png",
+          "rankReported": 94,
+          "type": "SPOT"
+        },
+        {
+          "id": 2503,
+          "slug": "bitazza",
+          "name": "Bitazza",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitazza.png",
+          "rankReported": 109,
+          "type": "SPOT"
+        },
+        {
+          "id": 23,
+          "slug": "bilaxy",
+          "name": "Bilaxy",
+          "image": "https://static.images.dropstab.com/images/exchanges/bilaxy.png",
+          "rankReported": 110,
+          "type": "SPOT"
+        },
+        {
+          "id": 53,
+          "slug": "mercatox",
+          "name": "Mercatox",
+          "image": "https://static.images.dropstab.com/images/exchanges/mercatox.png",
+          "rankReported": 121,
+          "type": "SPOT"
+        },
+        {
+          "id": 143,
+          "slug": "south-xchange",
+          "name": "SouthXchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/south_xchange.png",
+          "rankReported": 174,
+          "type": "SPOT"
+        },
+        {
+          "id": 83,
+          "slug": "bleutrade",
+          "name": "bleutrade",
+          "image": "https://static.images.dropstab.com/images/exchanges/bleutrade.png",
+          "rankReported": 199,
+          "type": "SPOT"
+        },
+        {
+          "id": 2303,
+          "slug": "zbg-futures",
+          "name": "ZBG Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/zbg_futures.png",
+          "rankReported": 215,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2414,
+          "slug": "coinstore",
+          "name": "Coinstore",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinstore.png",
+          "rankReported": 20,
+          "type": "SPOT"
+        },
+        {
+          "id": 24,
+          "slug": "digifinex",
+          "name": "DigiFinex",
+          "image": "https://static.images.dropstab.com/images/exchanges/digifinex.png",
+          "rankReported": 26,
+          "type": "SPOT"
+        },
+        {
+          "id": 2674,
+          "slug": "deepcoin",
+          "name": "Deepcoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/deepcoin.png",
+          "rankReported": 61,
+          "type": "SPOT"
+        },
+        {
+          "id": 2264,
+          "slug": "raydium",
+          "name": "Raydium",
+          "image": "https://static.images.dropstab.com/images/exchanges/raydium.png",
+          "rankReported": 76,
+          "type": "DEX"
+        },
+        {
+          "id": 134,
+          "slug": "kuna",
+          "name": "Kuna Exchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/kuna.png",
+          "rankReported": 164,
+          "type": "SPOT"
+        },
+        {
+          "id": 2244,
+          "slug": "bakeryswap",
+          "name": "Bakeryswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/bakeryswap.png",
+          "rankReported": 177,
+          "type": "SPOT"
+        },
+        {
+          "id": 224,
+          "slug": "abcc",
+          "name": "ABCC",
+          "image": "https://static.images.dropstab.com/images/exchanges/abcc.png",
+          "rankReported": 203,
+          "type": "SPOT"
+        },
+        {
+          "id": 3175,
+          "slug": "bitvenus",
+          "name": "BVOX (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitvenus.jpg",
+          "rankReported": 2,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2375,
+          "slug": "bitvavo",
+          "name": "Bitvavo",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitvavo.png",
+          "rankReported": 56,
+          "type": "SPOT"
+        },
+        {
+          "id": 2695,
+          "slug": "cointr",
+          "name": "CoinTR",
+          "image": "https://static.images.dropstab.com/images/exchanges/cointr.png",
+          "rankReported": 75,
+          "type": "SPOT"
+        },
+        {
+          "id": 45,
+          "slug": "lakebtc",
+          "name": "LakeBTC",
+          "image": "https://static.images.dropstab.com/images/exchanges/lakebtc.png",
+          "rankReported": 132,
+          "type": "SPOT"
+        },
+        {
+          "id": 55,
+          "slug": "therocktrading",
+          "name": "TheRockTrading",
+          "image": "https://static.images.dropstab.com/images/exchanges/therocktrading.png",
+          "rankReported": 160,
+          "type": "SPOT"
+        },
+        {
+          "id": 65,
+          "slug": "acx",
+          "name": "ACX",
+          "image": "https://static.images.dropstab.com/images/exchanges/acx.png",
+          "rankReported": 194,
+          "type": "SPOT"
+        },
+        {
+          "id": 2306,
+          "slug": "bitforex-futures",
+          "name": "Bitforex Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitforex_futures.png",
+          "rankReported": 57,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2926,
+          "slug": "c-patex",
+          "name": "C-Patex",
+          "image": "https://static.images.dropstab.com/images/exchanges/c_patex.png",
+          "rankReported": 90,
+          "type": "SPOT"
+        },
+        {
+          "id": 226,
+          "slug": "coinall",
+          "name": "CoinAll",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinall.png",
+          "rankReported": 130,
+          "type": "SPOT"
+        },
+        {
+          "id": 1886,
+          "slug": "probit",
+          "name": "ProBit Global",
+          "image": "https://static.images.dropstab.com/images/exchanges/probit.png",
+          "rankReported": 140,
+          "type": "SPOT"
+        },
+        {
+          "id": 2356,
+          "slug": "bitexen",
+          "name": "Bitexen",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitexen.png",
+          "rankReported": 150,
+          "type": "SPOT"
+        },
+        {
+          "id": 196,
+          "slug": "gbx",
+          "name": "Global Blockchain Exchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/gbx.png",
+          "rankReported": 205,
+          "type": "SPOT"
+        },
+        {
+          "id": 96,
+          "slug": "cobinhood",
+          "name": "Cobinhood",
+          "image": "https://static.images.dropstab.com/images/exchanges/cobinhood.png",
+          "rankReported": 217,
+          "type": "SPOT"
+        },
+        {
+          "id": 2317,
+          "slug": "bitmax-futures",
+          "name": "AscendEX (BitMax) Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmax_futures.png",
+          "rankReported": 7,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2297,
+          "slug": "deribit",
+          "name": "Deribit",
+          "image": "https://static.images.dropstab.com/images/exchanges/deribit.png",
+          "rankReported": 33,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 247,
+          "slug": "coinsbit",
+          "name": "Coinsbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinsbit.jpg",
+          "rankReported": 55,
+          "type": "SPOT"
+        },
+        {
+          "id": 1977,
+          "slug": "bkex",
+          "name": "BKEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/bkex.png",
+          "rankReported": 63,
+          "type": "SPOT"
+        },
+        {
+          "id": 2147,
+          "slug": "toko-crypto",
+          "name": "TokoCrypto",
+          "image": "https://static.images.dropstab.com/images/exchanges/toko-crypto.png",
+          "rankReported": 124,
+          "type": "SPOT"
+        },
+        {
+          "id": 2247,
+          "slug": "mdex",
+          "name": "Mdex",
+          "image": "https://static.images.dropstab.com/images/exchanges/mdex.png",
+          "rankReported": 179,
+          "type": "SPOT"
+        },
+        {
+          "id": 187,
+          "slug": "bitlish",
+          "name": "Bitlish",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitlish.png",
+          "rankReported": 195,
+          "type": "SPOT"
+        },
+        {
+          "id": 157,
+          "slug": "bitshares-assets",
+          "name": "Bitshares Assets",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitshares_assets.png",
+          "rankReported": 206,
+          "type": "DEX"
+        },
+        {
+          "id": 107,
+          "slug": "zbg",
+          "name": "ZBG",
+          "image": "https://static.images.dropstab.com/images/exchanges/zbg.png",
+          "rankReported": 211,
+          "type": "SPOT"
+        },
+        {
+          "id": 2308,
+          "slug": "prime-xbt",
+          "name": "PrimeXBT",
+          "image": "https://static.images.dropstab.com/images/exchanges/prime_xbt.png",
+          "rankReported": 13,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 188,
+          "slug": "p2pb2b",
+          "name": "P2B",
+          "image": "https://static.images.dropstab.com/images/exchanges/p2pb2b.png",
+          "rankReported": 37,
+          "type": "SPOT"
+        },
+        {
+          "id": 168,
+          "slug": "tidex",
+          "name": "Tidex",
+          "image": "https://static.images.dropstab.com/images/exchanges/tidex.png",
+          "rankReported": 52,
+          "type": "SPOT"
+        },
+        {
+          "id": 198,
+          "slug": "latoken",
+          "name": "LATOKEN",
+          "image": "https://static.images.dropstab.com/images/exchanges/latoken.png",
+          "rankReported": 66,
+          "type": "SPOT"
+        },
+        {
+          "id": 98,
+          "slug": "coinex",
+          "name": "CoinEx",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinex.svg",
+          "rankReported": 86,
+          "type": "SPOT"
+        },
+        {
+          "id": 158,
+          "slug": "coincheck",
+          "name": "Coincheck",
+          "image": "https://static.images.dropstab.com/images/exchanges/coincheck.png",
+          "rankReported": 88,
+          "type": "SPOT"
+        },
+        {
+          "id": 128,
+          "slug": "zaif",
+          "name": "Zaif",
+          "image": "https://static.images.dropstab.com/images/exchanges/zaif.png",
+          "rankReported": 141,
+          "type": "SPOT"
+        },
+        {
+          "id": 138,
+          "slug": "braziliex",
+          "name": "Braziliex",
+          "image": "https://static.images.dropstab.com/images/exchanges/braziliex.png",
+          "rankReported": 180,
+          "type": "SPOT"
+        },
+        {
+          "id": 2048,
+          "slug": "eterbase",
+          "name": "Eterbase",
+          "image": "https://static.images.dropstab.com/images/exchanges/eterbase.png",
+          "rankReported": 191,
+          "type": "SPOT"
+        },
+        {
+          "id": 108,
+          "slug": "bgogo",
+          "name": "Bgogo",
+          "image": "https://static.images.dropstab.com/images/exchanges/bgogo.png",
+          "rankReported": 209,
+          "type": "SPOT"
+        },
+        {
+          "id": 2249,
+          "slug": "biconomy",
+          "name": "Biconomy.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/biconomy.svg",
+          "rankReported": 15,
+          "type": "SPOT"
+        },
+        {
+          "id": 29,
+          "slug": "bitforex",
+          "name": "Bitforex",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitforex.png",
+          "rankReported": 41,
+          "type": "SPOT"
+        },
+        {
+          "id": 39,
+          "slug": "bitflyer",
+          "name": "bitFlyer",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitflyer.png",
+          "rankReported": 91,
+          "type": "SPOT"
+        },
+        {
+          "id": 2039,
+          "slug": "bitopro",
+          "name": "BitoPro",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitopro.png",
+          "rankReported": 108,
+          "type": "SPOT"
+        },
+        {
+          "id": 139,
+          "slug": "tidebit",
+          "name": "Tidebit",
+          "image": "https://static.images.dropstab.com/images/exchanges/tidebit.png",
+          "rankReported": 119,
+          "type": "SPOT"
+        }
+      ],
+      "pageable": {
+        "sort": {
+          "empty": true,
+          "sorted": false,
+          "unsorted": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 10000,
+        "paged": true,
+        "unpaged": false
+      },
+      "last": true,
+      "totalElements": 217,
+      "totalPages": 1,
+      "first": true,
+      "size": 10000,
+      "number": 0,
+      "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+      },
+      "numberOfElements": 217,
+      "empty": false
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://extra-bff.dropstab.com/v1.2/market-data/market-total-and-widgets-summary?fields=stockRealtimeSPX%2CstockRealtimeGOLD",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:12.848421+00:00",
+    "data": {
+      "ok": true,
+      "message": "OK",
+      "data": {
+        "stockRealtimeSPX": {
+          "marketStatus": false,
+          "stockMarket": {
+            "price": 6870.51,
+            "currencyType": "SPX",
+            "updateTime": 1772658000622
+          },
+          "change": 0.8251788890389076
+        },
+        "stockRealtimeGOLD": {
+          "marketStatus": false,
+          "stockMarket": {
+            "price": 5143.700195,
+            "currencyType": "GOLD",
+            "updateTime": 1772698666000
+          },
+          "change": -0.3546267792865119
+        }
+      }
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/marketTotal/last",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:20:08.879021+00:00",
+    "data": {
+      "btcDominance": "58.730602",
+      "btcDominanceChange24h": 0.7177001492108956,
+      "btcDominanceImage": "https://static.images.dropstab.com/images/bitcoin.svg",
+      "ethDominance": 10.267414864462904,
+      "ethDominanceImage": "https://static.images.dropstab.com/images/ethereum.svg",
+      "marketCap": {
+        "USD": 2447376756703.0,
+        "BTC": 34047143.32799588,
+        "ETH": 1165633978.073547,
+        "BNB": 3759931106.76284,
+        "SOL": 6503791540534149.0,
+        "EUR": 2108560589774.495,
+        "GBP": 1834491992876.196,
+        "CAD": 3339593084660.1797,
+        "RUB": 190591956719723.1
+      },
+      "volume24h": {
+        "USD": 275157282024.0,
+        "BTC": 3827902.423750035,
+        "ETH": 131051615.31141497,
+        "BNB": 422727077.5130203,
+        "SOL": 731217863470635.1,
+        "EUR": 237064358512.12125,
+        "GBP": 206250970257.07425,
+        "CAD": 375468694684.819,
+        "RUB": 21428153488424.67
+      },
+      "marketCapChange24h": {
+        "USD": 2.7517282819291777,
+        "BTC": 2.8571613844114037,
+        "ETH": 2.8785668071567674,
+        "BNB": 2.7918930311003947,
+        "SOL": 2.7517282819291777,
+        "EUR": 2.7517282819291777,
+        "GBP": 2.7517282819291777,
+        "CAD": 2.7517282819291777,
+        "RUB": 2.7517282819291777
+      },
+      "volumeChange24h": {
+        "USD": 58.816413614538554,
+        "BTC": 61.0699780398426,
+        "ETH": 61.527505116935664,
+        "BNB": 59.67490917003806,
+        "SOL": 58.816413614538554,
+        "EUR": 58.816413614538554,
+        "GBP": 58.816413614538554,
+        "CAD": 58.816413614538554,
+        "RUB": 58.816413614538554
+      },
+      "volumeLeadMarket": {
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "symbol": "BTC",
+        "rank": null,
+        "change": null,
+        "marketCap": null,
+        "image": "https://static.images.dropstab.com/images/bitcoin.svg"
+      },
+      "topGainers": [
+        {
+          "name": "Pi Network",
+          "slug": "pi-network",
+          "symbol": "PI",
+          "rank": null,
+          "change": null,
+          "marketCap": null,
+          "image": "https://static.images.dropstab.com/images/pi-network.jpg"
+        },
+        {
+          "name": "Zcash",
+          "slug": "zcash",
+          "symbol": "ZEC",
+          "rank": null,
+          "change": null,
+          "marketCap": null,
+          "image": "https://static.images.dropstab.com/images/zcash.svg"
+        }
+      ],
+      "marketTrendType": "BULLISH",
+      "marketCapGold": {
+        "USD": 35905572880975.0,
+        "BTC": 499507148.95210207,
+        "ETH": 17101067760.667458,
+        "BNB": 55162324625.28552,
+        "SOL": 398950809788.6111,
+        "EUR": 30934785877468.15,
+        "GBP": 26913913343900.715,
+        "CAD": 48995318177166.87,
+        "RUB": 2796183045289139.0
+      }
+    }
+  }
+]

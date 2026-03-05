@@ -98,6 +98,49 @@ async def sync_dropstab_v2_entity(entity: str):
     }
 
 
+@router.post("/sync/dropstab/browser")
+async def sync_dropstab_browser(
+    headless: bool = Query(True, description="Run browser in headless mode")
+):
+    """
+    Run Dropstab browser scraper (Playwright).
+    
+    This bypasses bot detection by using real browser.
+    Captures: unlocks, funding, investors, ICO/IEO/IDO
+    
+    Note: Requires Playwright installed (pip install playwright && playwright install chromium)
+    """
+    from ..dropstab.browser_scraper import dropstab_browser
+    from ..common.proxy_manager import proxy_manager
+    
+    # Set proxy if configured
+    if proxy_manager.is_configured:
+        dropstab_browser.set_proxy(proxy_manager.get_playwright_proxy())
+    
+    result = await dropstab_browser.scrape_all(headless=headless)
+    return result
+
+
+@router.post("/sync/dropstab/browser/{target}")
+async def sync_dropstab_browser_single(
+    target: str,
+    headless: bool = Query(True)
+):
+    """
+    Run browser scraper for single target.
+    
+    Targets: unlocks, funding, investors, ico, ieo, ido, categories, coins
+    """
+    from ..dropstab.browser_scraper import dropstab_browser
+    from ..common.proxy_manager import proxy_manager
+    
+    if proxy_manager.is_configured:
+        dropstab_browser.set_proxy(proxy_manager.get_playwright_proxy())
+    
+    result = await dropstab_browser.scrape_single(target, headless=headless)
+    return result
+
+
 @router.post("/sync/dropstab/{entity}")
 async def sync_dropstab_entity(
     entity: str,
@@ -1262,4 +1305,52 @@ async def get_intel_health():
     """
     health = get_health_monitor()
     return await health.get_health()
+
+
+# ═══════════════════════════════════════════════════════════════
+# PROXY MANAGEMENT
+# ═══════════════════════════════════════════════════════════════
+
+@router.get("/admin/proxy/status")
+async def get_proxy_status():
+    """Get current proxy configuration status"""
+    from ..common.proxy_manager import proxy_manager
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        **proxy_manager.get_status()
+    }
+
+
+@router.post("/admin/proxy/set")
+async def set_proxy(
+    server: str = Query(..., description="Proxy server (http://host:port)"),
+    username: str = Query(None, description="Proxy username (optional)"),
+    password: str = Query(None, description="Proxy password (optional)")
+):
+    """
+    Set global proxy for all scrapers.
+    
+    Example: http://proxy.example.com:8080
+    With auth: http://user:pass@proxy.example.com:8080
+    """
+    from ..common.proxy_manager import proxy_manager
+    proxy_manager.set_proxy(server, username, password)
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "status": "set",
+        **proxy_manager.get_status()
+    }
+
+
+@router.post("/admin/proxy/clear")
+async def clear_proxy():
+    """Clear proxy - use direct connection"""
+    from ..common.proxy_manager import proxy_manager
+    proxy_manager.clear_proxy()
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "status": "cleared",
+        **proxy_manager.get_status()
+    }
+
 

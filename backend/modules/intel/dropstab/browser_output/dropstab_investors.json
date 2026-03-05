@@ -1,0 +1,14 @@
+[
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/markets/recentSearchItems",
+    "type": "investors",
+    "timestamp": "2026-03-05T08:19:09.026497+00:00",
+    "data": {
+      "markets": [],
+      "exchanges": [],
+      "investors": [],
+      "categories": []
+    }
+  }
+]

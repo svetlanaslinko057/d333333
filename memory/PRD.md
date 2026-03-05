@@ -19,17 +19,13 @@ ANALYTICS DATA (redundancy from BOTH sources)
 Note: CryptoRank + Dropstab collect SAME data types for redundancy
 ```
 
-### Source Priority Table
-| Data Type | Primary | Fallback |
-|-----------|---------|----------|
-| price | Exchange providers | CoinGecko |
-| marketcap | CoinGecko | - |
-| categories | CoinGecko | - |
-| trending | CoinGecko | - |
-| fundraising | CryptoRank + Dropstab | both |
-| investors | CryptoRank + Dropstab | both |
-| unlocks | CryptoRank + Dropstab | both |
-| ICO/IDO/IEO | CryptoRank + Dropstab | both |
+### Discovered Dropstab Internal APIs (via Browser)
+```
+api2.dropstab.com/portfolio/api/markets        → market overview
+api2.dropstab.com/portfolio/api/exchange       → exchanges (paginated)
+api2.dropstab.com/portfolio/api/marketTotal/*  → BTC dominance, gas
+extra-bff.dropstab.com/v1.2/market-data/*      → market summary
+```
 
 ### Provider Status
 | Provider | Status | Data |
@@ -49,56 +45,48 @@ Note: CryptoRank + Dropstab collect SAME data types for redundancy
 ### Intel API ✅
 | Endpoint | Function |
 |----------|----------|
-| POST /api/intel/sync/coingecko/markets_full | ~15k coins (1.2s throttle) |
+| POST /api/intel/sync/coingecko/markets_full | ~15k coins |
 | POST /api/intel/sync/coingecko/top_coins | Top 100 |
-| POST /api/intel/sync/coingecko/categories | 675 categories |
-| POST /api/intel/sync/coingecko/trending | 15 trending |
-| POST /api/intel/sync/dropstab/v2 | Production scraper |
+| POST /api/intel/sync/dropstab/browser | Playwright scraper |
+| POST /api/intel/sync/dropstab/browser/{target} | Single target |
 | GET /api/intel/admin/health | System health |
 
-### Scheduler ✅
+### Browser Scraper ✅
+- Playwright-based for bot detection bypass
+- Captures XHR/fetch JSON responses
+- Discovers internal API endpoints
+- Proxy support via GLOBAL_PROXY
+
+### Proxy Management ✅
 | Endpoint | Function |
 |----------|----------|
-| GET /api/intel/scheduler/status | Job status |
-| POST /api/intel/scheduler/start | Start scheduler |
-| POST /api/intel/scheduler/stop | Stop scheduler |
-| POST /api/intel/scheduler/run/{job} | Run job now |
+| GET /api/intel/admin/proxy/status | Current config |
+| POST /api/intel/admin/proxy/set | Set proxy |
+| POST /api/intel/admin/proxy/clear | Clear proxy |
 
-### Scheduled Jobs
+### Scheduler ✅
 | Job | Interval | Status |
 |-----|----------|--------|
 | coingecko_markets_full | daily | enabled |
 | coingecko_top_coins | 10 min | enabled |
 | coingecko_trending | 30 min | enabled |
-| coingecko_categories | daily | enabled |
 | dropstab_markets | 10 min | enabled |
-| dropstab_unlocks | 1h | disabled (browser) |
-| dropstab_funding | 2h | disabled (browser) |
-
-### Health Monitor
-- Source availability tracking
-- Last sync times with age
-- Database stats
-- Error history (24h)
 
 ## Database Stats
 ```
 intel_projects: 350+
 intel_categories: 675
-intel_funding: 0 (pending CryptoRank/Dropstab browser scrape)
+intel_funding: 0 (pending browser scrape)
 intel_unlocks: 0 (pending)
-intel_investors: 0 (pending)
 ```
 
-## Known Limitations
+## Key Discovery
 
-### Dropstab
-- SSR pages blocked (404) from server IP
-- **Solution**: Playwright browser crawler or manual ingest
+Browser scraper revealed Dropstab's internal APIs:
+- `api2.dropstab.com` - Main API
+- `extra-bff.dropstab.com` - BFF layer
 
-### CoinGecko
-- Rate limit: ~50 req/min with 1.2s throttle
-- Full sync: ~72 seconds (60 pages)
+These can potentially be called directly with proper headers!
 
 ## Backlog
 
@@ -106,14 +94,15 @@ intel_investors: 0 (pending)
 - [x] Exchange providers
 - [x] CoinGecko full market sync
 - [x] Scheduler with jobs
-- [x] Health monitor
+- [x] Browser scraper (Playwright)
+- [x] Proxy manager
 
 ### P1 (Next)
-- [ ] Playwright browser crawler for Dropstab/CryptoRank
-- [ ] Data deduplication (merge CryptoRank + Dropstab events)
-- [ ] Source provenance tracking
+- [ ] Direct API calls to discovered Dropstab endpoints
+- [ ] Full page scrape for unlocks/funding
+- [ ] CryptoRank browser discovery
 
 ### P2 (Future)
+- [ ] Data deduplication (merge sources)
 - [ ] Redis realtime pipeline
-- [ ] ClickHouse historical storage
-- [ ] Source failover (CryptoCompare)
+- [ ] Source failover

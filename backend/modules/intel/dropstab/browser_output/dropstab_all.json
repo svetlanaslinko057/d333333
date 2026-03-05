@@ -1,0 +1,5025 @@
+[
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/markets",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:08.907792+00:00",
+    "data": {
+      "btcPriceUsd": "71975.77",
+      "btcChange24h": "3.7122719708148955",
+      "ethPriceUsd": "2101.6",
+      "ethChange24h": "4.34603143027652",
+      "btcDominance": "58.730602",
+      "globalInitialType": "USD",
+      "marketTotal": {
+        "marketCap": {
+          "USD": 2447376756703.0,
+          "BTC": 34002786.72535215,
+          "ETH": 1164530242.055101,
+          "BNB": 3757045112.4529867,
+          "SOL": 2447376756703.0
+        },
+        "volume24h": {
+          "USD": 275157282024.0,
+          "BTC": 3822915.4342357153,
+          "ETH": 130927522.85116103,
+          "BNB": 422402606.69010305,
+          "SOL": 275157282024.0
+        },
+        "marketCapChange24h": {
+          "USD": 2.7517282819291777,
+          "BTC": 2.853879919652221,
+          "ETH": 2.871319257937628,
+          "BNB": 2.7908998318119207,
+          "SOL": 2.7517282819291777
+        },
+        "volumeChange24h": {
+          "USD": 58.816413614538554,
+          "BTC": 60.999838851389626,
+          "ETH": 61.37259343638784,
+          "BNB": 59.65368017714069,
+          "SOL": 58.816413614538554
+        },
+        "btcDominance": 58.730602
+      },
+      "markets": {
+        "content": [
+          {
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "image": "https://static.images.dropstab.com/images/bitcoin.svg",
+            "price": {
+              "USD": "71975.77",
+              "BTC": "1.0",
+              "ETH": "34.28054258",
+              "BNB": "110.57756419",
+              "SOL": "799.73077778",
+              "EUR": "62011.40532409",
+              "GBP": "53951.22487147",
+              "CAD": "98215.27604884",
+              "RUB": "5605186.37072824"
+            },
+            "currencyId": 1
+          },
+          {
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "image": "https://static.images.dropstab.com/images/ethereum.svg",
+            "price": {
+              "USD": "2101.6",
+              "BTC": "0.0292368",
+              "ETH": "1.0",
+              "BNB": "3.22872279",
+              "SOL": "23.35111111",
+              "EUR": "1810.653355",
+              "GBP": "1575.30644257",
+              "CAD": "2867.75986063",
+              "RUB": "163664.2397396"
+            },
+            "currencyId": 2
+          },
+          {
+            "name": "BNB",
+            "symbol": "BNB",
+            "image": "https://static.images.dropstab.com/images/binancecoin.png",
+            "price": {
+              "USD": "651.41",
+              "BTC": "0.00906221",
+              "ETH": "0.31025286",
+              "BNB": "1.0",
+              "SOL": "7.23788889",
+              "EUR": "561.22844594",
+              "GBP": "488.28053376",
+              "CAD": "888.88820461",
+              "RUB": "50729.21698172"
+            },
+            "currencyId": 36
+          },
+          {
+            "name": "Dogecoin",
+            "symbol": "DOGE",
+            "image": "https://static.images.dropstab.com/images/dogecoin.png",
+            "price": {
+              "USD": "0.09576",
+              "BTC": "1.33E-6",
+              "ETH": "4.561E-5",
+              "BNB": "1.4712E-4",
+              "SOL": "0.001064",
+              "EUR": "0.08250293",
+              "GBP": "0.07177928",
+              "CAD": "0.13067029",
+              "RUB": "7.4574075"
+            },
+            "currencyId": 34
+          },
+          {
+            "name": "Cardano",
+            "symbol": "ADA",
+            "image": "https://static.images.dropstab.com/images/cardano.svg",
+            "price": {
+              "USD": "0.2719",
+              "BTC": "3.78E-6",
+              "ETH": "1.295E-4",
+              "BNB": "4.1772E-4",
+              "SOL": "0.00302111",
+              "EUR": "0.23425802",
+              "GBP": "0.20380939",
+              "CAD": "0.37102394",
+              "RUB": "21.17448933"
+            },
+            "currencyId": 7
+          }
+        ],
+        "pageable": {
+          "pageNumber": 0,
+          "pageSize": 100000,
+          "offset": 0,
+          "paged": true,
+          "unpaged": false,
+          "sort": {
+            "sorted": false,
+            "unsorted": true
+          }
+        },
+        "totalElements": 5,
+        "totalPages": 1,
+        "size": 100000,
+        "number": 0,
+        "numberOfElements": 5,
+        "first": true,
+        "last": true,
+        "empty": false,
+        "hasContent": true,
+        "hasNext": false,
+        "hasPrevious": false
+      }
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/fiatCurrency",
+    "type": "list_data",
+    "timestamp": "2026-03-05T08:19:08.928166+00:00",
+    "data": [
+      {
+        "id": 16,
+        "name": "Bermudian dollar",
+        "symbol": "BMD",
+        "price": {
+          "USD": 1,
+          "BTC": 0,
+          "ETH": 0,
+          "BNB": 0,
+          "SOL": 2658
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bmd.png"
+      },
+      {
+        "id": 58,
+        "name": "Haitian gourde",
+        "symbol": "HTG",
+        "price": {
+          "USD": 0.00762165878950051,
+          "BTC": 1.0603604426e-07,
+          "ETH": 3.63024295877e-06,
+          "BNB": 1.172056439253e-05,
+          "SOL": 20.256900437210657
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/htg.png"
+      },
+      {
+        "id": 61,
+        "name": "Hungarian forint",
+        "symbol": "HUF",
+        "price": {
+          "USD": 0.0030037523237598884,
+          "BTC": 4.17895924171e-08,
+          "ETH": 1.4307057065096e-06,
+          "BNB": 4.6191614584393e-06,
+          "SOL": 7.983394880424952
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/huf.png"
+      },
+      {
+        "id": 64,
+        "name": "Indonesian rupiah",
+        "symbol": "IDR",
+        "price": {
+          "USD": 5.918561944538414e-05,
+          "BTC": 8.2341772789e-10,
+          "ETH": 2.819047456543e-08,
+          "BNB": 9.101547090732e-08,
+          "SOL": 0.15730397194786483
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/idr.png"
+      },
+      {
+        "id": 67,
+        "name": "Israeli new shekel",
+        "symbol": "ILS",
+        "price": {
+          "USD": 0.3245807064126926,
+          "BTC": 4.5157169984e-06,
+          "ETH": 0.0001545997868114,
+          "BNB": 0.0004991392523794,
+          "SOL": 862.6729738543324
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ils.png"
+      },
+      {
+        "id": 87,
+        "name": "Manx pound",
+        "symbol": "IMP",
+        "price": {
+          "USD": 1.33669536175971,
+          "BTC": 1.859672447e-05,
+          "ETH": 0.00063667622221,
+          "BNB": 0.0020555661823,
+          "SOL": 3552.678702351389
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/imp.png"
+      },
+      {
+        "id": 63,
+        "name": "Indian rupee",
+        "symbol": "INR",
+        "price": {
+          "USD": 0.010915865313017838,
+          "BTC": 1.51866569924e-07,
+          "ETH": 5.199293787071e-06,
+          "BNB": 1.6786385462131e-05,
+          "SOL": 29.012266612671993
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/inr.png"
+      },
+      {
+        "id": 149,
+        "name": "United States dollar",
+        "symbol": "USD",
+        "price": {
+          "USD": 1,
+          "BTC": 0,
+          "ETH": 0,
+          "BNB": 0,
+          "SOL": 2658
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/usd.png"
+      },
+      {
+        "id": 66,
+        "name": "Iraqi dinar",
+        "symbol": "IQD",
+        "price": {
+          "USD": 0.0007628560969047749,
+          "BTC": 1.06132070579e-08,
+          "ETH": 3.633530509337e-07,
+          "BNB": 1.1731178543866e-06,
+          "SOL": 2.027524510045913
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/iqd.png"
+      },
+      {
+        "id": 65,
+        "name": "Iranian rial",
+        "symbol": "IRR",
+        "price": {
+          "USD": 7.581086129308617e-07,
+          "BTC": 1.05471578638e-11,
+          "ETH": 3.610917951173e-10,
+          "BNB": 1.1658171875429e-09,
+          "SOL": 0.0020149066124408284
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/irr.png"
+      },
+      {
+        "id": 62,
+        "name": "Icelandic krona",
+        "symbol": "ISK",
+        "price": {
+          "USD": 0.008020535693666267,
+          "BTC": 1.11585404347e-07,
+          "ETH": 3.820230481529e-06,
+          "BNB": 1.2333956118541e-05,
+          "SOL": 21.317038388481773
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/isk.png"
+      },
+      {
+        "id": 70,
+        "name": "Jersey pound",
+        "symbol": "JEP",
+        "price": {
+          "USD": 1.33669536175971,
+          "BTC": 1.859672447e-05,
+          "ETH": 0.00063667622221,
+          "BNB": 0.0020555661823,
+          "SOL": 3552.678702351389
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/jep.png"
+      },
+      {
+        "id": 68,
+        "name": "Jamaican dollar",
+        "symbol": "JMD",
+        "price": {
+          "USD": 0.006399693225651411,
+          "BTC": 8.9035493832e-08,
+          "ETH": 3.048213244955e-06,
+          "BNB": 9.841429354855e-06,
+          "SOL": 17.009151430302754
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/jmd.png"
+      },
+      {
+        "id": 71,
+        "name": "Jordanian dinar",
+        "symbol": "JOD",
+        "price": {
+          "USD": 1.410420737457105,
+          "BTC": 1.962242602e-05,
+          "ETH": 0.000671792072102,
+          "BNB": 0.002168940847457,
+          "SOL": 3748.6265447364917
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/jod.png"
+      },
+      {
+        "id": 69,
+        "name": "Japanese yen",
+        "symbol": "JPY",
+        "price": {
+          "USD": 0.00636975239150675,
+          "BTC": 8.861894309e-08,
+          "ETH": 3.0339522415e-06,
+          "BNB": 9.79538642847e-06,
+          "SOL": 16.929574462476413
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/jpy.png"
+      },
+      {
+        "id": 73,
+        "name": "Kenyan shilling",
+        "symbol": "KES",
+        "price": {
+          "USD": 0.007742947841908272,
+          "BTC": 1.0772347369e-07,
+          "ETH": 3.688013680422e-06,
+          "BNB": 1.1907082339358e-05,
+          "SOL": 20.579263367198067
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kes.png"
+      },
+      {
+        "id": 75,
+        "name": "Kyrgyzstani som",
+        "symbol": "KGS",
+        "price": {
+          "USD": 0.011435074421833863,
+          "BTC": 1.59090047328e-07,
+          "ETH": 5.446596279017e-06,
+          "BNB": 1.7584823697316e-05,
+          "SOL": 30.39222437696708
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kgs.png"
+      },
+      {
+        "id": 25,
+        "name": "Cambodian riel",
+        "symbol": "KHR",
+        "price": {
+          "USD": 0.00024903839429224185,
+          "BTC": 3.46473739242e-09,
+          "ETH": 1.1861851892233e-07,
+          "BNB": 3.8297050775025e-07,
+          "SOL": 0.6618960645640979
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/khr.png"
+      },
+      {
+        "id": 34,
+        "name": "Comorian franc",
+        "symbol": "KMF",
+        "price": {
+          "USD": 0.0023584899046859885,
+          "BTC": 3.28124030258e-08,
+          "ETH": 1.1233632475916e-06,
+          "BNB": 3.6268788147642e-06,
+          "SOL": 6.268411706806614
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kmf.png"
+      },
+      {
+        "id": 103,
+        "name": "North Korean won",
+        "symbol": "KPW",
+        "price": {
+          "USD": 0.0011111435141372059,
+          "BTC": 1.54587427883e-08,
+          "ETH": 5.292444899176e-07,
+          "BNB": 1.7087132166985e-06,
+          "SOL": 2.953205353188587
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kpw.png"
+      },
+      {
+        "id": 129,
+        "name": "South Korean won",
+        "symbol": "KRW",
+        "price": {
+          "USD": 0.0006826499518975352,
+          "BTC": 9.4973420504e-09,
+          "ETH": 3.251503707555e-07,
+          "BNB": 1.0497770813086e-06,
+          "SOL": 1.814352031621356
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/krw.png"
+      },
+      {
+        "id": 79,
+        "name": "Liberian dollar",
+        "symbol": "LRD",
+        "price": {
+          "USD": 0.00546092552912323,
+          "BTC": 7.597492319e-08,
+          "ETH": 2.60107241717e-06,
+          "BNB": 8.39779516174e-06,
+          "SOL": 14.51408778504513
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/lrd.png"
+      },
+      {
+        "id": 78,
+        "name": "Lesotho loti",
+        "symbol": "LSL",
+        "price": {
+          "USD": 0.061050538484131625,
+          "BTC": 8.49363344614e-07,
+          "ETH": 2.9078746973852e-05,
+          "BNB": 9.3883337901133e-05,
+          "SOL": 162.26056739968539
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/lsl.png"
+      },
+      {
+        "id": 80,
+        "name": "Libyan dinar",
+        "symbol": "LYD",
+        "price": {
+          "USD": 0.15719213832099926,
+          "BTC": 2.18692977435e-06,
+          "ETH": 7.487158229903e-05,
+          "BNB": 0.0002417296063855,
+          "SOL": 417.7864141421907
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/lyd.png"
+      },
+      {
+        "id": 93,
+        "name": "Moroccan dirham",
+        "symbol": "MAD",
+        "price": {
+          "USD": 0.10765322869440669,
+          "BTC": 1.49772153781e-06,
+          "ETH": 5.127589495278e-05,
+          "BNB": 0.00016554881736697,
+          "SOL": 286.12153805822373
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mad.png"
+      },
+      {
+        "id": 97,
+        "name": "Nepalese rupee",
+        "symbol": "NPR",
+        "price": {
+          "USD": 0.006779706043073072,
+          "BTC": 9.4322408012e-08,
+          "ETH": 3.229215687178e-06,
+          "BNB": 1.0425811943946e-05,
+          "SOL": 18.019152273948364
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/npr.png"
+      },
+      {
+        "id": 143,
+        "name": "Tunisian dinar",
+        "symbol": "TND",
+        "price": {
+          "USD": 0.3420428043427908,
+          "BTC": 4.758657786e-06,
+          "ETH": 0.0001629170914569,
+          "BNB": 0.0005259924150401,
+          "SOL": 909.0838653628991
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/tnd.png"
+      },
+      {
+        "id": 130,
+        "name": "South Sudanese pound",
+        "symbol": "SSP",
+        "price": {
+          "USD": 0.0016638926576264719,
+          "BTC": 2.31488446761e-08,
+          "ETH": 7.92522306668e-07,
+          "BNB": 2.5587292182159e-06,
+          "SOL": 4.422306066781321
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/coin-default.png"
+      },
+      {
+        "id": 148,
+        "name": "Ukrainian hryvnia",
+        "symbol": "UAH",
+        "price": {
+          "USD": 0.022797558323965836,
+          "BTC": 3.17170181752e-07,
+          "ETH": 1.0858617247029e-05,
+          "BNB": 3.5058017907672e-05,
+          "SOL": 60.591517140108536
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/uah.png"
+      },
+      {
+        "id": 147,
+        "name": "Ugandan shilling",
+        "symbol": "UGX",
+        "price": {
+          "USD": 0.00027046644868243384,
+          "BTC": 3.76285440166e-09,
+          "ETH": 1.2882483302251e-07,
+          "BNB": 4.1592250655041e-07,
+          "SOL": 0.7188477041393591
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ugx.png"
+      },
+      {
+        "id": 151,
+        "name": "Uzbekistani som",
+        "symbol": "UZS",
+        "price": {
+          "USD": 8.205103824488654e-05,
+          "BTC": 1.14153201598e-09,
+          "ETH": 3.908141417434e-08,
+          "BNB": 1.26177844454e-07,
+          "SOL": 0.21807584915584463
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/uzs.png"
+      },
+      {
+        "id": 154,
+        "name": "Vietnamese dong",
+        "symbol": "VND",
+        "price": {
+          "USD": 3.813519786999947e-05,
+          "BTC": 5.3055452113e-10,
+          "ETH": 1.816402929759e-08,
+          "BNB": 5.864419473526e-08,
+          "SOL": 0.10135600762790557
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/vnd.png"
+      },
+      {
+        "id": 152,
+        "name": "Vanuatu vatu",
+        "symbol": "VUV",
+        "price": {
+          "USD": 0.00837204540393796,
+          "BTC": 1.1647577011e-07,
+          "ETH": 3.98765671851e-06,
+          "BNB": 1.287450671358e-05,
+          "SOL": 22.251283465615842
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/vuv.png"
+      },
+      {
+        "id": 118,
+        "name": "Samoan tala",
+        "symbol": "WST",
+        "price": {
+          "USD": 0.36700048187772955,
+          "BTC": 5.10588054589e-06,
+          "ETH": 0.00017480458676999,
+          "BNB": 0.00056437225789517,
+          "SOL": 975.4165631301782
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/wst.png"
+      },
+      {
+        "id": 42,
+        "name": "Dominican peso",
+        "symbol": "DOP",
+        "price": {
+          "USD": 0.016844636575883958,
+          "BTC": 2.34350379475e-07,
+          "ETH": 8.023204004727e-06,
+          "BNB": 2.5903632412457e-05,
+          "SOL": 44.769798208329455
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/dop.png"
+      },
+      {
+        "id": 3,
+        "name": "Algerian dinar",
+        "symbol": "DZD",
+        "price": {
+          "USD": 0.007643958895618424,
+          "BTC": 1.06346293659e-07,
+          "ETH": 3.640864636468e-06,
+          "BNB": 1.1754857429902e-05,
+          "SOL": 20.31616982224166
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/dzd.png"
+      },
+      {
+        "id": 44,
+        "name": "Egyptian pound",
+        "symbol": "EGP",
+        "price": {
+          "USD": 0.019923853809710124,
+          "BTC": 2.77189874645e-07,
+          "ETH": 9.489854112051e-06,
+          "BNB": 3.0638843586875e-05,
+          "SOL": 52.95376427829933
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/egp.png"
+      },
+      {
+        "id": 45,
+        "name": "Eritrean nakfa",
+        "symbol": "ERN",
+        "price": {
+          "USD": 0.06666668198328277,
+          "BTC": 9.2749773204e-07,
+          "ETH": 3.175375066482e-05,
+          "BNB": 0.00010251982679908,
+          "SOL": 177.1871946399542
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ern.png"
+      },
+      {
+        "id": 46,
+        "name": "Ethiopian birr",
+        "symbol": "ETB",
+        "price": {
+          "USD": 0.0064431094798090855,
+          "BTC": 8.96395208521e-08,
+          "ETH": 3.0688926738442e-06,
+          "BNB": 9.9081947423631e-06,
+          "SOL": 17.124543467931126
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/etb.png"
+      },
+      {
+        "id": 47,
+        "name": "European euro",
+        "symbol": "EUR",
+        "price": {
+          "USD": 1.160686,
+          "BTC": 1.6e-05,
+          "ETH": 0.000553,
+          "BNB": 0.001785,
+          "SOL": 3084.879734
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/eur.png"
+      },
+      {
+        "id": 112,
+        "name": "Pound sterling",
+        "symbol": "GBP",
+        "price": {
+          "USD": 1.3340896369168103,
+          "BTC": 1.85604724243e-05,
+          "ETH": 0.0006354350994369,
+          "BNB": 0.0020515591063233,
+          "SOL": 3545.753187818765
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gbp.png"
+      },
+      {
+        "id": 51,
+        "name": "Georgian lari",
+        "symbol": "GEL",
+        "price": {
+          "USD": 0.3696838395857912,
+          "BTC": 5.1432126601e-06,
+          "ETH": 0.0001760826865504,
+          "BNB": 0.0005684987174592,
+          "SOL": 982.5484108592457
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gel.png"
+      },
+      {
+        "id": 55,
+        "name": "Guernsey Pound",
+        "symbol": "GGP",
+        "price": {
+          "USD": 1.33669536175971,
+          "BTC": 1.859672447e-05,
+          "ETH": 0.00063667622221,
+          "BNB": 0.0020555661823,
+          "SOL": 3552.678702351389
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ggp.png"
+      },
+      {
+        "id": 52,
+        "name": "Ghanaian cedi",
+        "symbol": "GHS",
+        "price": {
+          "USD": 0.09316788683260283,
+          "BTC": 1.29619475824e-06,
+          "ETH": 4.437643753131e-05,
+          "BNB": 0.00014327330140279,
+          "SOL": 247.6222905849909
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ghs.png"
+      },
+      {
+        "id": 53,
+        "name": "Gibraltar pound",
+        "symbol": "GIP",
+        "price": {
+          "USD": 1.33669536175971,
+          "BTC": 1.859672447e-05,
+          "ETH": 0.00063667622221,
+          "BNB": 0.0020555661823,
+          "SOL": 3552.678702351389
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gip.png"
+      },
+      {
+        "id": 50,
+        "name": "Gambian dalasi",
+        "symbol": "GMD",
+        "price": {
+          "USD": 0.013605429577836258,
+          "BTC": 1.89285032664e-07,
+          "ETH": 6.48034978868e-06,
+          "BNB": 2.09223894508e-05,
+          "SOL": 36.160610173651186
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gmd.png"
+      },
+      {
+        "id": 56,
+        "name": "Guinean franc",
+        "symbol": "GNF",
+        "price": {
+          "USD": 0.0001139528873918539,
+          "BTC": 1.585365305e-09,
+          "ETH": 5.42764611367e-08,
+          "BNB": 1.752364139196e-07,
+          "SOL": 0.302864816988316
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gnf.png"
+      },
+      {
+        "id": 54,
+        "name": "Guatemalan quetzal",
+        "symbol": "GTQ",
+        "price": {
+          "USD": 0.13029361375105325,
+          "BTC": 1.81270505233e-06,
+          "ETH": 6.205964960588e-05,
+          "BNB": 0.00020036513468803,
+          "SOL": 346.2953189396764
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gtq.png"
+      },
+      {
+        "id": 57,
+        "name": "Guyanese dollar",
+        "symbol": "GYD",
+        "price": {
+          "USD": 0.004776642282368859,
+          "BTC": 6.6454857987e-08,
+          "ETH": 2.275144098028e-06,
+          "BNB": 7.34550640442e-06,
+          "SOL": 12.695394770415572
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/gyd.png"
+      },
+      {
+        "id": 60,
+        "name": "Hong Kong dollar",
+        "symbol": "HKD",
+        "price": {
+          "USD": 0.12788748850381515,
+          "BTC": 1.77922992437e-06,
+          "ETH": 6.091359735165e-05,
+          "BNB": 0.00019666500238408,
+          "SOL": 339.9003016712695
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/hkd.png"
+      },
+      {
+        "id": 59,
+        "name": "Honduran lempira",
+        "symbol": "HNL",
+        "price": {
+          "USD": 0.037761764540341684,
+          "BTC": 5.25359143832e-07,
+          "ETH": 1.7986160705858e-05,
+          "BNB": 5.8069930063031e-05,
+          "SOL": 100.36349379492806
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/hnl.png"
+      },
+      {
+        "id": 37,
+        "name": "Croatian kuna",
+        "symbol": "HRK",
+        "price": {
+          "USD": 0.15401128129324865,
+          "BTC": 2.14267621933e-06,
+          "ETH": 7.335652053272e-05,
+          "BNB": 0.00023683809383596,
+          "SOL": 409.33230908504623
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/hrk.png"
+      },
+      {
+        "id": 74,
+        "name": "Kuwaiti dinar",
+        "symbol": "KWD",
+        "price": {
+          "USD": 3.2507659991597824,
+          "BTC": 4.52261609833e-05,
+          "ETH": 0.0015483598393704,
+          "BNB": 0.0049990183594525,
+          "SOL": 8639.909632318358
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kwd.png"
+      },
+      {
+        "id": 28,
+        "name": "Cayman Islands dollar",
+        "symbol": "KYD",
+        "price": {
+          "USD": 1.1992007298402803,
+          "BTC": 1.66838355246e-05,
+          "ETH": 0.0005711866833566,
+          "BNB": 0.0018441273431215,
+          "SOL": 3187.2444646917747
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kyd.png"
+      },
+      {
+        "id": 72,
+        "name": "Kazakhstani tenge",
+        "symbol": "KZT",
+        "price": {
+          "USD": 0.002013202546241598,
+          "BTC": 2.8008605502e-08,
+          "ETH": 9.5890075506e-07,
+          "BNB": 3.095896934002e-06,
+          "SOL": 5.350704441838134
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/kzt.png"
+      },
+      {
+        "id": 76,
+        "name": "Lao kip",
+        "symbol": "LAK",
+        "price": {
+          "USD": 4.667390265567916e-05,
+          "BTC": 6.4934893369e-10,
+          "ETH": 2.223106690467e-08,
+          "BNB": 7.177498975421e-08,
+          "SOL": 0.12405023961642302
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/lak.png"
+      },
+      {
+        "id": 77,
+        "name": "Lebanese pound",
+        "symbol": "LBP",
+        "price": {
+          "USD": 1.1159752752578824e-05,
+          "BTC": 1.55259644851e-10,
+          "ETH": 5.315458874574e-09,
+          "BNB": 1.7161434846898e-08,
+          "SOL": 0.029660472432103187
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/lbp.png"
+      },
+      {
+        "id": 131,
+        "name": "Sri Lankan rupee",
+        "symbol": "LKR",
+        "price": {
+          "USD": 0.003217945541252562,
+          "BTC": 4.4769547584e-08,
+          "ETH": 1.532727253406e-06,
+          "BNB": 4.948547156146e-06,
+          "SOL": 8.552679179408802
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/lkr.png"
+      },
+      {
+        "id": 141,
+        "name": "Tongan pa’anga",
+        "symbol": "TOP",
+        "price": {
+          "USD": 0.41532383447962956,
+          "BTC": 5.77817739057e-06,
+          "ETH": 0.00019782129682905,
+          "BNB": 0.00063868376690863,
+          "SOL": 1103.8507228694473
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/top.png"
+      },
+      {
+        "id": 144,
+        "name": "Turkish lira",
+        "symbol": "TRY",
+        "price": {
+          "USD": 0.022730594844927968,
+          "BTC": 3.16238554842e-07,
+          "ETH": 1.0826722130102e-05,
+          "BNB": 3.4955041667238e-05,
+          "SOL": 60.41354111608762
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/try.png"
+      },
+      {
+        "id": 142,
+        "name": "Trinidad and Tobago dollar",
+        "symbol": "TTD",
+        "price": {
+          "USD": 0.14749971184661778,
+          "BTC": 2.05208425174e-06,
+          "ETH": 7.025501995562e-05,
+          "BNB": 0.00022682462155866,
+          "SOL": 392.02581221692435
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ttd.png"
+      },
+      {
+        "id": 99,
+        "name": "New Taiwan dollar",
+        "symbol": "TWD",
+        "price": {
+          "USD": 0.031550755317665734,
+          "BTC": 4.38948709169e-07,
+          "ETH": 1.5027818812029e-05,
+          "BNB": 4.8518658411085e-05,
+          "SOL": 83.85582808681923
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/twd.png"
+      },
+      {
+        "id": 139,
+        "name": "Tanzanian shilling",
+        "symbol": "TZS",
+        "price": {
+          "USD": 0.00038980299575708884,
+          "BTC": 5.42311967163e-09,
+          "ETH": 1.8566556437853e-07,
+          "BNB": 5.994378964413e-07,
+          "SOL": 1.0360212511816316
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/tzs.png"
+      },
+      {
+        "id": 150,
+        "name": "Uruguayan peso",
+        "symbol": "UYU",
+        "price": {
+          "USD": 0.025787098066226477,
+          "BTC": 3.58762042158e-07,
+          "ETH": 1.2282553413556e-05,
+          "BNB": 3.9655323300227e-05,
+          "SOL": 68.53713771754545
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/uyu.png"
+      },
+      {
+        "id": 20,
+        "name": "Botswana pula",
+        "symbol": "BWP",
+        "price": {
+          "USD": 0.07458340230362488,
+          "BTC": 1.03763880887e-06,
+          "ETH": 3.552453324551e-05,
+          "BNB": 0.00011469413594292,
+          "SOL": 198.2283117704316
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bwp.png"
+      },
+      {
+        "id": 14,
+        "name": "Belarusian ruble",
+        "symbol": "BYN",
+        "price": {
+          "USD": 0.3427818260536231,
+          "BTC": 4.7689393981e-06,
+          "ETH": 0.0001632690920431,
+          "BNB": 0.0005271288804459,
+          "SOL": 911.0480426674368
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/byn.png"
+      },
+      {
+        "id": 15,
+        "name": "Belize dollar",
+        "symbol": "BZD",
+        "price": {
+          "USD": 0.4969017649279962,
+          "BTC": 6.9131273119e-06,
+          "ETH": 0.00023667736685,
+          "BNB": 0.0007641340675894,
+          "SOL": 1320.6691426657706
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bzd.png"
+      },
+      {
+        "id": 26,
+        "name": "Canadian dollar",
+        "symbol": "CAD",
+        "price": {
+          "USD": 0.7328368141449882,
+          "BTC": 1.01955649037e-05,
+          "ETH": 0.0003490546819204,
+          "BNB": 0.0011269542899551,
+          "SOL": 1947.7390409169122
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/cad.png"
+      },
+      {
+        "id": 35,
+        "name": "Congolese franc",
+        "symbol": "CDF",
+        "price": {
+          "USD": 0.0004424779899664781,
+          "BTC": 6.1559585682e-09,
+          "ETH": 2.107549881002e-07,
+          "BNB": 6.804413470757e-07,
+          "SOL": 1.176021235791304
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/cdf.png"
+      },
+      {
+        "id": 136,
+        "name": "Swiss franc",
+        "symbol": "CHF",
+        "price": {
+          "USD": 1.280745659624522,
+          "BTC": 1.7818326326e-05,
+          "ETH": 0.000610027034958,
+          "BNB": 0.001969526895478,
+          "SOL": 3403.975175081786
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/chf.png"
+      },
+      {
+        "id": 31,
+        "name": "Chilean peso",
+        "symbol": "CLP",
+        "price": {
+          "USD": 0.0011174686487149441,
+          "BTC": 1.55467409877e-08,
+          "ETH": 5.3225719042e-07,
+          "BNB": 1.7184399899846e-06,
+          "SOL": 2.970016342099519
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/clp.png"
+      },
+      {
+        "id": 32,
+        "name": "Chinese Yuan Renminbi",
+        "symbol": "CNY",
+        "price": {
+          "USD": 0.14498002331799537,
+          "BTC": 2.01702917886e-06,
+          "ETH": 6.905487681199e-05,
+          "BNB": 0.00022294985197576,
+          "SOL": 385.32896562922355
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/cny.png"
+      },
+      {
+        "id": 33,
+        "name": "Colombian peso",
+        "symbol": "COP",
+        "price": {
+          "USD": 0.00026589669014494803,
+          "BTC": 3.69927780607e-09,
+          "ETH": 1.2664822892462e-07,
+          "BNB": 4.0889514535829e-07,
+          "SOL": 0.7067021664982007
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/cop.png"
+      },
+      {
+        "id": 36,
+        "name": "Costa Rican colon",
+        "symbol": "CRC",
+        "price": {
+          "USD": 0.002119163956420094,
+          "BTC": 2.9482789677e-08,
+          "ETH": 1.009370826448e-06,
+          "BNB": 3.258844077849e-06,
+          "SOL": 5.632329452279319
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/crc.png"
+      },
+      {
+        "id": 120,
+        "name": "Saudi Arabian riyal",
+        "symbol": "SAR",
+        "price": {
+          "USD": 0.2663787498476687,
+          "BTC": 3.7059844437e-06,
+          "ETH": 0.000126877836926,
+          "BNB": 0.0004096364553464,
+          "SOL": 707.9833882994517
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sar.png"
+      },
+      {
+        "id": 126,
+        "name": "Solomon Islands dollar",
+        "symbol": "SBD",
+        "price": {
+          "USD": 0.12419801856454808,
+          "BTC": 1.72790031115e-06,
+          "ETH": 5.915628012734e-05,
+          "BNB": 0.00019099134640028,
+          "SOL": 330.09440150046004
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sbd.png"
+      },
+      {
+        "id": 123,
+        "name": "Seychellois rupee",
+        "symbol": "SCR",
+        "price": {
+          "USD": 0.07155035971333894,
+          "BTC": 9.9544171671e-07,
+          "ETH": 3.407987640491e-05,
+          "BNB": 0.00011002993199906,
+          "SOL": 190.167069005552
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/scr.png"
+      },
+      {
+        "id": 132,
+        "name": "Sudanese pound",
+        "symbol": "SDG",
+        "price": {
+          "USD": 0.0016625336753609474,
+          "BTC": 2.31299378859e-08,
+          "ETH": 7.918750150565e-07,
+          "BNB": 2.5566393792987e-06,
+          "SOL": 4.418694153783249
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sdg.png"
+      },
+      {
+        "id": 135,
+        "name": "Swedish krona",
+        "symbol": "SEK",
+        "price": {
+          "USD": 0.10862123486062167,
+          "BTC": 1.51118888757e-06,
+          "ETH": 5.173696224351e-05,
+          "BNB": 0.00016703741439248,
+          "SOL": 288.6943119219181
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sek.png"
+      },
+      {
+        "id": 124,
+        "name": "Sierra Leonean leone",
+        "symbol": "SLL",
+        "price": {
+          "USD": 4.768832147253e-05,
+          "BTC": 6.63462e-10,
+          "ETH": 2.271424083e-08,
+          "BNB": 7.333496002e-08,
+          "SOL": 0.12674636936220599
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sll.png"
+      },
+      {
+        "id": 127,
+        "name": "Somali shilling",
+        "symbol": "SOS",
+        "price": {
+          "USD": 0.0017516725856593959,
+          "BTC": 2.4370079658e-08,
+          "ETH": 8.343324262842e-07,
+          "BNB": 2.6937169324781e-06,
+          "SOL": 4.6556082010880955
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sos.png"
+      },
+      {
+        "id": 133,
+        "name": "Surinamese dollar",
+        "symbol": "SRD",
+        "price": {
+          "USD": 0.02663435595241666,
+          "BTC": 3.7054948597e-07,
+          "ETH": 1.268610755584e-05,
+          "BNB": 4.095823397708e-05,
+          "SOL": 70.78898592004428
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/srd.png"
+      },
+      {
+        "id": 137,
+        "name": "Syrian pound",
+        "symbol": "SYP",
+        "price": {
+          "USD": 0.009046057457786525,
+          "BTC": 1.25852937725e-07,
+          "ETH": 4.308692805294e-06,
+          "BNB": 1.3911000460761e-05,
+          "SOL": 24.042677628668503
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/syp.png"
+      },
+      {
+        "id": 134,
+        "name": "Swazi lilangeni",
+        "symbol": "SZL",
+        "price": {
+          "USD": 0.0610308763591654,
+          "BTC": 8.49089796e-07,
+          "ETH": 2.90693817828e-05,
+          "BNB": 9.38531015434e-05,
+          "SOL": 162.20830926024027
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/szl.png"
+      },
+      {
+        "id": 140,
+        "name": "Thai baht",
+        "symbol": "THB",
+        "price": {
+          "USD": 0.03161506156758175,
+          "BTC": 4.3984336748e-07,
+          "ETH": 1.505844827438e-05,
+          "BNB": 4.861754837242e-05,
+          "SOL": 84.02674170785848
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/thb.png"
+      },
+      {
+        "id": 138,
+        "name": "Tajikistani somoni",
+        "symbol": "TJS",
+        "price": {
+          "USD": 0.10447935312935056,
+          "BTC": 1.45356511213e-06,
+          "ETH": 4.976415850009e-05,
+          "BNB": 0.00016066804089016,
+          "SOL": 277.68598838365597
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/tjs.png"
+      },
+      {
+        "id": 145,
+        "name": "Turkmen manat",
+        "symbol": "TMT",
+        "price": {
+          "USD": 0.2849003450411352,
+          "BTC": 3.9636654476e-06,
+          "ETH": 0.0001356997866344,
+          "BNB": 0.0004381189097718,
+          "SOL": 757.2102193784324
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/tmt.png"
+      },
+      {
+        "id": 29,
+        "name": "Central African CFA franc",
+        "symbol": "XAF",
+        "price": {
+          "USD": 0.001772616593403383,
+          "BTC": 2.4661462386e-08,
+          "ETH": 8.4430818599e-07,
+          "BNB": 2.725924565774e-06,
+          "SOL": 4.711273337949191
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/xaf.png"
+      },
+      {
+        "id": 43,
+        "name": "East Caribbean dollar",
+        "symbol": "XCD",
+        "price": {
+          "USD": 0.3700210181614385,
+          "BTC": 5.1479036445e-06,
+          "ETH": 0.0001762432867799,
+          "BNB": 0.0005690172296777,
+          "SOL": 983.4445665420293
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/xcd.png"
+      },
+      {
+        "id": 155,
+        "name": "West African CFA franc",
+        "symbol": "XOF",
+        "price": {
+          "USD": 0.0017726013494831611,
+          "BTC": 2.46612503058e-08,
+          "ETH": 8.443009252167e-07,
+          "BNB": 2.7259011237188e-06,
+          "SOL": 4.711232822546608
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/xof.png"
+      },
+      {
+        "id": 30,
+        "name": "CFP franc",
+        "symbol": "XPF",
+        "price": {
+          "USD": 0.00972654869984216,
+          "BTC": 1.353202468e-07,
+          "ETH": 4.63281496927e-06,
+          "BNB": 1.495745788445e-05,
+          "SOL": 25.851292225494113
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/xpf.png"
+      },
+      {
+        "id": 156,
+        "name": "Yemeni rial",
+        "symbol": "YER",
+        "price": {
+          "USD": 0.004191139559062246,
+          "BTC": 5.8309073139e-08,
+          "ETH": 1.996265549758e-06,
+          "BNB": 6.445122044526e-06,
+          "SOL": 11.139241352989359
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/yer.png"
+      },
+      {
+        "id": 128,
+        "name": "South African rand",
+        "symbol": "ZAR",
+        "price": {
+          "USD": 0.06080266988073796,
+          "BTC": 8.4591488189e-07,
+          "ETH": 2.896068563353e-05,
+          "BNB": 9.350216629437e-05,
+          "SOL": 161.6017804139215
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/zar.png"
+      },
+      {
+        "id": 11,
+        "name": "Bahraini dinar",
+        "symbol": "BHD",
+        "price": {
+          "USD": 2.6503976672017613,
+          "BTC": 3.68735589082e-05,
+          "ETH": 0.0012624007102686,
+          "BNB": 0.0040757737104474,
+          "SOL": 7044.246291566143
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bhd.png"
+      },
+      {
+        "id": 24,
+        "name": "Burundi franc",
+        "symbol": "BIF",
+        "price": {
+          "USD": 0.00033681717831949925,
+          "BTC": 4.68595645844e-09,
+          "ETH": 1.6042809364155e-07,
+          "BNB": 5.1795646276396e-07,
+          "SOL": 0.8951951583242505
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bif.png"
+      },
+      {
+        "id": 22,
+        "name": "Brunei dollar",
+        "symbol": "BND",
+        "price": {
+          "USD": 0.7838416063037644,
+          "BTC": 1.09051671764e-05,
+          "ETH": 0.0003733485781327,
+          "BNB": 0.0012053893088054,
+          "SOL": 2083.299950309008
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bnd.png"
+      },
+      {
+        "id": 18,
+        "name": "Bolivian boliviano",
+        "symbol": "BOB",
+        "price": {
+          "USD": 0.1446181993614644,
+          "BTC": 2.0119953165e-06,
+          "ETH": 6.88825378361e-05,
+          "BNB": 0.0002223934401633,
+          "SOL": 384.3673072729951
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bob.png"
+      },
+      {
+        "id": 21,
+        "name": "Brazilian real",
+        "symbol": "BRL",
+        "price": {
+          "USD": 0.19114604527780246,
+          "BTC": 2.65931224127e-06,
+          "ETH": 9.104403701747e-05,
+          "BNB": 0.00029394382429478,
+          "SOL": 508.029356220073
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/brl.png"
+      },
+      {
+        "id": 38,
+        "name": "Cuban peso",
+        "symbol": "CUP",
+        "price": {
+          "USD": 0.03773585764459605,
+          "BTC": 5.2499871511e-07,
+          "ETH": 1.797382109207e-05,
+          "BNB": 5.803009051521e-05,
+          "SOL": 100.29463825806259
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/cup.png"
+      },
+      {
+        "id": 27,
+        "name": "Cape Verdean escudo",
+        "symbol": "CVE",
+        "price": {
+          "USD": 0.010544962264533204,
+          "BTC": 1.46706395066e-07,
+          "ETH": 5.022630383823e-06,
+          "BNB": 1.6216011848826e-05,
+          "SOL": 28.026477779490243
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/cve.png"
+      },
+      {
+        "id": 39,
+        "name": "Czech koruna",
+        "symbol": "CZK",
+        "price": {
+          "USD": 0.04757321227368433,
+          "BTC": 6.6186054528e-07,
+          "ETH": 2.265941360696e-05,
+          "BNB": 7.315794543063e-05,
+          "SOL": 126.44043129218427
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/czk.png"
+      },
+      {
+        "id": 41,
+        "name": "Djiboutian franc",
+        "symbol": "DJF",
+        "price": {
+          "USD": 0.005611999912775309,
+          "BTC": 7.8076739931e-08,
+          "ETH": 2.673030075292e-06,
+          "BNB": 8.63011690305e-06,
+          "SOL": 14.915614386113779
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/djf.png"
+      },
+      {
+        "id": 40,
+        "name": "Danish krone",
+        "symbol": "DKK",
+        "price": {
+          "USD": 0.15534997531261432,
+          "BTC": 2.16130075006e-06,
+          "ETH": 7.399414872784e-05,
+          "BNB": 0.00023889673354802,
+          "SOL": 412.8902998341909
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/dkk.png"
+      },
+      {
+        "id": 10,
+        "name": "Bahamian dollar",
+        "symbol": "BSD",
+        "price": {
+          "USD": 0.9993559685698887,
+          "BTC": 1.39035027209e-05,
+          "ETH": 0.00047599939441,
+          "BNB": 0.0015368066590461,
+          "SOL": 2656.0955975279435
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bsd.png"
+      },
+      {
+        "id": 17,
+        "name": "Bhutanese ngultrum",
+        "symbol": "BTN",
+        "price": {
+          "USD": 0.010847368377718316,
+          "BTC": 1.50913608861e-07,
+          "ETH": 5.166668275495e-06,
+          "BNB": 1.6681051077184e-05,
+          "SOL": 28.830214957390872
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/btn.png"
+      },
+      {
+        "id": 49,
+        "name": "Fijian dollar",
+        "symbol": "FJD",
+        "price": {
+          "USD": 0.4528884227415395,
+          "BTC": 6.3007933268e-06,
+          "ETH": 0.0002157135412608,
+          "BNB": 0.0006964504798726,
+          "SOL": 1203.690160110404
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/fjd.png"
+      },
+      {
+        "id": 48,
+        "name": "Falkland Islands pound",
+        "symbol": "FKP",
+        "price": {
+          "USD": 1.33669536175971,
+          "BTC": 1.859672447e-05,
+          "ETH": 0.00063667622221,
+          "BNB": 0.0020555661823,
+          "SOL": 3552.678702351389
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/fkp.png"
+      },
+      {
+        "id": 100,
+        "name": "New Zealand dollar",
+        "symbol": "NZD",
+        "price": {
+          "USD": 0.592855209189954,
+          "BTC": 8.248076034e-06,
+          "ETH": 0.000282380582518,
+          "BNB": 0.000911690990986,
+          "SOL": 1575.694908146057
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/nzd.png"
+      },
+      {
+        "id": 105,
+        "name": "Omani rial",
+        "symbol": "OMR",
+        "price": {
+          "USD": 2.600749738398213,
+          "BTC": 3.6182833946e-05,
+          "ETH": 0.001238753096418,
+          "BNB": 0.00399942527206,
+          "SOL": 6912.291663516845
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/omr.png"
+      },
+      {
+        "id": 109,
+        "name": "Peruvian sol",
+        "symbol": "PEN",
+        "price": {
+          "USD": 0.2921776648915617,
+          "BTC": 4.0649108892e-06,
+          "ETH": 0.0001391660188387,
+          "BNB": 0.00044930995076,
+          "SOL": 776.5519332666091
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/pen.png"
+      },
+      {
+        "id": 107,
+        "name": "Papua New Guinean kina",
+        "symbol": "PGK",
+        "price": {
+          "USD": 0.23213720000000004,
+          "BTC": 3.22960015582e-06,
+          "ETH": 0.00011056837612944,
+          "BNB": 0.0003569799010485,
+          "SOL": 616.9759468438539
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/pgk.png"
+      },
+      {
+        "id": 110,
+        "name": "Philippine peso",
+        "symbol": "PHP",
+        "price": {
+          "USD": 0.017066605514146037,
+          "BTC": 2.37438514068e-07,
+          "ETH": 8.12892917525e-06,
+          "BNB": 2.6244975590615e-05,
+          "SOL": 45.35974887480674
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/php.png"
+      },
+      {
+        "id": 106,
+        "name": "Pakistani rupee",
+        "symbol": "PKR",
+        "price": {
+          "USD": 0.003574583751916843,
+          "BTC": 4.9731263417e-08,
+          "ETH": 1.702596226663e-06,
+          "BNB": 5.496984343952e-06,
+          "SOL": 9.500554822370347
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/pkr.png"
+      },
+      {
+        "id": 111,
+        "name": "Polish zloty",
+        "symbol": "PLN",
+        "price": {
+          "USD": 0.27123033311001216,
+          "BTC": 3.77348191533e-06,
+          "ETH": 0.00012918867587367,
+          "BNB": 0.00041709720576867,
+          "SOL": 720.8779617541851
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/pln.png"
+      },
+      {
+        "id": 108,
+        "name": "Paraguayan guarani",
+        "symbol": "PYG",
+        "price": {
+          "USD": 0.0001534781234102965,
+          "BTC": 2.1352586801e-09,
+          "ETH": 7.31025741539e-08,
+          "BNB": 2.360182052171e-07,
+          "SOL": 0.407915278166901
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/pyg.png"
+      },
+      {
+        "id": 113,
+        "name": "Qatari riyal",
+        "symbol": "QAR",
+        "price": {
+          "USD": 0.27475610278610835,
+          "BTC": 3.82253405473e-06,
+          "ETH": 0.00013086802165579,
+          "BNB": 0.00042251912397089,
+          "SOL": 730.2487781690587
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/qar.png"
+      },
+      {
+        "id": 114,
+        "name": "Romanian leu",
+        "symbol": "RON",
+        "price": {
+          "USD": 0.22782139701914864,
+          "BTC": 3.16955670746e-06,
+          "ETH": 0.00010851273262514,
+          "BNB": 0.00035034307196187,
+          "SOL": 605.5053741372722
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ron.png"
+      },
+      {
+        "id": 122,
+        "name": "Serbian dinar",
+        "symbol": "RSD",
+        "price": {
+          "USD": 0.009886405980111842,
+          "BTC": 1.37544255267e-07,
+          "ETH": 4.708955975076e-06,
+          "BNB": 1.5203285938254e-05,
+          "SOL": 26.276162073386956
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/rsd.png"
+      },
+      {
+        "id": 115,
+        "name": "Russian ruble",
+        "symbol": "RUB",
+        "price": {
+          "USD": 0.012840923608869887,
+          "BTC": 1.78648871823e-07,
+          "ETH": 6.116210893536e-06,
+          "BNB": 1.9746734428027e-05,
+          "SOL": 34.128700621581096
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/rub.png"
+      },
+      {
+        "id": 116,
+        "name": "Rwandan franc",
+        "symbol": "RWF",
+        "price": {
+          "USD": 0.000685306926988192,
+          "BTC": 9.534307117e-09,
+          "ETH": 3.26415904333e-07,
+          "BNB": 1.053862969761e-06,
+          "SOL": 1.8214137594370552
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/rwf.png"
+      },
+      {
+        "id": 119,
+        "name": "Sao Tome and Principe dobra",
+        "symbol": "STN",
+        "price": {
+          "USD": 0.047460214125960784,
+          "BTC": 6.60288462756e-07,
+          "ETH": 2.2605591894203e-05,
+          "BNB": 7.2984177212554e-05,
+          "SOL": 126.14010398926455
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/coin-default.png"
+      },
+      {
+        "id": 86,
+        "name": "Maldivian rufiyaa",
+        "symbol": "MVR",
+        "price": {
+          "USD": 0.06468230889928298,
+          "BTC": 8.9989021535e-07,
+          "ETH": 3.080858155994e-05,
+          "BNB": 9.946826372703e-05,
+          "SOL": 171.91311335357602
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mvr.png"
+      },
+      {
+        "id": 84,
+        "name": "Malawian kwacha",
+        "symbol": "MWK",
+        "price": {
+          "USD": 0.0005763347027983009,
+          "BTC": 8.0182351039e-09,
+          "ETH": 2.745117637132e-07,
+          "BNB": 8.862858050142e-07,
+          "SOL": 1.5317865855104342
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mwk.png"
+      },
+      {
+        "id": 90,
+        "name": "Mexican peso",
+        "symbol": "MXN",
+        "price": {
+          "USD": 0.0566035518315959,
+          "BTC": 7.874948083e-07,
+          "ETH": 2.69606198799e-05,
+          "BNB": 8.70447749514e-05,
+          "SOL": 150.44133377168345
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mxn.png"
+      },
+      {
+        "id": 85,
+        "name": "Malaysian ringgit",
+        "symbol": "MYR",
+        "price": {
+          "USD": 0.2534531691199608,
+          "BTC": 3.5261577829e-06,
+          "ETH": 0.000120721303326,
+          "BNB": 0.0003897595354509,
+          "SOL": 673.6296853686666
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/myr.png"
+      },
+      {
+        "id": 94,
+        "name": "Mozambican metical",
+        "symbol": "MZN",
+        "price": {
+          "USD": 0.01564824024942574,
+          "BTC": 2.1770556011e-07,
+          "ETH": 7.45335307595e-06,
+          "BNB": 2.406381767258e-05,
+          "SOL": 41.59000730744383
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mzn.png"
+      },
+      {
+        "id": 96,
+        "name": "Namibian dollar",
+        "symbol": "NAD",
+        "price": {
+          "USD": 0.06105027837989848,
+          "BTC": 8.4935972592e-07,
+          "ETH": 2.907862308461e-05,
+          "BNB": 9.388293791361e-05,
+          "SOL": 162.25987609275344
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/nad.png"
+      },
+      {
+        "id": 102,
+        "name": "Nigerian naira",
+        "symbol": "NGN",
+        "price": {
+          "USD": 0.0007228516366343775,
+          "BTC": 1.00566464931e-08,
+          "ETH": 3.442986804578e-07,
+          "BNB": 1.1115991134488e-06,
+          "SOL": 1.9212003631478471
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ngn.png"
+      },
+      {
+        "id": 101,
+        "name": "Nicaraguan cordoba",
+        "symbol": "NIO",
+        "price": {
+          "USD": 0.027154840490000234,
+          "BTC": 3.77790707727e-07,
+          "ETH": 1.2934017542356e-05,
+          "BNB": 4.1758633562859e-05,
+          "SOL": 72.17233352823982
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/nio.png"
+      },
+      {
+        "id": 104,
+        "name": "Norwegian krone",
+        "symbol": "NOK",
+        "price": {
+          "USD": 0.10359063187388405,
+          "BTC": 1.44120081073e-06,
+          "ETH": 4.934085509999e-05,
+          "BNB": 0.0001593013679664,
+          "SOL": 275.32393853524
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/nok.png"
+      },
+      {
+        "id": 125,
+        "name": "Singapore dollar",
+        "symbol": "SGD",
+        "price": {
+          "USD": 0.7831286932044365,
+          "BTC": 1.08952487994e-05,
+          "ETH": 0.0003730090132387,
+          "BNB": 0.0012042929931453,
+          "SOL": 2081.405164662954
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/sgd.png"
+      },
+      {
+        "id": 117,
+        "name": "Saint Helena pound",
+        "symbol": "SHP",
+        "price": {
+          "USD": 1.3328732279531246,
+          "BTC": 1.85435491799e-05,
+          "ETH": 0.0006348557163659,
+          "BNB": 0.002049688516209,
+          "SOL": 3542.520207184384
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/shp.png"
+      },
+      {
+        "id": 13,
+        "name": "Barbadian dollar",
+        "symbol": "BBD",
+        "price": {
+          "USD": 0.49618081086164734,
+          "BTC": 6.90309706533e-06,
+          "ETH": 0.00023633397199398,
+          "BNB": 0.00076302538655397,
+          "SOL": 1318.752985678797
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bbd.png"
+      },
+      {
+        "id": 12,
+        "name": "Bangladeshi taka",
+        "symbol": "BDT",
+        "price": {
+          "USD": 0.008178015628026192,
+          "BTC": 1.13776338073e-07,
+          "ETH": 3.895239142852e-06,
+          "BNB": 1.2576128296826e-05,
+          "SOL": 21.73558970903971
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bdt.png"
+      },
+      {
+        "id": 23,
+        "name": "Bulgarian lev",
+        "symbol": "BGN",
+        "price": {
+          "USD": 0.6069266925991909,
+          "BTC": 8.4438450235e-06,
+          "ETH": 0.0002890829166127,
+          "BNB": 0.0009333300766433,
+          "SOL": 1613.0941995991784
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bgn.png"
+      },
+      {
+        "id": 157,
+        "name": "Zambian kwacha",
+        "symbol": "ZMW",
+        "price": {
+          "USD": 0.05211088910725612,
+          "BTC": 7.2499080535e-07,
+          "ETH": 2.482073699196e-05,
+          "BNB": 8.013597147315e-05,
+          "SOL": 138.50070194619568
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/zmw.png"
+      },
+      {
+        "id": 146,
+        "name": "UAE dirham",
+        "symbol": "AED",
+        "price": {
+          "USD": 0.27229416288299824,
+          "BTC": 3.78828240745e-06,
+          "ETH": 0.00012969538453767,
+          "BNB": 0.00041873316005387,
+          "SOL": 723.7054163003276
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/aed.png"
+      },
+      {
+        "id": 1,
+        "name": "Afghan afghani",
+        "symbol": "AFN",
+        "price": {
+          "USD": 0.015873090980343334,
+          "BTC": 2.20833787534e-07,
+          "ETH": 7.56045086204e-06,
+          "BNB": 2.4409592462978e-05,
+          "SOL": 42.18761722350388
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/afn.png"
+      },
+      {
+        "id": 2,
+        "name": "Albanian lek",
+        "symbol": "ALL",
+        "price": {
+          "USD": 0.012083032997581906,
+          "BTC": 1.68104746899e-07,
+          "ETH": 5.755222933942e-06,
+          "BNB": 1.8581252482767e-05,
+          "SOL": 32.11437341550008
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/all.png"
+      },
+      {
+        "id": 6,
+        "name": "Armenian dram",
+        "symbol": "AMD",
+        "price": {
+          "USD": 0.0026540521865622488,
+          "BTC": 3.69244022728e-08,
+          "ETH": 1.2641413803172e-06,
+          "BNB": 4.0813936195342e-06,
+          "SOL": 7.0539592998332195
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/amd.png"
+      },
+      {
+        "id": 98,
+        "name": "Netherlands Antillean guilder",
+        "symbol": "ANG",
+        "price": {
+          "USD": 0.558743377869991,
+          "BTC": 7.773496451e-06,
+          "ETH": 0.000266132907454,
+          "BNB": 0.000859233917457,
+          "SOL": 1485.0322335415044
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ang.png"
+      },
+      {
+        "id": 4,
+        "name": "Angolan kwanza",
+        "symbol": "AOA",
+        "price": {
+          "USD": 0.0010905129087191647,
+          "BTC": 1.51717202582e-08,
+          "ETH": 5.194180056676e-07,
+          "BNB": 1.6769875325742e-06,
+          "SOL": 2.898373179320039
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/aoa.png"
+      },
+      {
+        "id": 5,
+        "name": "Argentine peso",
+        "symbol": "ARS",
+        "price": {
+          "USD": 0.0007135060154286487,
+          "BTC": 9.9266258859e-09,
+          "ETH": 3.398473035969e-07,
+          "BNB": 1.0972274447406e-06,
+          "SOL": 1.8963615028003953
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/ars.png"
+      },
+      {
+        "id": 8,
+        "name": "Australian dollar",
+        "symbol": "AUD",
+        "price": {
+          "USD": 0.7044553530027263,
+          "BTC": 9.8007088818e-06,
+          "ETH": 0.000335536417417,
+          "BNB": 0.0010833093627734,
+          "SOL": 1872.3065860537577
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/aud.png"
+      },
+      {
+        "id": 7,
+        "name": "Aruban florin",
+        "symbol": "AWG",
+        "price": {
+          "USD": 0.5547851573702666,
+          "BTC": 7.7184278551e-06,
+          "ETH": 0.0002642475826845,
+          "BNB": 0.0008531469776547,
+          "SOL": 1474.5120461668216
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/awg.png"
+      },
+      {
+        "id": 9,
+        "name": "Azerbaijan manat",
+        "symbol": "AZN",
+        "price": {
+          "USD": 0.5889854784175601,
+          "BTC": 8.1942385489e-06,
+          "ETH": 0.0002805374059498,
+          "BNB": 0.000905740130425,
+          "SOL": 1565.4099094154421
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/azn.png"
+      },
+      {
+        "id": 19,
+        "name": "Bosnia and Herzegovina convertible mark",
+        "symbol": "BAM",
+        "price": {
+          "USD": 0.5945138316922157,
+          "BTC": 8.2711515581e-06,
+          "ETH": 0.0002831705946169,
+          "BNB": 0.0009142416157749,
+          "SOL": 1580.1032071553905
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/bam.png"
+      },
+      {
+        "id": 88,
+        "name": "Mauritanian ouguiya",
+        "symbol": "MRU",
+        "price": {
+          "USD": 0.025106560866699233,
+          "BTC": 3.49294093696e-07,
+          "ETH": 1.1958409359749e-05,
+          "BNB": 3.8608795203278e-05,
+          "SOL": 66.72840097461591
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/coin-default.png"
+      },
+      {
+        "id": 91,
+        "name": "Moldovan leu",
+        "symbol": "MDL",
+        "price": {
+          "USD": 0.05775058293615129,
+          "BTC": 8.0345283586e-07,
+          "ETH": 2.750695784984e-05,
+          "BNB": 8.880867599868e-05,
+          "SOL": 153.48992142498682
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mdl.png"
+      },
+      {
+        "id": 83,
+        "name": "Malagasy ariary",
+        "symbol": "MGA",
+        "price": {
+          "USD": 0.00024033800389974995,
+          "BTC": 3.34369353488e-09,
+          "ETH": 1.1447446946628e-07,
+          "BNB": 3.6959107308233e-07,
+          "SOL": 0.6387721033880397
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mga.png"
+      },
+      {
+        "id": 82,
+        "name": "Macedonian denar",
+        "symbol": "MKD",
+        "price": {
+          "USD": 0.018828186194725767,
+          "BTC": 2.61946439727e-07,
+          "ETH": 8.967980888085e-06,
+          "BNB": 2.8953929162219e-05,
+          "SOL": 50.04169088299207
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mkd.png"
+      },
+      {
+        "id": 95,
+        "name": "Myanmar kyat",
+        "symbol": "MMK",
+        "price": {
+          "USD": 0.0004762151155260417,
+          "BTC": 6.625325072e-09,
+          "ETH": 2.268241885058e-07,
+          "BNB": 7.323221991921e-07,
+          "SOL": 1.265688014687154
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mmk.png"
+      },
+      {
+        "id": 92,
+        "name": "Mongolian tugrik",
+        "symbol": "MNT",
+        "price": {
+          "USD": 0.0002802574833121582,
+          "BTC": 3.8990718066e-09,
+          "ETH": 1.334883630368e-07,
+          "BNB": 4.309791307075e-07,
+          "SOL": 0.7448703875406198
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mnt.png"
+      },
+      {
+        "id": 81,
+        "name": "Macanese pataca",
+        "symbol": "MOP",
+        "price": {
+          "USD": 0.12411221325102857,
+          "BTC": 1.72670654791e-06,
+          "ETH": 5.911541052876e-05,
+          "BNB": 0.00019085939524239,
+          "SOL": 329.8663475110394
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mop.png"
+      },
+      {
+        "id": 89,
+        "name": "Mauritian rupee",
+        "symbol": "MUR",
+        "price": {
+          "USD": 0.021106095294542326,
+          "BTC": 2.93637765304e-07,
+          "ETH": 1.0052963002702e-05,
+          "BNB": 3.2456891053075e-05,
+          "SOL": 56.09593433765402
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/fiat/mur.png"
+      },
+      {
+        "id": 153,
+        "name": "Venezuelan bolivar",
+        "symbol": "VES",
+        "price": {
+          "USD": 0.002352155782349764,
+          "BTC": 3.2724279784e-08,
+          "ETH": 1.120346266165e-06,
+          "BNB": 3.61713822013e-06,
+          "SOL": 6.251576830165486
+        },
+        "imageUrl": "https://static.images.dropstab.com/images/coin-default.png"
+      }
+    ]
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/markets/mostSearched?size=6&fields=currencyId%2Cname%2Csymbol%2Cslug%2Cimage%2Crank%2Cico%2Ctrading%2Cprice%2Cchange&withAd=false",
+    "type": "list_data",
+    "timestamp": "2026-03-05T08:19:08.928679+00:00",
+    "data": [
+      {
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "symbol": "BTC",
+        "image": "https://static.images.dropstab.com/images/bitcoin.svg",
+        "price": {
+          "USD": "71975.77",
+          "BTC": "1.0",
+          "ETH": "34.28054258",
+          "BNB": "110.57756419",
+          "SOL": "799.73077778",
+          "EUR": "62011.40532409",
+          "GBP": "53951.22487147",
+          "CAD": "98215.27604884",
+          "RUB": "5605186.37072824"
+        },
+        "change": {
+          "1H": {
+            "USD": -0.9203637365665429,
+            "BTC": 0.0,
+            "ETH": 0.5548352858621541,
+            "BNB": -0.367890615594324,
+            "SOL": 0.05909729058501956,
+            "EUR": -0.9203637365665429,
+            "GBP": -0.9203637365665429,
+            "CAD": -0.9203637365665429,
+            "RUB": -0.9203637365665429
+          },
+          "4H": {
+            "USD": -0.9994768578430069,
+            "BTC": 0.0,
+            "ETH": 0.32214065687770077,
+            "BNB": -0.3289792296728322,
+            "SOL": -0.823534575240048,
+            "EUR": -0.9994768578430069,
+            "GBP": -0.9994768578430069,
+            "CAD": -0.9994768578430069,
+            "RUB": -0.9994768578430069
+          },
+          "12H": {
+            "USD": -2.0414326369881386,
+            "BTC": 0.0,
+            "ETH": 1.1762475838968944,
+            "BNB": -0.30044024998242547,
+            "SOL": 1.3315714597055939,
+            "EUR": -2.0414326369881386,
+            "GBP": -2.0414326369881386,
+            "CAD": -2.0414326369881386,
+            "RUB": -2.0414326369881386
+          },
+          "1D": {
+            "USD": 3.7122719708148955,
+            "BTC": 0.0,
+            "ETH": -0.6073632612324964,
+            "BNB": 2.181886903240171,
+            "SOL": 0.5904208429585278,
+            "EUR": 3.7122719708148955,
+            "GBP": 3.7122719708148955,
+            "CAD": 3.7122719708148955,
+            "RUB": 3.7122719708148955
+          },
+          "1W": {
+            "USD": 5.877502944640756,
+            "BTC": 0.0,
+            "ETH": 3.362004576146771,
+            "BNB": 1.9619569161089423,
+            "SOL": 2.702236278523573,
+            "EUR": 5.877502944640756,
+            "GBP": 5.877502944640756,
+            "CAD": 5.877502944640756,
+            "RUB": 5.877502944640756
+          },
+          "1M": {
+            "USD": 2.372105508540434,
+            "BTC": 0.0,
+            "ETH": 0.9875076954412476,
+            "BNB": 9.108442308376263,
+            "SOL": 2.3383230515471753,
+            "EUR": 2.372105508540434,
+            "GBP": 2.372105508540434,
+            "CAD": 2.372105508540434,
+            "RUB": 2.372105508540434
+          },
+          "3M": {
+            "USD": -21.155158409196993,
+            "BTC": 0.0,
+            "ETH": 17.345391084376182,
+            "BNB": 9.277312633962964,
+            "SOL": 21.60236683979042,
+            "EUR": -21.155158409196993,
+            "GBP": -21.155158409196993,
+            "CAD": -21.155158409196993,
+            "RUB": -21.155158409196993
+          },
+          "6M": {
+            "USD": -35.65236781734418,
+            "BTC": 0.0,
+            "ETH": 33.44431452150689,
+            "BNB": -15.883966733922161,
+            "SOL": 48.00882909737165,
+            "EUR": -35.65236781734418,
+            "GBP": -35.65236781734418,
+            "CAD": -35.65236781734418,
+            "RUB": -35.65236781734418
+          },
+          "YTD": {
+            "USD": -17.106831539467404,
+            "BTC": 0.0,
+            "ETH": 15.893942470919686,
+            "BNB": 10.193079522417413,
+            "SOL": 13.576121683422349,
+            "EUR": -17.106831539467404,
+            "GBP": -17.106831539467404,
+            "CAD": -17.106831539467404,
+            "RUB": -17.106831539467404
+          },
+          "1Y": {
+            "USD": -19.684959279323277,
+            "BTC": 0.0,
+            "ETH": -15.428402571641453,
+            "BNB": -26.604641466536428,
+            "SOL": 29.24198551842496,
+            "EUR": -19.684959279323277,
+            "GBP": -19.684959279323277,
+            "CAD": -19.684959279323277,
+            "RUB": -19.684959279323277
+          },
+          "ALL": {
+            "USD": 53993.89783106722,
+            "BTC": 0.0,
+            "ETH": 0.0,
+            "BNB": null,
+            "SOL": 0.0,
+            "EUR": 53993.89783106722,
+            "GBP": 53993.89783106722,
+            "CAD": 53993.89783106722,
+            "RUB": 53993.89783106722
+          }
+        },
+        "currencyId": 1,
+        "rank": 1,
+        "isTrading": true,
+        "ico": true
+      },
+      {
+        "name": "Chainlink",
+        "slug": "chainlink",
+        "symbol": "LINK",
+        "image": "https://static.images.dropstab.com/images/chainlink.svg",
+        "price": {
+          "USD": "9.23",
+          "BTC": "1.284E-4",
+          "ETH": "0.00439605",
+          "BNB": "0.0141802",
+          "SOL": "0.10255556",
+          "EUR": "7.95219379",
+          "GBP": "6.91857559",
+          "CAD": "12.59489128",
+          "RUB": "718.79564751"
+        },
+        "change": {
+          "1H": {
+            "USD": -0.9010547337480967,
+            "BTC": 0.01948836667817755,
+            "ETH": 0.5744317808753285,
+            "BNB": -0.34847394478827454,
+            "SOL": 0.07859717435991787,
+            "EUR": -0.9010547337480967,
+            "GBP": -0.9010547337480967,
+            "CAD": -0.9010547337480967,
+            "RUB": -0.9010547337480967
+          },
+          "4H": {
+            "USD": -0.9184880567258746,
+            "BTC": 0.08180643752841998,
+            "ETH": 0.4042106262013734,
+            "BNB": -0.2474419183323695,
+            "SOL": -0.7424018420093992,
+            "EUR": -0.9184880567258746,
+            "GBP": -0.9184880567258746,
+            "CAD": -0.9184880567258746,
+            "RUB": -0.9184880567258746
+          },
+          "12H": {
+            "USD": -3.213465523371395,
+            "BTC": -1.1964577657000652,
+            "ETH": -0.03428348736452813,
+            "BNB": -1.4933033749802704,
+            "SOL": 0.1191820038700886,
+            "EUR": -3.213465523371395,
+            "GBP": -3.213465523371395,
+            "CAD": -3.213465523371395,
+            "RUB": -3.213465523371395
+          },
+          "1D": {
+            "USD": 3.1194829476746344,
+            "BTC": -0.5715707619510124,
+            "ETH": -1.1754625123634677,
+            "BNB": 1.5978451136914318,
+            "SOL": 0.01547540809672121,
+            "EUR": 3.1194829476746344,
+            "GBP": 3.1194829476746344,
+            "CAD": 3.1194829476746344,
+            "RUB": 3.1194829476746344
+          },
+          "1W": {
+            "USD": -0.03626083633149202,
+            "BTC": -5.585477194399213,
+            "ETH": -2.411256617127744,
+            "BNB": -3.733104934403453,
+            "SOL": -3.0341737069513375,
+            "EUR": -0.03626083633149202,
+            "GBP": -0.03626083633149202,
+            "CAD": -0.03626083633149202,
+            "RUB": -0.03626083633149202
+          },
+          "1M": {
+            "USD": 0.1377452871997198,
+            "BTC": -2.235101920337179,
+            "ETH": -1.216632474638668,
+            "BNB": 6.727055678734817,
+            "SOL": 0.10470016170618379,
+            "EUR": 0.1377452871997198,
+            "GBP": 0.1377452871997198,
+            "CAD": 0.1377452871997198,
+            "RUB": 0.1377452871997198
+          },
+          "3M": {
+            "USD": -34.687881638752174,
+            "BTC": -17.157384576737677,
+            "ETH": -2.7954661710718365,
+            "BNB": -9.478760652605644,
+            "SOL": 0.73085335458003,
+            "EUR": -34.687881638752174,
+            "GBP": -34.687881638752174,
+            "CAD": -34.687881638752174,
+            "RUB": -34.687881638752174
+          },
+          "6M": {
+            "USD": -59.50162029048553,
+            "BTC": -37.0816816238768,
+            "ETH": -16.01433749376526,
+            "BNB": -47.06000921373498,
+            "SOL": -6.847889225648352,
+            "EUR": -59.50162029048553,
+            "GBP": -59.50162029048553,
+            "CAD": -59.50162029048553,
+            "RUB": -59.50162029048553
+          },
+          "YTD": {
+            "USD": -23.626362398104185,
+            "BTC": -7.860182148369388,
+            "ETH": 6.778907440886028,
+            "BNB": 1.5264162050818264,
+            "SOL": 4.6433827874310385,
+            "EUR": -23.626362398104185,
+            "GBP": -23.626362398104185,
+            "CAD": -23.626362398104185,
+            "RUB": -23.626362398104185
+          },
+          "1Y": {
+            "USD": -43.162856780036584,
+            "BTC": -29.245433636774397,
+            "ETH": -40.15058758304016,
+            "BNB": -48.05975982562032,
+            "SOL": -8.538361245553983,
+            "EUR": -43.162856780036584,
+            "GBP": -43.162856780036584,
+            "CAD": -43.162856780036584,
+            "RUB": -43.162856780036584
+          },
+          "ALL": {
+            "USD": 4785.714953801843,
+            "BTC": 161.86218715072408,
+            "ETH": 551.7543570930595,
+            "BNB": null,
+            "SOL": 0.0,
+            "EUR": 4785.714953801843,
+            "GBP": 4785.714953801843,
+            "CAD": 4785.714953801843,
+            "RUB": 4785.714953801843
+          }
+        },
+        "currencyId": 100,
+        "rank": 16,
+        "isTrading": true,
+        "ico": true
+      },
+      {
+        "name": "StarkNet",
+        "slug": "starknet",
+        "symbol": "STRK",
+        "image": "https://static.images.dropstab.com/images/starknet.svg",
+        "price": {
+          "USD": "0.0405",
+          "BTC": "5.6E-7",
+          "ETH": "1.929E-5",
+          "BNB": "6.222E-5",
+          "SOL": "4.5E-4",
+          "EUR": "0.03489316",
+          "GBP": "0.03035778",
+          "CAD": "0.05526469",
+          "RUB": "3.15397873"
+        },
+        "change": {
+          "1H": {
+            "USD": -1.026189793915988,
+            "BTC": -0.10680908947616752,
+            "ETH": 0.4474335818688502,
+            "BNB": -0.4743067644539023,
+            "SOL": -0.04777492016929674,
+            "EUR": -1.026189793915988,
+            "GBP": -1.026189793915988,
+            "CAD": -1.026189793915988,
+            "RUB": -1.026189793915988
+          },
+          "4H": {
+            "USD": -0.968866226836862,
+            "BTC": 0.030919665912665373,
+            "ETH": 0.3531599276039854,
+            "BNB": -0.29816128304011036,
+            "SOL": -0.7928695434679001,
+            "EUR": -0.968866226836862,
+            "GBP": -0.968866226836862,
+            "CAD": -0.968866226836862,
+            "RUB": -0.968866226836862
+          },
+          "12H": {
+            "USD": -2.931575241415607,
+            "BTC": -0.9086929590624071,
+            "ETH": 0.2568661458570043,
+            "BNB": -1.206403129648459,
+            "SOL": 0.4107786045425277,
+            "EUR": -2.931575241415607,
+            "GBP": -2.931575241415607,
+            "CAD": -2.931575241415607,
+            "RUB": -2.931575241415607
+          },
+          "1D": {
+            "USD": 0.057985863999521214,
+            "BTC": -3.5234847693269233,
+            "ETH": -4.109447678556188,
+            "BNB": -1.4184763188071603,
+            "SOL": -2.9538673148457484,
+            "EUR": 0.057985863999521214,
+            "GBP": 0.057985863999521214,
+            "CAD": 0.057985863999521214,
+            "RUB": 0.057985863999521214
+          },
+          "1W": {
+            "USD": -9.196274594591147,
+            "BTC": -14.236997586836164,
+            "ETH": -11.353641521065738,
+            "BNB": -12.554364429529386,
+            "SOL": -11.919478622077605,
+            "EUR": -9.196274594591147,
+            "GBP": -9.196274594591147,
+            "CAD": -9.196274594591147,
+            "RUB": -9.196274594591147
+          },
+          "1M": {
+            "USD": -24.616135087879687,
+            "BTC": -26.40241850016325,
+            "ETH": -25.635712969782098,
+            "BNB": -19.655691021610057,
+            "SOL": -24.641011514536427,
+            "EUR": -24.616135087879687,
+            "GBP": -24.616135087879687,
+            "CAD": -24.616135087879687,
+            "RUB": -24.616135087879687
+          },
+          "3M": {
+            "USD": -65.28145091181638,
+            "BTC": -55.96260721084527,
+            "ETH": -48.328113311724294,
+            "BNB": -51.88081215766456,
+            "SOL": -46.453595984406896,
+            "EUR": -65.28145091181638,
+            "GBP": -65.28145091181638,
+            "CAD": -65.28145091181638,
+            "RUB": -65.28145091181638
+          },
+          "6M": {
+            "USD": -66.98511894869547,
+            "BTC": -48.70805172860321,
+            "ETH": -31.533639677764047,
+            "BNB": -56.8425326839662,
+            "SOL": -24.061014812139682,
+            "EUR": -66.98511894869547,
+            "GBP": -66.98511894869547,
+            "CAD": -66.98511894869547,
+            "RUB": -66.98511894869547
+          },
+          "YTD": {
+            "USD": -48.71250520620436,
+            "BTC": -38.12497902745582,
+            "ETH": -28.29433255480177,
+            "BNB": -31.821559034637247,
+            "SOL": -29.72840997975048,
+            "EUR": -48.71250520620436,
+            "GBP": -48.71250520620436,
+            "CAD": -48.71250520620436,
+            "RUB": -48.71250520620436
+          },
+          "1Y": {
+            "USD": -78.11090699067044,
+            "BTC": -72.7510357449589,
+            "ETH": -76.95082333961471,
+            "BNB": -79.99679991473288,
+            "SOL": -64.77633807642562,
+            "EUR": -78.11090699067044,
+            "GBP": -78.11090699067044,
+            "CAD": -78.11090699067044,
+            "RUB": -78.11090699067044
+          },
+          "ALL": {
+            "USD": -97.9050788516692,
+            "BTC": -98.49312981270623,
+            "ETH": -97.0287878224321,
+            "BNB": null,
+            "SOL": -97.50578280926175,
+            "EUR": -97.9050788516692,
+            "GBP": -97.9050788516692,
+            "CAD": -97.9050788516692,
+            "RUB": -97.9050788516692
+          }
+        },
+        "currencyId": 60738,
+        "rank": 145,
+        "isTrading": true,
+        "ico": true
+      },
+      {
+        "name": "LayerZero",
+        "slug": "layerzero",
+        "symbol": "ZRO",
+        "image": "https://static.images.dropstab.com/images/layerzero.png",
+        "price": {
+          "USD": "1.87",
+          "BTC": "2.601E-5",
+          "ETH": "8.9064E-4",
+          "BNB": "0.00287291",
+          "SOL": "0.02077778",
+          "EUR": "1.61111618",
+          "GBP": "1.40170491",
+          "CAD": "2.5517277",
+          "RUB": "145.62815394"
+        },
+        "change": {
+          "1H": {
+            "USD": -0.4670386595733378,
+            "BTC": 0.4575360730916467,
+            "ETH": 1.0149099305328813,
+            "BNB": 0.08796222522147179,
+            "SOL": 0.5169037550993405,
+            "EUR": -0.4670386595733378,
+            "GBP": -0.4670386595733378,
+            "CAD": -0.4670386595733378,
+            "RUB": -0.4670386595733378
+          },
+          "4H": {
+            "USD": 0.8273626477506957,
+            "BTC": 1.8452826789314036,
+            "ETH": 2.1733677415522568,
+            "BNB": 1.5102328525161468,
+            "SOL": 1.0065515628194577,
+            "EUR": 0.8273626477506957,
+            "GBP": 0.8273626477506957,
+            "CAD": 0.8273626477506957,
+            "RUB": 0.8273626477506957
+          },
+          "12H": {
+            "USD": -6.564325682035599,
+            "BTC": -4.617149032291056,
+            "ETH": -3.4952105523313626,
+            "BNB": -4.903717508178785,
+            "SOL": -3.3470582113514946,
+            "EUR": -6.564325682035599,
+            "GBP": -6.564325682035599,
+            "CAD": -6.564325682035599,
+            "RUB": -6.564325682035599
+          },
+          "1D": {
+            "USD": 0.870831888758894,
+            "BTC": -2.7397337152691104,
+            "ETH": -3.3304568404594392,
+            "BNB": -0.6176247031460358,
+            "SOL": -2.165488831207074,
+            "EUR": 0.870831888758894,
+            "GBP": 0.870831888758894,
+            "CAD": 0.870831888758894,
+            "RUB": 0.870831888758894
+          },
+          "1W": {
+            "USD": 18.3149700626819,
+            "BTC": 11.7470348016653,
+            "ETH": 15.503975225405675,
+            "BNB": 13.939463479503257,
+            "SOL": 14.766703716250262,
+            "EUR": 18.3149700626819,
+            "GBP": 18.3149700626819,
+            "CAD": 18.3149700626819,
+            "RUB": 18.3149700626819
+          },
+          "1M": {
+            "USD": 10.80380033093924,
+            "BTC": 8.178212073028357,
+            "ETH": 9.305162602827831,
+            "BNB": 18.094963426815003,
+            "SOL": 10.767235442478906,
+            "EUR": 10.80380033093924,
+            "GBP": 10.80380033093924,
+            "CAD": 10.80380033093924,
+            "RUB": 10.80380033093924
+          },
+          "3M": {
+            "USD": 32.548473773615804,
+            "BTC": 68.12595446733005,
+            "ETH": 97.27292462994113,
+            "BNB": 83.70943127627048,
+            "SOL": 104.42945672369399,
+            "EUR": 32.548473773615804,
+            "GBP": 32.548473773615804,
+            "CAD": 32.548473773615804,
+            "RUB": 32.548473773615804
+          },
+          "6M": {
+            "USD": 0.18458510403127626,
+            "BTC": 55.64685963163003,
+            "ETH": 107.76309603560681,
+            "BNB": 30.96254838776087,
+            "SOL": 130.4389863602538,
+            "EUR": 0.18458510403127626,
+            "GBP": 0.18458510403127626,
+            "CAD": 0.18458510403127626,
+            "RUB": 0.18458510403127626
+          },
+          "YTD": {
+            "USD": 57.60386972900275,
+            "BTC": 90.13880057982166,
+            "ETH": 120.34787848969634,
+            "BNB": 109.50889045045353,
+            "SOL": 115.94103131239449,
+            "EUR": 57.60386972900275,
+            "GBP": 57.60386972900275,
+            "CAD": 57.60386972900275,
+            "RUB": 57.60386972900275
+          },
+          "1Y": {
+            "USD": -13.531656202468945,
+            "BTC": 7.6414088206975705,
+            "ETH": -8.948985192270909,
+            "BNB": -20.981486931117978,
+            "SOL": 39.14380589992854,
+            "EUR": -13.531656202468945,
+            "GBP": -13.531656202468945,
+            "CAD": -13.531656202468945,
+            "RUB": -13.531656202468945
+          },
+          "ALL": {
+            "USD": -43.487349423885625,
+            "BTC": -49.63232291313805,
+            "ETH": -6.813249849990843,
+            "BNB": null,
+            "SOL": -17.395784586068487,
+            "EUR": -43.487349423885625,
+            "GBP": -43.487349423885625,
+            "CAD": -43.487349423885625,
+            "RUB": -43.487349423885625
+          }
+        },
+        "currencyId": 72182,
+        "rank": 89,
+        "isTrading": true,
+        "ico": true
+      },
+      {
+        "name": "Aptos",
+        "slug": "aptos",
+        "symbol": "APT",
+        "image": "https://static.images.dropstab.com/images/aptos.svg",
+        "price": {
+          "USD": "1.001",
+          "BTC": "1.393E-5",
+          "ETH": "4.7676E-4",
+          "BNB": "0.00153785",
+          "SOL": "0.01112222",
+          "EUR": "0.86242102",
+          "GBP": "0.7503244",
+          "CAD": "1.36592483",
+          "RUB": "77.95389417"
+        },
+        "change": {
+          "1H": {
+            "USD": -0.8055862765312116,
+            "BTC": 0.11584364291585825,
+            "ETH": 0.6713216701852875,
+            "BNB": -0.2524731505695321,
+            "SOL": 0.17500939395513893,
+            "EUR": -0.8055862765312116,
+            "GBP": -0.8055862765312116,
+            "CAD": -0.8055862765312116,
+            "RUB": -0.8055862765312116
+          },
+          "4H": {
+            "USD": -0.6120571825765309,
+            "BTC": 0.39133093742358405,
+            "ETH": 0.7147322303536541,
+            "BNB": 0.0610643102473718,
+            "SOL": -0.4354263833897365,
+            "EUR": -0.6120571825765309,
+            "GBP": -0.6120571825765309,
+            "CAD": -0.6120571825765309,
+            "RUB": -0.6120571825765309
+          },
+          "12H": {
+            "USD": -1.4923215664349065,
+            "BTC": 0.5605544112526006,
+            "ETH": 1.7433955028682835,
+            "BNB": 0.2584300301957443,
+            "SOL": 1.899590053514566,
+            "EUR": -1.4923215664349065,
+            "GBP": -1.4923215664349065,
+            "CAD": -1.4923215664349065,
+            "RUB": -1.4923215664349065
+          },
+          "1D": {
+            "USD": 0.3088976523604181,
+            "BTC": -3.281554105200002,
+            "ETH": -3.868986412400055,
+            "BNB": -1.1712670012039461,
+            "SOL": -2.7105082416515436,
+            "EUR": 0.3088976523604181,
+            "GBP": 0.3088976523604181,
+            "CAD": 0.3088976523604181,
+            "RUB": 0.3088976523604181
+          },
+          "1W": {
+            "USD": 3.7727319529239356,
+            "BTC": -1.9879303281428395,
+            "ETH": 1.3072399394012058,
+            "BNB": -0.06497574859429811,
+            "SOL": 0.6605873758618985,
+            "EUR": 3.7727319529239356,
+            "GBP": 3.7727319529239356,
+            "CAD": 3.7727319529239356,
+            "RUB": 3.7727319529239356
+          },
+          "1M": {
+            "USD": -16.391262042164843,
+            "BTC": -18.37244066586897,
+            "ETH": -17.522082544071427,
+            "BNB": -10.889601062395215,
+            "SOL": -16.418852649784853,
+            "EUR": -16.391262042164843,
+            "GBP": -16.391262042164843,
+            "CAD": -16.391262042164843,
+            "RUB": -16.391262042164843
+          },
+          "3M": {
+            "USD": -47.145193389433295,
+            "BTC": -32.958376987691004,
+            "ETH": -21.335780156738913,
+            "BNB": -26.7443359685273,
+            "SOL": -18.482053447945123,
+            "EUR": -47.145193389433295,
+            "GBP": -47.145193389433295,
+            "CAD": -47.145193389433295,
+            "RUB": -47.145193389433295
+          },
+          "6M": {
+            "USD": -76.79549087128763,
+            "BTC": -63.949454185719425,
+            "ETH": -51.87841868525348,
+            "BNB": -69.666774120713,
+            "SOL": -46.62628430256811,
+            "EUR": -76.79549087128763,
+            "GBP": -76.79549087128763,
+            "CAD": -76.79549087128763,
+            "RUB": -76.79549087128763
+          },
+          "YTD": {
+            "USD": -39.36296095039469,
+            "BTC": -26.84536302675515,
+            "ETH": -15.222621529205849,
+            "BNB": -19.392849976793414,
+            "SOL": -16.91812662584574,
+            "EUR": -39.36296095039469,
+            "GBP": -39.36296095039469,
+            "CAD": -39.36296095039469,
+            "RUB": -39.36296095039469
+          },
+          "1Y": {
+            "USD": -83.77155985015186,
+            "BTC": -79.79778397534307,
+            "ETH": -82.91148090161109,
+            "BNB": -85.1697493701162,
+            "SOL": -73.88539172721435,
+            "EUR": -83.77155985015186,
+            "GBP": -83.77155985015186,
+            "CAD": -83.77155985015186,
+            "RUB": -83.77155985015186
+          },
+          "ALL": {
+            "USD": -86.11643451490896,
+            "BTC": -96.34782017201614,
+            "ETH": -91.61080440617653,
+            "BNB": null,
+            "SOL": -95.60540739863781,
+            "EUR": -86.11643451490896,
+            "GBP": -86.11643451490896,
+            "CAD": -86.11643451490896,
+            "RUB": -86.11643451490896
+          }
+        },
+        "currencyId": 44770,
+        "rank": 65,
+        "isTrading": true,
+        "ico": true
+      }
+    ]
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/maps",
+    "type": "list_data",
+    "timestamp": "2026-03-05T08:19:09.012683+00:00",
+    "data": [
+      {
+        "type": "TABLE_TEXT_LINE",
+        "items": [
+          {
+            "id": 19,
+            "type": "TABLE_TEXT_LINE",
+            "enabled": true,
+            "mobile": false,
+            "dropstabCompany": false,
+            "activeFrom": 1730714400000,
+            "activeTo": 1776240000000,
+            "headline": "The Best Crypto Casino",
+            "description": "Free Bonus Up To 5 BTC Everyday! Join Now",
+            "image": "https://static.images.dropstab.com/images/maps/f42e132f-b25c-42e4-977f-dbe97048ae43.png",
+            "url": "https://bcall-global.bcgame.bet/dispatch-v6?i=3kg73kvp8",
+            "gaEvent": "bcgame-table-text"
+          }
+        ]
+      },
+      {
+        "type": "MAIN_TOP_BANNER",
+        "items": [
+          {
+            "id": 66,
+            "type": "MAIN_TOP_BANNER",
+            "enabled": true,
+            "mobile": false,
+            "dropstabCompany": false,
+            "activeFrom": 1771470000000,
+            "activeTo": 1774468800000,
+            "headline": "Up to 100x leverage",
+            "description": "Enjoy 90% off Stock Perps trading fees plus zero maker fees",
+            "image": "https://static.images.dropstab.com/images/maps/a3d2093b-626e-48f0-81ec-26fb9e10b565.png",
+            "url": "https://www.bitget.com/activity-hub/UEX?channelCode=regd&vipCode=pm3n",
+            "gaEvent": "top-banner-bitget",
+            "color": "orange"
+          }
+        ]
+      },
+      {
+        "type": "COIN_CARD_MEDIUM_BANNER",
+        "items": [
+          {
+            "id": 276,
+            "type": "COIN_CARD_MEDIUM_BANNER",
+            "enabled": true,
+            "mobile": false,
+            "dropstabCompany": false,
+            "activeFrom": 1768467600000,
+            "activeTo": 1774411200000,
+            "headline": "Trade with up to 100x leverage",
+            "description": "Enjoy 90% off Stock Perps trading fees plus zero maker fees",
+            "url": "https://www.bitget.com/activity-hub/UEX?channelCode=regd&vipCode=pm3n",
+            "displayLink": "bitget.com",
+            "image": "https://static.images.dropstab.com/images/maps/8779a3df-f9c4-42f0-9428-a89cb194259c.png",
+            "gaEvent": "bitget-medium-banner"
+          }
+        ]
+      },
+      {
+        "type": "POP_UP",
+        "items": [
+          {
+            "id": 24,
+            "type": "POP_UP",
+            "enabled": true,
+            "mobile": false,
+            "dropstabCompany": false,
+            "activeFrom": 1736910000000,
+            "activeTo": 1774468800000,
+            "headline": "Trade stocks with up to 100x leverage",
+            "description": "Enjoy 90% off Stock Perps trading fees plus zero maker fees",
+            "linkText": "Trade Now",
+            "url": "https://www.bitget.com/activity-hub/UEX?channelCode=regd&vipCode=pm3n",
+            "withCover": true,
+            "gaEventUrl": "bitget-popup-window",
+            "gaEventImageUrl": "img-bitget-popup-window",
+            "bannerDesktop": "https://static.images.dropstab.com/images/maps/72f16cd5-7364-4e7b-a6ff-ba273d112d26.jpg",
+            "imageIcon": null,
+            "imageCover": "https://static.images.dropstab.com/images/maps/85ad5a70-8577-42aa-93be-3e486328accd.png"
+          },
+          {
+            "id": 176,
+            "type": "POP_UP",
+            "enabled": true,
+            "mobile": false,
+            "dropstabCompany": false,
+            "activeFrom": 1752091200000,
+            "activeTo": 1775862000000,
+            "headline": "No.1 Crypto game with BTC Dividends!",
+            "description": "Free Lucky Spin & Get Reward up to 5 BTC! ",
+            "linkText": "Play Now",
+            "url": "https://bcall-global.bcgame.bet/dispatch-v6?i=3kg73kvp8",
+            "withCover": true,
+            "gaEventUrl": "pop-up-bcgame",
+            "gaEventImageUrl": "pop-up-bcgame-img",
+            "bannerDesktop": "https://static.images.dropstab.com/images/maps/eac501c9-9a4c-450c-bd47-4c0780bae123.png",
+            "imageIcon": null,
+            "imageCover": "https://static.images.dropstab.com/images/maps/bd3e7e8b-980c-4c66-b811-3d4ccc2d0571.png"
+          }
+        ]
+      },
+      {
+        "type": "COIN_CARD_DROPDOWN_BUTTON",
+        "items": [
+          {
+            "id": 274,
+            "type": "COIN_CARD_DROPDOWN_BUTTON",
+            "enabled": true,
+            "mobile": false,
+            "dropstabCompany": false,
+            "activeFrom": 1766361600000,
+            "activeTo": 1773921600000,
+            "headline": "Start Trading",
+            "image": "https://static.images.dropstab.com/images/maps/2ba69905-19d6-4f74-97e3-d924fb6254cd.png",
+            "url": "https://partner.bydfi.com/register?vipCode=dropstabO8",
+            "gaEvent": "BYDFi-Dropdown button",
+            "dropdown": {
+              "headline": "10% OFF FEES",
+              "description": "Start Trading and Get Welcome Bonus",
+              "footer": "bydfi.com",
+              "image": "https://static.images.dropstab.com/images/maps/d48ae178-e406-467d-9cc6-1367a3f55c5b.png"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/markets/recentSearchItems",
+    "type": "investors",
+    "timestamp": "2026-03-05T08:19:09.026497+00:00",
+    "data": {
+      "markets": [],
+      "exchanges": [],
+      "investors": [],
+      "categories": []
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://mc.yandex.com/watch/95700251/1?wmode=7&page-url=https%3A%2F%2Fdropstab.com%2Fcoins&charset=utf-8&uah=chu%0A%22Not%3AA-Brand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22145%22%2C%22Chromium%22%3Bv%3D%22145%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A145.0.7632.0%0Achl%0A%22Not%3AA-Brand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22145.0.7632.0%22%2C%22Chromium%22%3Bv%3D%22145.0.7632.0%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0&browser-info=pv%3A1%3Avf%3A6g20vg83qczf8he8e6rm6azi046aj%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%3Av%3A2400%3Acn%3A1%3Adp%3A0%3Als%3A79578221292%3Ahid%3A396294763%3Az%3A-300%3Ai%3A20260305031909%3Aet%3A1772698750%3Ac%3A1%3Arn%3A777203627%3Arqn%3A1%3Au%3A1772698750790569427%3Aw%3A1920x1080%3As%3A1920x1080x24%3Ask%3A1%3Afp%3A684%3Awv%3A2%3Ads%3A20%2C69%2C350%2C68%2C0%2C0%2C%2C70%2C0%2C1180%2C1180%2C0%2C579%3Aco%3A0%3Antf%3A1%3Ans%3A1772698747450%3Agi%3AR0ExLjEuMTcxMjk0NzY4NS4xNzcyNjk4NzQ4%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1772698750%3At%3A&t=gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2883952132%29ti%281%29&redirnss=1",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:10.757147+00:00",
+    "data": {
+      "settings": {
+        "auto_goals": 1,
+        "button_goals": 0,
+        "c_recp": "1.00000",
+        "form_goals": 1,
+        "pcs": "1",
+        "webvisor": {
+          "arch_type": "none",
+          "date": "2026-03-04 23:24:40",
+          "forms": 1,
+          "recp": "0.70870"
+        },
+        "sbp": {
+          "a": "25h36OXT+9ndgvIEhadRRh6y1A3wlsPS4aZsXYR4wy5P//qxETCpHuJ/9ChDBuET",
+          "b": "GHH6PXzPHBXkAXfQzaMp6uwYBuXb3hGwmpo42S7wzMw/jmEi2Tw+DcnZWdSh6iHe"
+        },
+        "eu": 2,
+        "nss": 1,
+        "hittoken": "1772698750_fa051e3e06b3fde1a6091a5d9e4ac279fca4b75778841a2df2fc81bdeee910d1",
+        "wstoken": "10961.5wY3Og3qEWWORAr4B9PaemCDI89PvvFBHSDF0OpoCwdALkEFCdUuPqWQ3lal6gAu-ZpAObI-sTFKSvpswAoZ9m-sPP70hZPjPlddjXGHl38,.j2TqeCxeSWkLIfcINOeSFeQGYmg,",
+        "hidv2": "1004418021517951229",
+        "ymclid": "1004418021517951229"
+      },
+      "userData": {}
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/exchange",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:10.792170+00:00",
+    "data": {
+      "content": [
+        {
+          "id": 2292,
+          "slug": "binance-futures",
+          "name": "Binance Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance_futures.svg",
+          "rankReported": 1,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2295,
+          "slug": "okex-swap",
+          "name": "OKX Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/okex_swap.svg",
+          "rankReported": 3,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2319,
+          "slug": "poloniex-futures",
+          "name": "Poloniex Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/poloniex_futures.png",
+          "rankReported": 4,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2304,
+          "slug": "gate-futures",
+          "name": "Gate.io Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/gate_futures.svg",
+          "rankReported": 5,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2296,
+          "slug": "bybit",
+          "name": "Bybit (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bybit.svg",
+          "rankReported": 6,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2,
+          "slug": "binance",
+          "name": "Binance",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance.svg",
+          "rankReported": 8,
+          "type": "SPOT"
+        },
+        {
+          "id": 2299,
+          "slug": "mxc-futures",
+          "name": "MEXC Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/mxc_futures.svg",
+          "rankReported": 9,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2877,
+          "slug": "hyperliquid",
+          "name": "Hyperliquid (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/hyperliquid.png",
+          "rankReported": 10,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2574,
+          "slug": "bingx-futures",
+          "name": "BingX (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bingx_futures.png",
+          "rankReported": 12,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 1994,
+          "slug": "mxc",
+          "name": "MEXC",
+          "image": "https://static.images.dropstab.com/images/exchanges/mxc.svg",
+          "rankReported": 16,
+          "type": "SPOT"
+        },
+        {
+          "id": 5,
+          "slug": "lbank",
+          "name": "LBank",
+          "image": "https://static.images.dropstab.com/images/exchanges/lbank.png",
+          "rankReported": 17,
+          "type": "SPOT"
+        },
+        {
+          "id": 30,
+          "slug": "bitmart",
+          "name": "BitMart",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmart.png",
+          "rankReported": 18,
+          "type": "SPOT"
+        },
+        {
+          "id": 2293,
+          "slug": "huobi-dm",
+          "name": "HTX Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi_dm.png",
+          "rankReported": 19,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 14,
+          "slug": "gate",
+          "name": "Gate",
+          "image": "https://static.images.dropstab.com/images/exchanges/gate.svg",
+          "rankReported": 21,
+          "type": "SPOT"
+        },
+        {
+          "id": 10,
+          "slug": "gdax",
+          "name": "Coinbase",
+          "image": "https://static.images.dropstab.com/images/exchanges/gdax.svg",
+          "rankReported": 22,
+          "type": "SPOT"
+        },
+        {
+          "id": 18,
+          "slug": "kucoin",
+          "name": "KuCoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/kucoin.svg",
+          "rankReported": 23,
+          "type": "SPOT"
+        },
+        {
+          "id": 2358,
+          "slug": "bybit-spot",
+          "name": "Bybit",
+          "image": "https://static.images.dropstab.com/images/exchanges/bybit_spot.svg",
+          "rankReported": 24,
+          "type": "SPOT"
+        },
+        {
+          "id": 1,
+          "slug": "okex",
+          "name": "OKX",
+          "image": "https://static.images.dropstab.com/images/exchanges/okex.svg",
+          "rankReported": 25,
+          "type": "SPOT"
+        },
+        {
+          "id": 2216,
+          "slug": "crypto-com",
+          "name": "Crypto.com Exchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/crypto_com.png",
+          "rankReported": 27,
+          "type": "SPOT"
+        },
+        {
+          "id": 7,
+          "slug": "upbit",
+          "name": "Upbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/upbit.png",
+          "rankReported": 28,
+          "type": "SPOT"
+        },
+        {
+          "id": 13,
+          "slug": "kraken",
+          "name": "Kraken",
+          "image": "https://static.images.dropstab.com/images/exchanges/kraken.png",
+          "rankReported": 29,
+          "type": "SPOT"
+        },
+        {
+          "id": 1988,
+          "slug": "whitebit",
+          "name": "WhiteBIT",
+          "image": "https://static.images.dropstab.com/images/exchanges/whitebit.png",
+          "rankReported": 30,
+          "type": "SPOT"
+        },
+        {
+          "id": 3216,
+          "slug": "bitunix-futures",
+          "name": "Bitunix Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitunix_futures.png",
+          "rankReported": 31,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2309,
+          "slug": "kraken-futures",
+          "name": "Kraken Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/kraken_futures.png",
+          "rankReported": 32,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2478,
+          "slug": "bingx",
+          "name": "BingX",
+          "image": "https://static.images.dropstab.com/images/exchanges/bingx.png",
+          "rankReported": 34,
+          "type": "SPOT"
+        },
+        {
+          "id": 2181,
+          "slug": "bitget",
+          "name": "Bitget",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitget.svg",
+          "rankReported": 35,
+          "type": "SPOT"
+        },
+        {
+          "id": 16,
+          "slug": "poloniex",
+          "name": "Poloniex",
+          "image": "https://static.images.dropstab.com/images/exchanges/poloniex.png",
+          "rankReported": 36,
+          "type": "SPOT"
+        },
+        {
+          "id": 3,
+          "slug": "huobi",
+          "name": "HTX",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi.png",
+          "rankReported": 38,
+          "type": "SPOT"
+        },
+        {
+          "id": 234,
+          "slug": "bitmax",
+          "name": "AscendEX (BitMax)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmax.png",
+          "rankReported": 39,
+          "type": "SPOT"
+        },
+        {
+          "id": 2111,
+          "slug": "uniswap",
+          "name": "Uniswap (v3)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap.png",
+          "rankReported": 43,
+          "type": "DEX"
+        },
+        {
+          "id": 159,
+          "slug": "bitmex",
+          "name": "BitMEX (Derivative)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmex.png",
+          "rankReported": 44,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 4,
+          "slug": "bitfinex",
+          "name": "Bitfinex",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitfinex.png",
+          "rankReported": 46,
+          "type": "SPOT"
+        },
+        {
+          "id": 2851,
+          "slug": "bitunix",
+          "name": "Bitunix",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitunix.png",
+          "rankReported": 47,
+          "type": "SPOT"
+        },
+        {
+          "id": 6,
+          "slug": "bithumb",
+          "name": "Bithumb",
+          "image": "https://static.images.dropstab.com/images/exchanges/bithumb.png",
+          "rankReported": 48,
+          "type": "SPOT"
+        },
+        {
+          "id": 31,
+          "slug": "bitstamp",
+          "name": "Bitstamp by Robinhood",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitstamp.png",
+          "rankReported": 51,
+          "type": "SPOT"
+        },
+        {
+          "id": 2477,
+          "slug": "jupiter",
+          "name": "Jupiter",
+          "image": "https://static.images.dropstab.com/images/exchanges/jupiter.svg",
+          "rankReported": 54,
+          "type": "SPOT"
+        },
+        {
+          "id": 2579,
+          "slug": "uniswap-v3-arbitrum",
+          "name": "Uniswap V3 (Arbitrum One)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v3_arbitrum.png",
+          "rankReported": 58,
+          "type": "DEX"
+        },
+        {
+          "id": 2354,
+          "slug": "orca",
+          "name": "Orca",
+          "image": "https://static.images.dropstab.com/images/exchanges/orca.png",
+          "rankReported": 59,
+          "type": "DEX"
+        },
+        {
+          "id": 2850,
+          "slug": "bydfi",
+          "name": "BYDFi",
+          "image": "https://static.images.dropstab.com/images/exchanges/bydfi.png",
+          "rankReported": 60,
+          "type": "SPOT"
+        },
+        {
+          "id": 115,
+          "slug": "btc-alpha",
+          "name": "ALP.COM",
+          "image": "https://static.images.dropstab.com/images/exchanges/btc_alpha.jpg",
+          "rankReported": 64,
+          "type": "SPOT"
+        },
+        {
+          "id": 2192,
+          "slug": "one-inch",
+          "name": "1inch",
+          "image": "https://static.images.dropstab.com/images/exchanges/one_inch.png",
+          "rankReported": 68,
+          "type": "SPOT"
+        },
+        {
+          "id": 4407,
+          "slug": "meteora",
+          "name": "Meteora",
+          "image": "https://static.images.dropstab.com/images/exchanges/meteora.jpeg",
+          "rankReported": 70,
+          "type": "DEX"
+        },
+        {
+          "id": 4480,
+          "slug": "hyperliquid-spot",
+          "name": "Hyperliquid",
+          "image": "https://static.images.dropstab.com/images/exchanges/hyperliquid-spot.png",
+          "rankReported": 71,
+          "type": "SPOT"
+        },
+        {
+          "id": 2871,
+          "slug": "uniswap-v3-base",
+          "name": "Uniswap V3 (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap-v3-base.png",
+          "rankReported": 72,
+          "type": "DEX"
+        },
+        {
+          "id": 17,
+          "slug": "coinone",
+          "name": "Coinone",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinone.png",
+          "rankReported": 73,
+          "type": "SPOT"
+        },
+        {
+          "id": 2082,
+          "slug": "kumex",
+          "name": "KuCoin Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/kumex.svg",
+          "rankReported": 78,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2298,
+          "slug": "bitfinex-futures",
+          "name": "Bitfinex Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitfinex_futures.png",
+          "rankReported": 79,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 11,
+          "slug": "hitbtc",
+          "name": "HitBTC",
+          "image": "https://static.images.dropstab.com/images/exchanges/hitbtc.png",
+          "rankReported": 81,
+          "type": "SPOT"
+        },
+        {
+          "id": 2084,
+          "slug": "bitcoin-com",
+          "name": "FMFW.io",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitcoin_com.png",
+          "rankReported": 82,
+          "type": "SPOT"
+        },
+        {
+          "id": 2210,
+          "slug": "changelly",
+          "name": "Changelly PRO",
+          "image": "https://static.images.dropstab.com/images/exchanges/changelly.png",
+          "rankReported": 83,
+          "type": "SPOT"
+        },
+        {
+          "id": 3323,
+          "slug": "raydium-clmm",
+          "name": "Raydium (CLMM)",
+          "image": "https://static.images.dropstab.com/images/exchanges/raydium-clmm.png",
+          "rankReported": 85,
+          "type": "DEX"
+        },
+        {
+          "id": 9,
+          "slug": "bit-z",
+          "name": "BitZ",
+          "image": "https://static.images.dropstab.com/images/exchanges/bit_z.png",
+          "rankReported": 89,
+          "type": "SPOT"
+        },
+        {
+          "id": 186,
+          "slug": "exmo",
+          "name": "EXMO",
+          "image": "https://static.images.dropstab.com/images/exchanges/exmo.png",
+          "rankReported": 92,
+          "type": "SPOT"
+        },
+        {
+          "id": 19,
+          "slug": "gemini",
+          "name": "Gemini",
+          "image": "https://static.images.dropstab.com/images/exchanges/gemini.png",
+          "rankReported": 93,
+          "type": "SPOT"
+        },
+        {
+          "id": 4509,
+          "slug": "traderjoe-v2-2-avalanche",
+          "name": "LFJ V2.2 (Avalanche)",
+          "image": "https://static.images.dropstab.com/images/exchanges/traderjoe-v2-2-avalanche.png",
+          "rankReported": 95,
+          "type": "DEX"
+        },
+        {
+          "id": 195,
+          "slug": "cex",
+          "name": "CEX.IO",
+          "image": "https://static.images.dropstab.com/images/exchanges/cex.svg",
+          "rankReported": 96,
+          "type": "SPOT"
+        },
+        {
+          "id": 2329,
+          "slug": "delta-futures",
+          "name": "Delta Exchange Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/delta_futures.png",
+          "rankReported": 97,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2799,
+          "slug": "cetus",
+          "name": "Cetus",
+          "image": "https://static.images.dropstab.com/images/exchanges/cetus.png",
+          "rankReported": 98,
+          "type": "DEX"
+        },
+        {
+          "id": 2410,
+          "slug": "raydium2",
+          "name": "Raydium",
+          "image": "https://static.images.dropstab.com/images/exchanges/raydium2.png",
+          "rankReported": 99,
+          "type": "DEX"
+        },
+        {
+          "id": 2311,
+          "slug": "perpetual-protocol",
+          "name": "Perpetual Protocol",
+          "image": "https://static.images.dropstab.com/images/exchanges/perpetual_protocol.png",
+          "rankReported": 102,
+          "type": "DEX"
+        },
+        {
+          "id": 2246,
+          "slug": "quickswap",
+          "name": "Quickswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/quickswap.png",
+          "rankReported": 103,
+          "type": "DEX"
+        },
+        {
+          "id": 4781,
+          "slug": "pumpswap",
+          "name": "PumpSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/pumpswap.jpg",
+          "rankReported": 104,
+          "type": "SPOT"
+        },
+        {
+          "id": 2215,
+          "slug": "dodo",
+          "name": "DODO (Ethereum)",
+          "image": "https://static.images.dropstab.com/images/exchanges/dodo.png",
+          "rankReported": 105,
+          "type": "SPOT"
+        },
+        {
+          "id": 2350,
+          "slug": "pancakeswap-new",
+          "name": "PancakeSwap (v2)",
+          "image": "https://static.images.dropstab.com/images/exchanges/pancakeswap_new.png",
+          "rankReported": 106,
+          "type": "DEX"
+        },
+        {
+          "id": 2171,
+          "slug": "hoo",
+          "name": "Hoo.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/hoo.png",
+          "rankReported": 107,
+          "type": "SPOT"
+        },
+        {
+          "id": 2010,
+          "slug": "binance-us",
+          "name": "Binance US",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance_us.png",
+          "rankReported": 111,
+          "type": "SPOT"
+        },
+        {
+          "id": 165,
+          "slug": "bitso",
+          "name": "Bitso",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitso.png",
+          "rankReported": 112,
+          "type": "SPOT"
+        },
+        {
+          "id": 2643,
+          "slug": "uniswap-v3-polygon-pos",
+          "name": "Uniswap V3 (Polygon)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v3_polygon_pos.png",
+          "rankReported": 113,
+          "type": "DEX"
+        },
+        {
+          "id": 2166,
+          "slug": "tokenlon",
+          "name": "Tokenlon",
+          "image": "https://static.images.dropstab.com/images/exchanges/tokenlon.png",
+          "rankReported": 114,
+          "type": "DEX"
+        },
+        {
+          "id": 2278,
+          "slug": "uniswap-v2",
+          "name": "Uniswap V2 (Ethereum)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v2.png",
+          "rankReported": 115,
+          "type": "DEX"
+        },
+        {
+          "id": 116,
+          "slug": "luno",
+          "name": "Luno",
+          "image": "https://static.images.dropstab.com/images/exchanges/luno.png",
+          "rankReported": 116,
+          "type": "SPOT"
+        },
+        {
+          "id": 2271,
+          "slug": "pancakeswap-v1",
+          "name": "PancakeSwap (v1)",
+          "image": "https://static.images.dropstab.com/images/exchanges/pancakeswap_v1.png",
+          "rankReported": 118,
+          "type": "DEX"
+        },
+        {
+          "id": 3178,
+          "slug": "aerodrome-base",
+          "name": "Aerodrome (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/aerodrome-base.jpeg",
+          "rankReported": 120,
+          "type": "DEX"
+        },
+        {
+          "id": 2836,
+          "slug": "camelot-v3",
+          "name": "Camelot V3",
+          "image": "https://static.images.dropstab.com/images/exchanges/camelot-v3.jpg",
+          "rankReported": 122,
+          "type": "DEX"
+        },
+        {
+          "id": 2176,
+          "slug": "ftx-us",
+          "name": "FTX.US",
+          "image": "https://static.images.dropstab.com/images/exchanges/ftx_us.png",
+          "rankReported": 123,
+          "type": "SPOT"
+        },
+        {
+          "id": 3235,
+          "slug": "turbos-finance",
+          "name": "Turbos Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/turbos-finance.png",
+          "rankReported": 125,
+          "type": "DEX"
+        },
+        {
+          "id": 2644,
+          "slug": "uniswap-v3-optimism",
+          "name": "Uniswap V3 (Optimism)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v3_optimism.png",
+          "rankReported": 126,
+          "type": "SPOT"
+        },
+        {
+          "id": 2347,
+          "slug": "osmosis",
+          "name": "Osmosis",
+          "image": "https://static.images.dropstab.com/images/exchanges/osmosis.svg",
+          "rankReported": 127,
+          "type": "SPOT"
+        },
+        {
+          "id": 2179,
+          "slug": "curve",
+          "name": "Curve Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/curve.png",
+          "rankReported": 128,
+          "type": "SPOT"
+        },
+        {
+          "id": 184,
+          "slug": "bitbay",
+          "name": "zondacrypto",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitbay.png",
+          "rankReported": 131,
+          "type": "SPOT"
+        },
+        {
+          "id": 2116,
+          "slug": "dydx",
+          "name": "dYdX",
+          "image": "https://static.images.dropstab.com/images/exchanges/dydx.png",
+          "rankReported": 133,
+          "type": "DEX"
+        },
+        {
+          "id": 2792,
+          "slug": "traderjoe-v2-1-avalanche",
+          "name": "LFJ V2.1 (Avalanche)",
+          "image": "https://static.images.dropstab.com/images/exchanges/traderjoe-v2-1-avalanche.png",
+          "rankReported": 134,
+          "type": "DEX"
+        },
+        {
+          "id": 4522,
+          "slug": "sunswap-v2",
+          "name": "SunSwap V2",
+          "image": "https://static.images.dropstab.com/images/exchanges/sunswap-v2.png",
+          "rankReported": 136,
+          "type": "DEX"
+        },
+        {
+          "id": 2178,
+          "slug": "balancer",
+          "name": "Balancer V2",
+          "image": "https://static.images.dropstab.com/images/exchanges/balancer.png",
+          "rankReported": 138,
+          "type": "SPOT"
+        },
+        {
+          "id": 2260,
+          "slug": "dodo-bsc",
+          "name": "DODO (BSC)",
+          "image": "https://static.images.dropstab.com/images/exchanges/dodo_bsc.png",
+          "rankReported": 139,
+          "type": "DEX"
+        },
+        {
+          "id": 1983,
+          "slug": "bithumb-global",
+          "name": "BitGlobal",
+          "image": "https://static.images.dropstab.com/images/exchanges/bithumb_global.png",
+          "rankReported": 142,
+          "type": "SPOT"
+        },
+        {
+          "id": 2177,
+          "slug": "uniswap-v1",
+          "name": "Uniswap (v1)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap_v1.png",
+          "rankReported": 143,
+          "type": "DEX"
+        },
+        {
+          "id": 2779,
+          "slug": "syncswap",
+          "name": "SyncSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/syncswap.jpg",
+          "rankReported": 144,
+          "type": "DEX"
+        },
+        {
+          "id": 2865,
+          "slug": "sushiswap-v3-base",
+          "name": "SushiSwap V3 (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/sushiswap-v3-base.png",
+          "rankReported": 145,
+          "type": "DEX"
+        },
+        {
+          "id": 2207,
+          "slug": "sushiswap",
+          "name": "Sushiswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/sushiswap.png",
+          "rankReported": 146,
+          "type": "DEX"
+        },
+        {
+          "id": 179,
+          "slug": "kyber-network",
+          "name": "Kyber Network",
+          "image": "https://static.images.dropstab.com/images/exchanges/kyber_network.png",
+          "rankReported": 147,
+          "type": "SPOT"
+        },
+        {
+          "id": 2844,
+          "slug": "velodrome-finance-v2",
+          "name": "Velodrome Finance V2 (Optimism)",
+          "image": "https://static.images.dropstab.com/images/exchanges/velodrome-finance-v2.png",
+          "rankReported": 148,
+          "type": "SPOT"
+        },
+        {
+          "id": 2355,
+          "slug": "traderjoe",
+          "name": "LFJ",
+          "image": "https://static.images.dropstab.com/images/exchanges/traderjoe.jpg",
+          "rankReported": 149,
+          "type": "DEX"
+        },
+        {
+          "id": 1893,
+          "slug": "huobi-korea",
+          "name": "Huobi Korea",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi_korea.png",
+          "rankReported": 151,
+          "type": "SPOT"
+        },
+        {
+          "id": 2884,
+          "slug": "ston-fi",
+          "name": "STON.fi",
+          "image": "https://static.images.dropstab.com/images/exchanges/stonfi.png",
+          "rankReported": 152,
+          "type": "DEX"
+        },
+        {
+          "id": 2187,
+          "slug": "nice-hash",
+          "name": "NiceHash",
+          "image": "https://static.images.dropstab.com/images/exchanges/nice_hash.png",
+          "rankReported": 153,
+          "type": "SPOT"
+        },
+        {
+          "id": 133,
+          "slug": "wazirx",
+          "name": "WazirX",
+          "image": "https://static.images.dropstab.com/images/exchanges/wazirx.png",
+          "rankReported": 154,
+          "type": "SPOT"
+        },
+        {
+          "id": 2895,
+          "slug": "dedust",
+          "name": "DeDust",
+          "image": "https://static.images.dropstab.com/images/exchanges/dedust.png",
+          "rankReported": 155,
+          "type": "DEX"
+        },
+        {
+          "id": 172,
+          "slug": "bancor",
+          "name": "Bancor (V2)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bancor.png",
+          "rankReported": 156,
+          "type": "SPOT"
+        },
+        {
+          "id": 2208,
+          "slug": "serum-dex",
+          "name": "Serum DEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/serum_dex.png",
+          "rankReported": 157,
+          "type": "DEX"
+        },
+        {
+          "id": 2313,
+          "slug": "dydx-perpetual",
+          "name": "dYdX Perpetual (Ethereum)",
+          "image": "https://static.images.dropstab.com/images/exchanges/dydx_perpetual.png",
+          "rankReported": 158,
+          "type": "DEX"
+        },
+        {
+          "id": 2193,
+          "slug": "zero-ex",
+          "name": "Matcha",
+          "image": "https://static.images.dropstab.com/images/exchanges/zero_ex.png",
+          "rankReported": 159,
+          "type": "DEX"
+        },
+        {
+          "id": 2226,
+          "slug": "serumswap",
+          "name": "SerumSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/serumswap.png",
+          "rankReported": 162,
+          "type": "DEX"
+        },
+        {
+          "id": 3358,
+          "slug": "thruster-v3",
+          "name": "Thruster V3",
+          "image": "https://static.images.dropstab.com/images/exchanges/thruster-v3.jpeg",
+          "rankReported": 163,
+          "type": "DEX"
+        },
+        {
+          "id": 2856,
+          "slug": "pancakeswap-v3-zksync",
+          "name": "PancakeSwap V3 (zkSync)",
+          "image": "https://static.images.dropstab.com/images/exchanges/pancakeswap-v3-zksync.jpeg",
+          "rankReported": 165,
+          "type": "DEX"
+        },
+        {
+          "id": 2676,
+          "slug": "camelot",
+          "name": "Camelot",
+          "image": "https://static.images.dropstab.com/images/exchanges/camelot.png",
+          "rankReported": 167,
+          "type": "DEX"
+        },
+        {
+          "id": 2835,
+          "slug": "ramses-v2",
+          "name": "Ramses V2",
+          "image": "https://static.images.dropstab.com/images/exchanges/ramses-v2.jpeg",
+          "rankReported": 168,
+          "type": "DEX"
+        },
+        {
+          "id": 2277,
+          "slug": "wault-swap",
+          "name": "WaultSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/wault_swap.png",
+          "rankReported": 169,
+          "type": "DEX"
+        },
+        {
+          "id": 2213,
+          "slug": "anyswap",
+          "name": "Anyswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/anyswap.png",
+          "rankReported": 170,
+          "type": "SPOT"
+        },
+        {
+          "id": 4397,
+          "slug": "cellana-finance",
+          "name": "Cellana Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/cellana-finance.png",
+          "rankReported": 171,
+          "type": "DEX"
+        },
+        {
+          "id": 2785,
+          "slug": "thala",
+          "name": "ThalaSwap V1",
+          "image": "https://static.images.dropstab.com/images/exchanges/thala.jpeg",
+          "rankReported": 172,
+          "type": "DEX"
+        },
+        {
+          "id": 2009,
+          "slug": "okex-korea",
+          "name": "OKEx Korea",
+          "image": "https://static.images.dropstab.com/images/exchanges/okex_korea.png",
+          "rankReported": 173,
+          "type": "SPOT"
+        },
+        {
+          "id": 2164,
+          "slug": "huobi-id",
+          "name": "Huobi Indonesia",
+          "image": "https://static.images.dropstab.com/images/exchanges/huobi_id.png",
+          "rankReported": 175,
+          "type": "SPOT"
+        },
+        {
+          "id": 2596,
+          "slug": "velodrome",
+          "name": "Velodrome Finance",
+          "image": "https://static.images.dropstab.com/images/exchanges/velodrome.png",
+          "rankReported": 176,
+          "type": "SPOT"
+        },
+        {
+          "id": 2333,
+          "slug": "bakkt",
+          "name": "Bakkt",
+          "image": "https://static.images.dropstab.com/images/exchanges/bakkt.png",
+          "rankReported": 178,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 190,
+          "slug": "hotbit",
+          "name": "Hotbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/hotbit.png",
+          "rankReported": 181,
+          "type": "SPOT"
+        },
+        {
+          "id": 2223,
+          "slug": "honeyswap",
+          "name": "Honeyswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/honeyswap.png",
+          "rankReported": 182,
+          "type": "DEX"
+        },
+        {
+          "id": 21,
+          "slug": "idex",
+          "name": "Idex",
+          "image": "https://static.images.dropstab.com/images/exchanges/idex.png",
+          "rankReported": 183,
+          "type": "SPOT"
+        },
+        {
+          "id": 238,
+          "slug": "okcoin",
+          "name": "Okcoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/okcoin.png",
+          "rankReported": 184,
+          "type": "SPOT"
+        },
+        {
+          "id": 26,
+          "slug": "coinbene",
+          "name": "CoinBene",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinbene.png",
+          "rankReported": 185,
+          "type": "SPOT"
+        },
+        {
+          "id": 2725,
+          "slug": "liquidswap",
+          "name": "Liquidswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/liquidswap.png",
+          "rankReported": 186,
+          "type": "DEX"
+        },
+        {
+          "id": 2276,
+          "slug": "spookyswap",
+          "name": "SpookySwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/spookyswap.png",
+          "rankReported": 187,
+          "type": "DEX"
+        },
+        {
+          "id": 2100,
+          "slug": "newdex",
+          "name": "Newdex",
+          "image": "https://static.images.dropstab.com/images/exchanges/newdex.png",
+          "rankReported": 189,
+          "type": "DEX"
+        },
+        {
+          "id": 2283,
+          "slug": "spiritswap",
+          "name": "SpiritSwap",
+          "image": "https://static.images.dropstab.com/images/exchanges/spiritswap.png",
+          "rankReported": 190,
+          "type": "DEX"
+        },
+        {
+          "id": 3331,
+          "slug": "fluxbeam",
+          "name": "FluxBeam",
+          "image": "https://static.images.dropstab.com/images/exchanges/fluxbeam.png",
+          "rankReported": 192,
+          "type": "DEX"
+        },
+        {
+          "id": 4449,
+          "slug": "liquidswap-v0-5",
+          "name": "LiquidSwap V0.5",
+          "image": "https://static.images.dropstab.com/images/exchanges/liquidswap-v0-5.png",
+          "rankReported": 193,
+          "type": "DEX"
+        },
+        {
+          "id": 2234,
+          "slug": "blockchain-com",
+          "name": "Blockchain.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/blockchain_com.png",
+          "rankReported": 196,
+          "type": "SPOT"
+        },
+        {
+          "id": 4552,
+          "slug": "uniswap-v3-zora",
+          "name": "Uniswap V3 (Zora)",
+          "image": "https://static.images.dropstab.com/images/exchanges/uniswap-v3-zora.jpg",
+          "rankReported": 197,
+          "type": "DEX"
+        },
+        {
+          "id": 2126,
+          "slug": "nash",
+          "name": "Nash",
+          "image": "https://static.images.dropstab.com/images/exchanges/nash.png",
+          "rankReported": 200,
+          "type": "SPOT"
+        },
+        {
+          "id": 1891,
+          "slug": "trx-market",
+          "name": "PoloniDEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/trx_market.png",
+          "rankReported": 201,
+          "type": "DEX"
+        },
+        {
+          "id": 20,
+          "slug": "quoine",
+          "name": "Liquid",
+          "image": "https://static.images.dropstab.com/images/exchanges/quoine.png",
+          "rankReported": 202,
+          "type": "SPOT"
+        },
+        {
+          "id": 15,
+          "slug": "bittrex",
+          "name": "Bittrex Global",
+          "image": "https://static.images.dropstab.com/images/exchanges/bittrex.png",
+          "rankReported": 204,
+          "type": "SPOT"
+        },
+        {
+          "id": 1999,
+          "slug": "bitholic",
+          "name": "Bithumb Singapore",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitholic.png",
+          "rankReported": 207,
+          "type": "SPOT"
+        },
+        {
+          "id": 2152,
+          "slug": "etorox",
+          "name": "eToro",
+          "image": "https://static.images.dropstab.com/images/exchanges/etorox.png",
+          "rankReported": 208,
+          "type": "SPOT"
+        },
+        {
+          "id": 1979,
+          "slug": "binance-dex",
+          "name": "Binance DEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/binance_dex.png",
+          "rankReported": 210,
+          "type": "DEX"
+        },
+        {
+          "id": 2866,
+          "slug": "rocketswap-base",
+          "name": "Rocketswap (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/rocketswap-base.png",
+          "rankReported": 212,
+          "type": "DEX"
+        },
+        {
+          "id": 2867,
+          "slug": "cbswap-base",
+          "name": "CBSwap (Base)",
+          "image": "https://static.images.dropstab.com/images/exchanges/cbswap-base.jpg",
+          "rankReported": 213,
+          "type": "DEX"
+        },
+        {
+          "id": 2307,
+          "slug": "bitz-futures",
+          "name": "BitZ Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitz_futures.png",
+          "rankReported": 216,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2450,
+          "slug": "azbit",
+          "name": "Azbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/azbit.png",
+          "rankReported": 14,
+          "type": "SPOT"
+        },
+        {
+          "id": 270,
+          "slug": "coineal",
+          "name": "Coineal",
+          "image": "https://static.images.dropstab.com/images/exchanges/coineal.png",
+          "rankReported": 101,
+          "type": "SPOT"
+        },
+        {
+          "id": 2300,
+          "slug": "hopex",
+          "name": "Hopex",
+          "image": "https://static.images.dropstab.com/images/exchanges/hopex.png",
+          "rankReported": 214,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2301,
+          "slug": "btse-futures",
+          "name": "BTSE (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/btse_futures.png",
+          "rankReported": 11,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 111,
+          "slug": "bitrue",
+          "name": "Bitrue",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitrue.jpeg",
+          "rankReported": 49,
+          "type": "SPOT"
+        },
+        {
+          "id": 1901,
+          "slug": "bhex",
+          "name": "HBTC",
+          "image": "https://static.images.dropstab.com/images/exchanges/bhex.png",
+          "rankReported": 50,
+          "type": "SPOT"
+        },
+        {
+          "id": 191,
+          "slug": "yobit",
+          "name": "YoBit",
+          "image": "https://static.images.dropstab.com/images/exchanges/yobit.png",
+          "rankReported": 74,
+          "type": "SPOT"
+        },
+        {
+          "id": 51,
+          "slug": "btcturk",
+          "name": "BtcTurk | Kripto",
+          "image": "https://static.images.dropstab.com/images/exchanges/btcturk.png",
+          "rankReported": 87,
+          "type": "SPOT"
+        },
+        {
+          "id": 3151,
+          "slug": "bibox-futures",
+          "name": "Bibox (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bibox_futures.png",
+          "rankReported": 129,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2631,
+          "slug": "bitlo",
+          "name": "Bitlo",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitlo.png",
+          "rankReported": 137,
+          "type": "SPOT"
+        },
+        {
+          "id": 3031,
+          "slug": "balancer-v1",
+          "name": "Balancer V1",
+          "image": "https://static.images.dropstab.com/images/exchanges/balancer_v1.png",
+          "rankReported": 161,
+          "type": "SPOT"
+        },
+        {
+          "id": 212,
+          "slug": "bigone",
+          "name": "BigONE",
+          "image": "https://static.images.dropstab.com/images/exchanges/bigone.svg",
+          "rankReported": 45,
+          "type": "SPOT"
+        },
+        {
+          "id": 112,
+          "slug": "livecoin",
+          "name": "Livecoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/livecoin.png",
+          "rankReported": 62,
+          "type": "SPOT"
+        },
+        {
+          "id": 42,
+          "slug": "cointiger",
+          "name": "CoinTiger",
+          "image": "https://static.images.dropstab.com/images/exchanges/cointiger.png",
+          "rankReported": 65,
+          "type": "SPOT"
+        },
+        {
+          "id": 72,
+          "slug": "crex24",
+          "name": "CREX24",
+          "image": "https://static.images.dropstab.com/images/exchanges/crex24.png",
+          "rankReported": 67,
+          "type": "SPOT"
+        },
+        {
+          "id": 2162,
+          "slug": "currency",
+          "name": "Currency.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/currency.png",
+          "rankReported": 69,
+          "type": "SPOT"
+        },
+        {
+          "id": 2042,
+          "slug": "btse",
+          "name": "BTSE",
+          "image": "https://static.images.dropstab.com/images/exchanges/btse.png",
+          "rankReported": 77,
+          "type": "SPOT"
+        },
+        {
+          "id": 102,
+          "slug": "fcoin",
+          "name": "FCoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/fcoin.png",
+          "rankReported": 80,
+          "type": "SPOT"
+        },
+        {
+          "id": 3332,
+          "slug": "backpack-exchange",
+          "name": "Backpack Exchange ",
+          "image": "https://static.images.dropstab.com/images/exchanges/backpack_exchange.png",
+          "rankReported": 100,
+          "type": "SPOT"
+        },
+        {
+          "id": 52,
+          "slug": "indodax",
+          "name": "Indodax",
+          "image": "https://static.images.dropstab.com/images/exchanges/indodax.jpg",
+          "rankReported": 117,
+          "type": "SPOT"
+        },
+        {
+          "id": 12,
+          "slug": "bcex",
+          "name": "BCEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/bcex.png",
+          "rankReported": 135,
+          "type": "SPOT"
+        },
+        {
+          "id": 202,
+          "slug": "coin-egg",
+          "name": "CoinEgg",
+          "image": "https://static.images.dropstab.com/images/exchanges/coin_egg.png",
+          "rankReported": 166,
+          "type": "SPOT"
+        },
+        {
+          "id": 142,
+          "slug": "coinfalcon",
+          "name": "Coinfalcon",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinfalcon.png",
+          "rankReported": 188,
+          "type": "SPOT"
+        },
+        {
+          "id": 232,
+          "slug": "tokok",
+          "name": "TOKOK",
+          "image": "https://static.images.dropstab.com/images/exchanges/tokok.png",
+          "rankReported": 198,
+          "type": "SPOT"
+        },
+        {
+          "id": 3223,
+          "slug": "bitdelta",
+          "name": "BitDelta",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitdelta.png",
+          "rankReported": 40,
+          "type": "SPOT"
+        },
+        {
+          "id": 3253,
+          "slug": "bitcastle",
+          "name": "bitcastle",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitcastle.png",
+          "rankReported": 42,
+          "type": "SPOT"
+        },
+        {
+          "id": 2803,
+          "slug": "bit2me",
+          "name": "Bit2Me",
+          "image": "https://static.images.dropstab.com/images/exchanges/bit2me.png",
+          "rankReported": 53,
+          "type": "SPOT"
+        },
+        {
+          "id": 2023,
+          "slug": "bitci",
+          "name": "SAFEbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitci.png",
+          "rankReported": 84,
+          "type": "SPOT"
+        },
+        {
+          "id": 33,
+          "slug": "bitbank",
+          "name": "Bitbank",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitbank.png",
+          "rankReported": 94,
+          "type": "SPOT"
+        },
+        {
+          "id": 2503,
+          "slug": "bitazza",
+          "name": "Bitazza",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitazza.png",
+          "rankReported": 109,
+          "type": "SPOT"
+        },
+        {
+          "id": 23,
+          "slug": "bilaxy",
+          "name": "Bilaxy",
+          "image": "https://static.images.dropstab.com/images/exchanges/bilaxy.png",
+          "rankReported": 110,
+          "type": "SPOT"
+        },
+        {
+          "id": 53,
+          "slug": "mercatox",
+          "name": "Mercatox",
+          "image": "https://static.images.dropstab.com/images/exchanges/mercatox.png",
+          "rankReported": 121,
+          "type": "SPOT"
+        },
+        {
+          "id": 143,
+          "slug": "south-xchange",
+          "name": "SouthXchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/south_xchange.png",
+          "rankReported": 174,
+          "type": "SPOT"
+        },
+        {
+          "id": 83,
+          "slug": "bleutrade",
+          "name": "bleutrade",
+          "image": "https://static.images.dropstab.com/images/exchanges/bleutrade.png",
+          "rankReported": 199,
+          "type": "SPOT"
+        },
+        {
+          "id": 2303,
+          "slug": "zbg-futures",
+          "name": "ZBG Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/zbg_futures.png",
+          "rankReported": 215,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2414,
+          "slug": "coinstore",
+          "name": "Coinstore",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinstore.png",
+          "rankReported": 20,
+          "type": "SPOT"
+        },
+        {
+          "id": 24,
+          "slug": "digifinex",
+          "name": "DigiFinex",
+          "image": "https://static.images.dropstab.com/images/exchanges/digifinex.png",
+          "rankReported": 26,
+          "type": "SPOT"
+        },
+        {
+          "id": 2674,
+          "slug": "deepcoin",
+          "name": "Deepcoin",
+          "image": "https://static.images.dropstab.com/images/exchanges/deepcoin.png",
+          "rankReported": 61,
+          "type": "SPOT"
+        },
+        {
+          "id": 2264,
+          "slug": "raydium",
+          "name": "Raydium",
+          "image": "https://static.images.dropstab.com/images/exchanges/raydium.png",
+          "rankReported": 76,
+          "type": "DEX"
+        },
+        {
+          "id": 134,
+          "slug": "kuna",
+          "name": "Kuna Exchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/kuna.png",
+          "rankReported": 164,
+          "type": "SPOT"
+        },
+        {
+          "id": 2244,
+          "slug": "bakeryswap",
+          "name": "Bakeryswap",
+          "image": "https://static.images.dropstab.com/images/exchanges/bakeryswap.png",
+          "rankReported": 177,
+          "type": "SPOT"
+        },
+        {
+          "id": 224,
+          "slug": "abcc",
+          "name": "ABCC",
+          "image": "https://static.images.dropstab.com/images/exchanges/abcc.png",
+          "rankReported": 203,
+          "type": "SPOT"
+        },
+        {
+          "id": 3175,
+          "slug": "bitvenus",
+          "name": "BVOX (Futures)",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitvenus.jpg",
+          "rankReported": 2,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2375,
+          "slug": "bitvavo",
+          "name": "Bitvavo",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitvavo.png",
+          "rankReported": 56,
+          "type": "SPOT"
+        },
+        {
+          "id": 2695,
+          "slug": "cointr",
+          "name": "CoinTR",
+          "image": "https://static.images.dropstab.com/images/exchanges/cointr.png",
+          "rankReported": 75,
+          "type": "SPOT"
+        },
+        {
+          "id": 45,
+          "slug": "lakebtc",
+          "name": "LakeBTC",
+          "image": "https://static.images.dropstab.com/images/exchanges/lakebtc.png",
+          "rankReported": 132,
+          "type": "SPOT"
+        },
+        {
+          "id": 55,
+          "slug": "therocktrading",
+          "name": "TheRockTrading",
+          "image": "https://static.images.dropstab.com/images/exchanges/therocktrading.png",
+          "rankReported": 160,
+          "type": "SPOT"
+        },
+        {
+          "id": 65,
+          "slug": "acx",
+          "name": "ACX",
+          "image": "https://static.images.dropstab.com/images/exchanges/acx.png",
+          "rankReported": 194,
+          "type": "SPOT"
+        },
+        {
+          "id": 2306,
+          "slug": "bitforex-futures",
+          "name": "Bitforex Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitforex_futures.png",
+          "rankReported": 57,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2926,
+          "slug": "c-patex",
+          "name": "C-Patex",
+          "image": "https://static.images.dropstab.com/images/exchanges/c_patex.png",
+          "rankReported": 90,
+          "type": "SPOT"
+        },
+        {
+          "id": 226,
+          "slug": "coinall",
+          "name": "CoinAll",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinall.png",
+          "rankReported": 130,
+          "type": "SPOT"
+        },
+        {
+          "id": 1886,
+          "slug": "probit",
+          "name": "ProBit Global",
+          "image": "https://static.images.dropstab.com/images/exchanges/probit.png",
+          "rankReported": 140,
+          "type": "SPOT"
+        },
+        {
+          "id": 2356,
+          "slug": "bitexen",
+          "name": "Bitexen",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitexen.png",
+          "rankReported": 150,
+          "type": "SPOT"
+        },
+        {
+          "id": 196,
+          "slug": "gbx",
+          "name": "Global Blockchain Exchange",
+          "image": "https://static.images.dropstab.com/images/exchanges/gbx.png",
+          "rankReported": 205,
+          "type": "SPOT"
+        },
+        {
+          "id": 96,
+          "slug": "cobinhood",
+          "name": "Cobinhood",
+          "image": "https://static.images.dropstab.com/images/exchanges/cobinhood.png",
+          "rankReported": 217,
+          "type": "SPOT"
+        },
+        {
+          "id": 2317,
+          "slug": "bitmax-futures",
+          "name": "AscendEX (BitMax) Futures",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitmax_futures.png",
+          "rankReported": 7,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 2297,
+          "slug": "deribit",
+          "name": "Deribit",
+          "image": "https://static.images.dropstab.com/images/exchanges/deribit.png",
+          "rankReported": 33,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 247,
+          "slug": "coinsbit",
+          "name": "Coinsbit",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinsbit.jpg",
+          "rankReported": 55,
+          "type": "SPOT"
+        },
+        {
+          "id": 1977,
+          "slug": "bkex",
+          "name": "BKEX",
+          "image": "https://static.images.dropstab.com/images/exchanges/bkex.png",
+          "rankReported": 63,
+          "type": "SPOT"
+        },
+        {
+          "id": 2147,
+          "slug": "toko-crypto",
+          "name": "TokoCrypto",
+          "image": "https://static.images.dropstab.com/images/exchanges/toko-crypto.png",
+          "rankReported": 124,
+          "type": "SPOT"
+        },
+        {
+          "id": 2247,
+          "slug": "mdex",
+          "name": "Mdex",
+          "image": "https://static.images.dropstab.com/images/exchanges/mdex.png",
+          "rankReported": 179,
+          "type": "SPOT"
+        },
+        {
+          "id": 187,
+          "slug": "bitlish",
+          "name": "Bitlish",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitlish.png",
+          "rankReported": 195,
+          "type": "SPOT"
+        },
+        {
+          "id": 157,
+          "slug": "bitshares-assets",
+          "name": "Bitshares Assets",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitshares_assets.png",
+          "rankReported": 206,
+          "type": "DEX"
+        },
+        {
+          "id": 107,
+          "slug": "zbg",
+          "name": "ZBG",
+          "image": "https://static.images.dropstab.com/images/exchanges/zbg.png",
+          "rankReported": 211,
+          "type": "SPOT"
+        },
+        {
+          "id": 2308,
+          "slug": "prime-xbt",
+          "name": "PrimeXBT",
+          "image": "https://static.images.dropstab.com/images/exchanges/prime_xbt.png",
+          "rankReported": 13,
+          "type": "DERIVATIVE"
+        },
+        {
+          "id": 188,
+          "slug": "p2pb2b",
+          "name": "P2B",
+          "image": "https://static.images.dropstab.com/images/exchanges/p2pb2b.png",
+          "rankReported": 37,
+          "type": "SPOT"
+        },
+        {
+          "id": 168,
+          "slug": "tidex",
+          "name": "Tidex",
+          "image": "https://static.images.dropstab.com/images/exchanges/tidex.png",
+          "rankReported": 52,
+          "type": "SPOT"
+        },
+        {
+          "id": 198,
+          "slug": "latoken",
+          "name": "LATOKEN",
+          "image": "https://static.images.dropstab.com/images/exchanges/latoken.png",
+          "rankReported": 66,
+          "type": "SPOT"
+        },
+        {
+          "id": 98,
+          "slug": "coinex",
+          "name": "CoinEx",
+          "image": "https://static.images.dropstab.com/images/exchanges/coinex.svg",
+          "rankReported": 86,
+          "type": "SPOT"
+        },
+        {
+          "id": 158,
+          "slug": "coincheck",
+          "name": "Coincheck",
+          "image": "https://static.images.dropstab.com/images/exchanges/coincheck.png",
+          "rankReported": 88,
+          "type": "SPOT"
+        },
+        {
+          "id": 128,
+          "slug": "zaif",
+          "name": "Zaif",
+          "image": "https://static.images.dropstab.com/images/exchanges/zaif.png",
+          "rankReported": 141,
+          "type": "SPOT"
+        },
+        {
+          "id": 138,
+          "slug": "braziliex",
+          "name": "Braziliex",
+          "image": "https://static.images.dropstab.com/images/exchanges/braziliex.png",
+          "rankReported": 180,
+          "type": "SPOT"
+        },
+        {
+          "id": 2048,
+          "slug": "eterbase",
+          "name": "Eterbase",
+          "image": "https://static.images.dropstab.com/images/exchanges/eterbase.png",
+          "rankReported": 191,
+          "type": "SPOT"
+        },
+        {
+          "id": 108,
+          "slug": "bgogo",
+          "name": "Bgogo",
+          "image": "https://static.images.dropstab.com/images/exchanges/bgogo.png",
+          "rankReported": 209,
+          "type": "SPOT"
+        },
+        {
+          "id": 2249,
+          "slug": "biconomy",
+          "name": "Biconomy.com",
+          "image": "https://static.images.dropstab.com/images/exchanges/biconomy.svg",
+          "rankReported": 15,
+          "type": "SPOT"
+        },
+        {
+          "id": 29,
+          "slug": "bitforex",
+          "name": "Bitforex",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitforex.png",
+          "rankReported": 41,
+          "type": "SPOT"
+        },
+        {
+          "id": 39,
+          "slug": "bitflyer",
+          "name": "bitFlyer",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitflyer.png",
+          "rankReported": 91,
+          "type": "SPOT"
+        },
+        {
+          "id": 2039,
+          "slug": "bitopro",
+          "name": "BitoPro",
+          "image": "https://static.images.dropstab.com/images/exchanges/bitopro.png",
+          "rankReported": 108,
+          "type": "SPOT"
+        },
+        {
+          "id": 139,
+          "slug": "tidebit",
+          "name": "Tidebit",
+          "image": "https://static.images.dropstab.com/images/exchanges/tidebit.png",
+          "rankReported": 119,
+          "type": "SPOT"
+        }
+      ],
+      "pageable": {
+        "sort": {
+          "empty": true,
+          "sorted": false,
+          "unsorted": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 10000,
+        "paged": true,
+        "unpaged": false
+      },
+      "last": true,
+      "totalElements": 217,
+      "totalPages": 1,
+      "first": true,
+      "size": 10000,
+      "number": 0,
+      "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+      },
+      "numberOfElements": 217,
+      "empty": false
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://extra-bff.dropstab.com/v1.2/market-data/market-total-and-widgets-summary?fields=stockRealtimeSPX%2CstockRealtimeGOLD",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:19:12.848421+00:00",
+    "data": {
+      "ok": true,
+      "message": "OK",
+      "data": {
+        "stockRealtimeSPX": {
+          "marketStatus": false,
+          "stockMarket": {
+            "price": 6870.51,
+            "currencyType": "SPX",
+            "updateTime": 1772658000622
+          },
+          "change": 0.8251788890389076
+        },
+        "stockRealtimeGOLD": {
+          "marketStatus": false,
+          "stockMarket": {
+            "price": 5143.700195,
+            "currencyType": "GOLD",
+            "updateTime": 1772698666000
+          },
+          "change": -0.3546267792865119
+        }
+      }
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/marketTotal/last",
+    "type": "unknown",
+    "timestamp": "2026-03-05T08:20:08.879021+00:00",
+    "data": {
+      "btcDominance": "58.730602",
+      "btcDominanceChange24h": 0.7177001492108956,
+      "btcDominanceImage": "https://static.images.dropstab.com/images/bitcoin.svg",
+      "ethDominance": 10.267414864462904,
+      "ethDominanceImage": "https://static.images.dropstab.com/images/ethereum.svg",
+      "marketCap": {
+        "USD": 2447376756703.0,
+        "BTC": 34047143.32799588,
+        "ETH": 1165633978.073547,
+        "BNB": 3759931106.76284,
+        "SOL": 6503791540534149.0,
+        "EUR": 2108560589774.495,
+        "GBP": 1834491992876.196,
+        "CAD": 3339593084660.1797,
+        "RUB": 190591956719723.1
+      },
+      "volume24h": {
+        "USD": 275157282024.0,
+        "BTC": 3827902.423750035,
+        "ETH": 131051615.31141497,
+        "BNB": 422727077.5130203,
+        "SOL": 731217863470635.1,
+        "EUR": 237064358512.12125,
+        "GBP": 206250970257.07425,
+        "CAD": 375468694684.819,
+        "RUB": 21428153488424.67
+      },
+      "marketCapChange24h": {
+        "USD": 2.7517282819291777,
+        "BTC": 2.8571613844114037,
+        "ETH": 2.8785668071567674,
+        "BNB": 2.7918930311003947,
+        "SOL": 2.7517282819291777,
+        "EUR": 2.7517282819291777,
+        "GBP": 2.7517282819291777,
+        "CAD": 2.7517282819291777,
+        "RUB": 2.7517282819291777
+      },
+      "volumeChange24h": {
+        "USD": 58.816413614538554,
+        "BTC": 61.0699780398426,
+        "ETH": 61.527505116935664,
+        "BNB": 59.67490917003806,
+        "SOL": 58.816413614538554,
+        "EUR": 58.816413614538554,
+        "GBP": 58.816413614538554,
+        "CAD": 58.816413614538554,
+        "RUB": 58.816413614538554
+      },
+      "volumeLeadMarket": {
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "symbol": "BTC",
+        "rank": null,
+        "change": null,
+        "marketCap": null,
+        "image": "https://static.images.dropstab.com/images/bitcoin.svg"
+      },
+      "topGainers": [
+        {
+          "name": "Pi Network",
+          "slug": "pi-network",
+          "symbol": "PI",
+          "rank": null,
+          "change": null,
+          "marketCap": null,
+          "image": "https://static.images.dropstab.com/images/pi-network.jpg"
+        },
+        {
+          "name": "Zcash",
+          "slug": "zcash",
+          "symbol": "ZEC",
+          "rank": null,
+          "change": null,
+          "marketCap": null,
+          "image": "https://static.images.dropstab.com/images/zcash.svg"
+        }
+      ],
+      "marketTrendType": "BULLISH",
+      "marketCapGold": {
+        "USD": 35905572880975.0,
+        "BTC": 499507148.95210207,
+        "ETH": 17101067760.667458,
+        "BNB": 55162324625.28552,
+        "SOL": 398950809788.6111,
+        "EUR": 30934785877468.15,
+        "GBP": 26913913343900.715,
+        "CAD": 48995318177166.87,
+        "RUB": 2796183045289139.0
+      }
+    }
+  },
+  {
+    "label": "coins",
+    "url": "https://api2.dropstab.com/portfolio/api/marketTotal/ethGasPricesV2",
+    "type": "list_data",
+    "timestamp": "2026-03-05T08:20:08.884926+00:00",
+    "data": [
+      {
+        "type": "Fast",
+        "gwei": 0.16,
+        "costUsd": 0.0070605696,
+        "timeToArrive": "~ 15 sec"
+      },
+      {
+        "type": "Normal",
+        "gwei": 0.15,
+        "costUsd": 0.006619284,
+        "timeToArrive": "~ 3 min"
+      },
+      {
+        "type": "Slow",
+        "gwei": 0.13,
+        "costUsd": 0.0057367128,
+        "timeToArrive": "> 10 min"
+      }
+    ]
+  }
+]
