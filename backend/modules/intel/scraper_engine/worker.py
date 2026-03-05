@@ -125,9 +125,63 @@ class ScraperWorker:
         return result
     
     async def _process_parse(self, job: Job) -> Dict[str, Any]:
-        """Process parse job (TODO: implement parsers)"""
-        # This will call the parsers in sources/dropstab/parsers.py etc.
-        return {"status": "parse_not_implemented", "job": job.id}
+        """
+        Process parse job.
+        
+        Reads raw data from storage, parses it, and stores to normalized tables.
+        """
+        raw_file = job.payload.get("raw_file")
+        
+        if not raw_file:
+            return {"error": "No raw_file specified"}
+        
+        # Import dependencies
+        from ..scraper_engine.raw_store import raw_store
+        from ..normalization import create_normalization_engine
+        from server import db
+        
+        # Read raw data
+        raw_doc = raw_store.get(raw_file)
+        payload = raw_doc.get("payload", [])
+        
+        if not payload:
+            return {"error": "Empty payload"}
+        
+        # Get parser based on source
+        if job.source == "dropstab":
+            from ..sources.dropstab.parsers import parse_auto
+        elif job.source == "cryptorank":
+            from ..sources.cryptorank.adapters import parse_auto
+        else:
+            return {"error": f"Unknown source: {job.source}"}
+        
+        # Parse the data
+        parsed = parse_auto(payload, target_hint=job.target)
+        
+        # Store to normalized tables
+        engine = create_normalization_engine(db)
+        
+        results = {}
+        
+        if parsed.get("unlocks"):
+            results["unlocks"] = await engine.store_unlocks(parsed["unlocks"])
+        
+        if parsed.get("funding"):
+            results["funding"] = await engine.store_funding(parsed["funding"])
+        
+        if parsed.get("investors"):
+            results["investors"] = await engine.store_investors(parsed["investors"])
+        
+        if parsed.get("sales"):
+            results["sales"] = await engine.store_sales(parsed["sales"])
+        
+        return {
+            "status": "parsed",
+            "source": job.source,
+            "target": job.target,
+            "raw_file": raw_file,
+            "results": results
+        }
     
     def stop(self):
         """Signal worker to stop"""

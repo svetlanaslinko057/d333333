@@ -143,6 +143,29 @@ class JobQueue:
         
         return job_ids
     
+    def push_parse(self, source: str, target: str, raw_file: str, priority: int = 5) -> str:
+        """
+        Push parse job for a raw data file.
+        
+        Args:
+            source: dropstab or cryptorank
+            target: Data type hint (unlocks, funding, etc)
+            raw_file: Path to raw JSON file
+            priority: Job priority
+        
+        Returns:
+            Job ID
+        """
+        job = Job(
+            id="",
+            source=source,
+            kind="parse",
+            target=target,
+            payload={"raw_file": raw_file},
+            priority=priority
+        )
+        return self.push(job)
+    
     # ═══════════════════════════════════════════════════════════════
     # POP JOBS
     # ═══════════════════════════════════════════════════════════════

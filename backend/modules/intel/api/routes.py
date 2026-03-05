@@ -1588,3 +1588,252 @@ async def queue_clear(confirm: bool = Query(False)):
         "ok": True,
         "message": "Queue cleared"
     }
+
+
+# ═══════════════════════════════════════════════════════════════
+# NORMALIZATION & PIPELINE
+# ═══════════════════════════════════════════════════════════════
+
+def get_normalization_engine():
+    """Get normalization engine"""
+    from server import db
+    from ..normalization import create_normalization_engine
+    return create_normalization_engine(db)
+
+
+@router.get("/pipeline/stats")
+async def pipeline_stats():
+    """Get normalization pipeline statistics"""
+    engine = get_normalization_engine()
+    stats = await engine.get_stats()
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        **stats
+    }
+
+
+@router.post("/pipeline/dedupe")
+async def run_dedup_pipeline():
+    """
+    Run full deduplication pipeline.
+    
+    Merges data from all sources into curated tables.
+    """
+    engine = get_normalization_engine()
+    result = await engine.run_full_pipeline()
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "ok": True,
+        **result
+    }
+
+
+@router.post("/pipeline/dedupe/{entity}")
+async def run_dedupe_entity(entity: str):
+    """Run dedup for specific entity"""
+    engine = get_normalization_engine()
+    
+    if entity == "unlocks":
+        result = await engine.dedupe_unlocks()
+    elif entity == "funding":
+        result = await engine.dedupe_funding()
+    elif entity == "investors":
+        result = await engine.dedupe_investors()
+    else:
+        raise HTTPException(status_code=400, detail=f"Unknown entity: {entity}")
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "entity": entity,
+        **result
+    }
+
+
+@router.post("/pipeline/index")
+async def build_event_index():
+    """Build/rebuild event index"""
+    engine = get_normalization_engine()
+    result = await engine.build_event_index()
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "ok": True,
+        **result
+    }
+
+
+# ═══════════════════════════════════════════════════════════════
+# CURATED DATA API (Final Tables)
+# ═══════════════════════════════════════════════════════════════
+
+@router.get("/curated/unlocks")
+async def get_curated_unlocks(
+    symbol: Optional[str] = Query(None),
+    days: int = Query(30, ge=1, le=365),
+    min_usd: Optional[float] = Query(None),
+    limit: int = Query(100, ge=1, le=500),
+    db = Depends(get_db)
+):
+    """
+    Get curated token unlocks (deduplicated, multi-source).
+    
+    These are the final clean records for the frontend.
+    """
+    now = int(datetime.now(timezone.utc).timestamp())
+    end = now + (days * 86400)
+    
+    query = {
+        "unlock_date": {"$gte": now, "$lte": end}
+    }
+    
+    if symbol:
+        query["symbol"] = symbol.upper()
+    
+    if min_usd:
+        query["amount_usd"] = {"$gte": min_usd}
+    
+    cursor = db.intel_unlocks.find(query, {"_id": 0})
+    items = await cursor.sort("unlock_date", 1).limit(limit).to_list(limit)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "days_ahead": days,
+        "count": len(items),
+        "data": items
+    }
+
+
+@router.get("/curated/funding")
+async def get_curated_funding(
+    symbol: Optional[str] = Query(None),
+    round_type: Optional[str] = Query(None),
+    days: int = Query(90, ge=1, le=365),
+    min_usd: Optional[float] = Query(None),
+    limit: int = Query(100, ge=1, le=500),
+    db = Depends(get_db)
+):
+    """Get curated funding rounds (deduplicated, multi-source)"""
+    cutoff = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
+    
+    query = {
+        "round_date": {"$gte": cutoff}
+    }
+    
+    if symbol:
+        query["symbol"] = symbol.upper()
+    
+    if round_type:
+        query["round_type"] = round_type.lower()
+    
+    if min_usd:
+        query["raised_usd"] = {"$gte": min_usd}
+    
+    cursor = db.intel_funding.find(query, {"_id": 0})
+    items = await cursor.sort("round_date", -1).limit(limit).to_list(limit)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "days_back": days,
+        "count": len(items),
+        "data": items
+    }
+
+
+@router.get("/curated/investors")
+async def get_curated_investors(
+    tier: Optional[str] = Query(None),
+    search: Optional[str] = Query(None),
+    limit: int = Query(100, ge=1, le=500),
+    db = Depends(get_db)
+):
+    """Get curated investors (deduplicated, multi-source)"""
+    query = {}
+    
+    if tier:
+        query["tier"] = tier
+    
+    if search:
+        query["$or"] = [
+            {"name": {"$regex": search, "$options": "i"}},
+            {"slug": {"$regex": search, "$options": "i"}}
+        ]
+    
+    cursor = db.intel_investors.find(query, {"_id": 0})
+    items = await cursor.sort("investments_count", -1).limit(limit).to_list(limit)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "count": len(items),
+        "data": items
+    }
+
+
+# ═══════════════════════════════════════════════════════════════
+# EVENT INDEX API
+# ═══════════════════════════════════════════════════════════════
+
+@router.get("/events")
+async def get_events(
+    event_type: Optional[str] = Query(None, description="unlock, funding, sale"),
+    symbol: Optional[str] = Query(None),
+    days: int = Query(30, ge=1, le=365),
+    direction: str = Query("future", description="future or past"),
+    limit: int = Query(100, ge=1, le=500),
+    db = Depends(get_db)
+):
+    """
+    Query unified event index.
+    
+    Fast queries across all event types.
+    """
+    now = int(datetime.now(timezone.utc).timestamp())
+    
+    if direction == "future":
+        date_query = {"$gte": now, "$lte": now + (days * 86400)}
+        sort_dir = 1
+    else:
+        date_query = {"$gte": now - (days * 86400), "$lte": now}
+        sort_dir = -1
+    
+    query = {"event_date": date_query}
+    
+    if event_type:
+        query["event_type"] = event_type
+    
+    if symbol:
+        query["symbol"] = symbol.upper()
+    
+    cursor = db.intel_events.find(query, {"_id": 0})
+    items = await cursor.sort("event_date", sort_dir).limit(limit).to_list(limit)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "direction": direction,
+        "days": days,
+        "count": len(items),
+        "events": items
+    }
+
+
+@router.get("/events/{symbol}")
+async def get_events_for_symbol(
+    symbol: str,
+    limit: int = Query(50, ge=1, le=200),
+    db = Depends(get_db)
+):
+    """Get all events for a specific symbol"""
+    cursor = db.intel_events.find(
+        {"symbol": symbol.upper()},
+        {"_id": 0}
+    )
+    items = await cursor.sort("event_date", 1).limit(limit).to_list(limit)
+    
+    return {
+        "ts": int(datetime.now(timezone.utc).timestamp() * 1000),
+        "symbol": symbol.upper(),
+        "count": len(items),
+        "events": items
+    }
+

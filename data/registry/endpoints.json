@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1772702379.9142475,
+  "updatedAt": 1772703581.6409934,
   "endpoints": [
     {
       "url": "https://api2.dropstab.com/portfolio/api/markets",
@@ -473,6 +473,114 @@
       "last_success": "",
       "last_error": "",
       "updatedAt": 1772702379.9142473
+    },
+    {
+      "url": "https://api.cryptorank.io/v0/global",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer null",
+        "referer": "https://cryptorank.io/",
+        "accept-language": "en-US",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "content-type": "application/json"
+      },
+      "body": null,
+      "cookies": {},
+      "source": "cryptorank",
+      "target": "funding",
+      "captured_at": "2026-03-05T09:39:28.388391+00:00",
+      "from_page": "https://cryptorank.io/funding-rounds",
+      "response_status": 200,
+      "response_type": "exchanges",
+      "response_keys": [
+        "gas",
+        "allCurrencies",
+        "btcDominanceChangePercent",
+        "totalVolume24h",
+        "totalMarketCapChangePercent",
+        "totalVolume24hChangePercent",
+        "btcDominance",
+        "totalMarketCap",
+        "ethDominance",
+        "ethDominanceChangePercent"
+      ],
+      "sample_size": 10,
+      "success_count": 0,
+      "fail_count": 0,
+      "last_success": "",
+      "last_error": "",
+      "updatedAt": 1772703581.6386478
+    },
+    {
+      "url": "https://api.cryptorank.io/v0/funding-rounds-widgets/total-funding-overview?locale=en",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer null",
+        "referer": "https://cryptorank.io/",
+        "accept-language": "en-US",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "content-type": "application/json"
+      },
+      "body": null,
+      "cookies": {},
+      "source": "cryptorank",
+      "target": "funding",
+      "captured_at": "2026-03-05T09:39:28.429325+00:00",
+      "from_page": "https://cryptorank.io/funding-rounds",
+      "response_status": 200,
+      "response_type": "funding",
+      "response_keys": [
+        "fundingRoundsTotal",
+        "fundingRoundsTotalChange",
+        "totalInvestments",
+        "totalInvestmentsChange",
+        "investmentsFocus",
+        "avgRoundSize",
+        "investmentStage"
+      ],
+      "sample_size": 7,
+      "success_count": 0,
+      "fail_count": 0,
+      "last_success": "",
+      "last_error": "",
+      "updatedAt": 1772703581.6395657
+    },
+    {
+      "url": "https://api.cryptorank.io/v0/app/coins/fiat",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer null",
+        "referer": "https://cryptorank.io/",
+        "accept-language": "en-US",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "content-type": "application/json"
+      },
+      "body": null,
+      "cookies": {},
+      "source": "cryptorank",
+      "target": "funding",
+      "captured_at": "2026-03-05T09:39:28.688768+00:00",
+      "from_page": "https://cryptorank.io/funding-rounds",
+      "response_status": 200,
+      "response_type": "paginated",
+      "response_keys": [
+        "data"
+      ],
+      "sample_size": 168,
+      "success_count": 0,
+      "fail_count": 0,
+      "last_success": "",
+      "last_error": "",
+      "updatedAt": 1772703581.6409924
     }
   ]
 }

@@ -16,7 +16,7 @@ If Layer 1 fails → fallback to Layer 2
 If Layer 2 fails → fallback to Layer 3
 ```
 
-### Data Pipeline Architecture
+### Data Pipeline Architecture (NEW!)
 ```
 Scheduler
    │
@@ -34,7 +34,22 @@ Workers (N parallel)
       Raw Data Store (/app/data/raw/)
            │
            ▼
-      Parsers → MongoDB
+      Adapter Parsers → Unified Models
+           │
+           ▼
+      Normalized Tables (normalized_*)
+           │
+           ▼
+      Dedup Engine
+           │
+           ▼
+      Curated Intel Tables (intel_*)
+           │
+           ▼
+      Event Index
+           │
+           ▼
+      API Layer
 ```
 
 ### Data Sources
@@ -47,7 +62,8 @@ MARKET DATA - CoinGecko ONLY
 ANALYTICS - CryptoRank + Dropstab (redundancy)
 ├ fundraising
 ├ investors
-└ unlocks
+├ unlocks
+├ token sales (ICO/IEO/IDO)
 ```
 
 ### Stealth Browser Features
@@ -73,6 +89,36 @@ Proxy #3 (backup)
 NOT rotation - just failover
 ```
 
+## Unified Data Models (NEW!)
+```python
+IntelUnlock   - token unlock events
+IntelFunding  - funding rounds
+IntelInvestor - VC/funds
+IntelSale     - ICO/IEO/IDO sales
+IntelEvent    - unified event index for fast queries
+```
+
+## Database Collections
+```
+# Raw storage
+/app/data/raw/{source}/{target}/*.json.gz
+
+# Normalized (parsed, per-source)
+normalized_unlocks
+normalized_funding
+normalized_investors
+normalized_sales
+
+# Curated (deduplicated, multi-source)
+intel_unlocks
+intel_funding
+intel_investors
+intel_sales
+
+# Event Index (fast queries)
+intel_events
+```
+
 ## API Endpoints
 
 ### Exchange
@@ -82,28 +128,41 @@ NOT rotation - just failover
 
 ### Intel Sync (Legacy)
 - `POST /api/intel/sync/coingecko/markets_full` - 15k coins
-- `POST /api/intel/sync/dropstab/browser` - stealth scraper
 - `GET /api/intel/admin/health` - system health
 
-### NEW: Scraper Engine
+### Scraper Engine
 - `GET /api/intel/scraper/status` - Full scraper status
 - `POST /api/intel/scraper/discover/{source}` - Browser discovery
-- `POST /api/intel/scraper/sync/{source}/{target}` - Sync from registry
 - `GET /api/intel/scraper/registry` - View discovered endpoints
 - `GET /api/intel/scraper/raw` - List raw data files
 - `GET /api/intel/scraper/raw/stats` - Storage statistics
 
-### NEW: Worker System
+### Worker System
 - `GET /api/intel/worker/status` - Worker status
 - `POST /api/intel/worker/start` - Start worker
 - `POST /api/intel/worker/stop` - Stop worker
 
-### NEW: Job Queue (Redis)
+### Job Queue (Redis)
 - `GET /api/intel/queue/status` - Queue statistics
 - `GET /api/intel/queue/jobs?status=pending|processing|completed|failed`
 - `POST /api/intel/queue/push/discover?source=dropstab&targets=unlocks,funding`
 - `POST /api/intel/queue/push/sync?source=dropstab&targets=unlocks`
 - `DELETE /api/intel/queue/clear?confirm=true`
+
+### Normalization Pipeline (NEW!)
+- `GET /api/intel/pipeline/stats` - Normalized/curated counts
+- `POST /api/intel/pipeline/dedupe` - Run full dedup pipeline
+- `POST /api/intel/pipeline/dedupe/{entity}` - Dedupe specific entity
+- `POST /api/intel/pipeline/index` - Rebuild event index
+
+### Curated Data API (NEW!)
+- `GET /api/intel/curated/unlocks?days=30&symbol=SOL&min_usd=1000000`
+- `GET /api/intel/curated/funding?days=90&round_type=seed`
+- `GET /api/intel/curated/investors?tier=tier_1&search=a16z`
+
+### Event Index (NEW!)
+- `GET /api/intel/events?type=unlock&days=30&direction=future`
+- `GET /api/intel/events/{symbol}` - All events for symbol
 
 ### Scheduler
 - `POST /api/intel/scheduler/start`
@@ -117,20 +176,27 @@ NOT rotation - just failover
 
 ## Current Stats (2026-03-05)
 ```
-Registry endpoints: 13
+Registry endpoints: 16
 ├ dropstab/unlocks:    4
 ├ dropstab/funding:    4
-└ dropstab/investors:  5
+├ dropstab/investors:  5
+├ cryptorank/funding:  3
 
-Raw files: 3 discovery files
+Raw files: 4 discovery files
 ```
 
 ## Discovered Direct APIs
 ```
+# Dropstab
 ✅ api2.dropstab.com/portfolio/api/markets
 ✅ api2.dropstab.com/portfolio/api/markets/recentSearchItems
 ✅ api2.dropstab.com/portfolio/api/exchange
 ✅ extra-bff.dropstab.com/v1.2/market-data/market-total-and-widgets-summary
+
+# CryptoRank
+✅ api.cryptorank.io/v0/global
+✅ api.cryptorank.io/v0/funding-rounds-widgets/total-funding-over
+✅ api.cryptorank.io/v0/app/coins/fiat
 ```
 
 ## Backlog
@@ -148,14 +214,21 @@ Raw files: 3 discovery files
 - [x] **Request Blueprint Capture**
 - [x] **Raw Data Storage**
 - [x] **Endpoint Registry with Scoring**
+- [x] **Unified Data Models (IntelUnlock, IntelFunding, etc)**
+- [x] **Adapter Parsers (Dropstab, CryptoRank)**
+- [x] **Normalization Engine**
+- [x] **Deduplication Engine**
+- [x] **Event Index for Fast Queries**
+- [x] **Curated Data API**
 
 ### P1 (In Progress)
-- [ ] Implement parsers for raw data (dropstab/parsers.py, cryptorank/parsers.py)
-- [ ] Full browser scrape for analytics (more targets)
-- [ ] CryptoRank browser discovery
-- [ ] Direct API cookie replay
+- [ ] Run full discovery for all CryptoRank targets
+- [ ] Collect actual data and run through parsing pipeline
+- [ ] Populate curated tables with real data
+- [ ] Activate scheduler for periodic data collection
 
 ### P2 (Future)
 - [ ] DOM Parser (Layer 3) fallback
-- [ ] Data deduplication from multiple sources
-- [ ] Realtime price updates pipeline
+- [ ] Data deduplication optimization
+- [ ] Analytics and aggregation layer
+- [ ] Alerts and signals
